@@ -15,8 +15,44 @@ final class DBManager {
     
     static let dbFileName: String = "cTOM.db"
     static var ctomDB: FMDatabase!
+    static var videoList = [String]()
+    static var trialWithAnswer = [Int : Int]()
+    // dictionary to story correct answers with id's
     
     private init() {}
+    
+    
+    static func getTrialInfoForTest(test: Int) {
+        if Trackers.sharedInstance.currentTest == test {
+            
+            let query = "select * from Trial where test_id = \(test)"
+            // will need to change this to join for stories trials
+            
+            let results:FMResultSet? = DBManager.ctomDB.executeQuery(query, withArgumentsIn: [])
+            
+            while results?.next() == true {
+                videoList.append((results?.string(forColumn: "trial_name"))!)
+                trialWithAnswer[Int((results?.int(forColumn: "trial_id"))!)] = Int((results?.int(forColumn: "correct_answer_tag"))!)
+            }
+        }
+    }
+    // extracts video paths for specific test and stors in array. Also store trial id and correct answers in dictionary
+    
+    
+    static func storeResultsToDatabase() {
+        
+        let update = "INSERT INTO `Trial-Session`(`trial_id`, `answer_tag`, `accuracy_measure`) VALUES (?, ?, ?);"
+        
+        for result in Trackers.sharedInstance.resultsArray {
+            
+            do {
+                try DBManager.ctomDB.executeUpdate(update, values: [result.getTrialID(), result.getAnswerTag(), result.getAccuracyMeasure()])
+            } catch {
+                print(error)
+            }
+        }
+    }
+    // Store various data from various result objects to DB
     
     
     static func copyDatabaseIfNeeded() {

@@ -15,8 +15,7 @@ import UIKit
 final class MediaManager {
     
     static let sharedInstance = MediaManager()
-    
-    static var videoList = [String] ()
+
     static var player: AVPlayer!
     static var playerLayer: AVPlayerLayer!
     
@@ -24,28 +23,10 @@ final class MediaManager {
     private init() {}
 
     
-    static func getMediaForTest(test: Int) {
-        
-        if Trackers.sharedInstance.currentTest == test {
-            
-            let query = "select * from Trial where test_id = \(test)"
-            // will need to change this to join for stories trials
-            
-            let results:FMResultSet? = DBManager.ctomDB.executeQuery(query, withArgumentsIn: [])
-            
-            while results?.next() == true {
-                videoList.append((results?.string(forColumn: "trial_name"))!)
-            }
-            
-        }
-        
-    }
-    // extracts video paths for specific test and stors in array
-    
     
     static func playTestVideo(videoView: UIView) {
         
-        let path = Bundle.main.path(forResource: videoList[3], ofType: "mp4")
+        let path = Bundle.main.path(forResource: DBManager.videoList[Trackers.sharedInstance.currentTrial! - 1], ofType: "mp4")
         player = AVPlayer(url: URL(fileURLWithPath: path!))
         
         playerLayer = AVPlayerLayer(player: player)
@@ -57,7 +38,6 @@ final class MediaManager {
 
         player.play()
 
-        
     }
     
     

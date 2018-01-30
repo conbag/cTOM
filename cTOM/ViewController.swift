@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         }
         
     }
-    // test to make sure DB is talking with app
+    // test to make sure DB is talking with app -> will need to be deleted
     
     
     

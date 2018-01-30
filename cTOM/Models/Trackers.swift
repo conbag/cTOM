@@ -16,8 +16,9 @@ struct Trackers {
     
     var currentParticipant: Int?
     var currentTest: Int?
-    
+    var currentSession: Int?
     var currentTrial: Int?
-    
+    var resultsArray = [Result]()
+    // used to store array of results as user proceeds through trials
     
 }

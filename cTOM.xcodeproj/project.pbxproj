@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F434F7CD20207DAD0048035C /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434F7CC20207DAD0048035C /* MediaManager.swift */; };
+		F4B7189D2020D60A00BE3EB6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B7189C2020D60A00BE3EB6 /* Result.swift */; };
+		F4B7189F2020F85F00BE3EB6 /* cTOM.db in Resources */ = {isa = PBXBuildFile; fileRef = F4B7189E2020F85F00BE3EB6 /* cTOM.db */; };
 		F4CD745620209E8700C8A791 /* ViewControllerGaze.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD745520209E8700C8A791 /* ViewControllerGaze.swift */; };
 		F4D9FC2E201FB3BB004D0F4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FC2D201FB3BB004D0F4E /* AppDelegate.swift */; };
 		F4D9FC30201FB3BB004D0F4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FC2F201FB3BB004D0F4E /* ViewController.swift */; };
@@ -105,7 +107,6 @@
 		F4D9FD18201FB5B1004D0F4E /* Jess_A_20d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCC6201FB5B1004D0F4E /* Jess_A_20d_L.mp4 */; };
 		F4D9FD19201FB5B1004D0F4E /* Jess_A_sa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCC7201FB5B1004D0F4E /* Jess_A_sa.mp4 */; };
 		F4D9FD1A201FB5B1004D0F4E /* Jess_A_10d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCC8201FB5B1004D0F4E /* Jess_A_10d_L.mp4 */; };
-		F4D9FD1D201FB6D5004D0F4E /* cTOM.db in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FD1C201FB6D5004D0F4E /* cTOM.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,8 @@
 
 /* Begin PBXFileReference section */
 		F434F7CC20207DAD0048035C /* MediaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
+		F4B7189C2020D60A00BE3EB6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		F4B7189E2020F85F00BE3EB6 /* cTOM.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cTOM.db; sourceTree = "<group>"; };
 		F4CD745520209E8700C8A791 /* ViewControllerGaze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGaze.swift; sourceTree = "<group>"; };
 		F4D9FC2A201FB3BB004D0F4E /* cTOM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cTOM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D9FC2D201FB3BB004D0F4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -228,7 +231,6 @@
 		F4D9FCC6201FB5B1004D0F4E /* Jess_A_20d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_20d_L.mp4; sourceTree = "<group>"; };
 		F4D9FCC7201FB5B1004D0F4E /* Jess_A_sa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_sa.mp4; sourceTree = "<group>"; };
 		F4D9FCC8201FB5B1004D0F4E /* Jess_A_10d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_10d_L.mp4; sourceTree = "<group>"; };
-		F4D9FD1C201FB6D5004D0F4E /* cTOM.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cTOM.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,8 +319,9 @@
 		F4D9FC64201FB463004D0F4E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F4D9FC65201FB47C004D0F4E /* DBManager.swift */,
 				F4D9FC67201FB4A9004D0F4E /* Trackers.swift */,
+				F4B7189C2020D60A00BE3EB6 /* Result.swift */,
+				F4D9FC65201FB47C004D0F4E /* DBManager.swift */,
 				F434F7CC20207DAD0048035C /* MediaManager.swift */,
 			);
 			path = Models;
@@ -520,7 +523,7 @@
 		F4D9FD1B201FB6A8004D0F4E /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				F4D9FD1C201FB6D5004D0F4E /* cTOM.db */,
+				F4B7189E2020F85F00BE3EB6 /* cTOM.db */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -624,7 +627,7 @@
 				F4D9FCFA201FB5B1004D0F4E /* Brian_N_20d_R.mp4 in Resources */,
 				F4D9FCEB201FB5B1004D0F4E /* Chris_A_10d_L.mp4 in Resources */,
 				F4D9FD0C201FB5B1004D0F4E /* Jess_N_10d_L.mp4 in Resources */,
-				F4D9FD1D201FB6D5004D0F4E /* cTOM.db in Resources */,
+				F4B7189F2020F85F00BE3EB6 /* cTOM.db in Resources */,
 				F4D9FCF1201FB5B1004D0F4E /* Montage.mp4 in Resources */,
 				F4D9FCD5201FB5B1004D0F4E /* Jenny_A_20d_L.mp4 in Resources */,
 				F4D9FD0D201FB5B1004D0F4E /* Jess_N_10d_R.mp4 in Resources */,
@@ -719,6 +722,7 @@
 				F4D9FC30201FB3BB004D0F4E /* ViewController.swift in Sources */,
 				F434F7CD20207DAD0048035C /* MediaManager.swift in Sources */,
 				F4D9FC66201FB47C004D0F4E /* DBManager.swift in Sources */,
+				F4B7189D2020D60A00BE3EB6 /* Result.swift in Sources */,
 				F4D9FC5F201FB3E3004D0F4E /* FMDatabaseQueue.m in Sources */,
 				F4D9FC5E201FB3E3004D0F4E /* FMDatabase.m in Sources */,
 				F4D9FC2E201FB3BB004D0F4E /* AppDelegate.swift in Sources */,

@@ -9,15 +9,17 @@
 import Foundation
 
 
-class DBManager {
+final class DBManager {
     
     static let sharedInstance = DBManager()
     
-    let dbFileName: String = "cTOM.db"
-    var ctomDB: FMDatabase!
+    static let dbFileName: String = "cTOM.db"
+    static var ctomDB: FMDatabase!
+    
+    private init() {}
     
     
-    func copyDatabaseIfNeeded() {
+    static func copyDatabaseIfNeeded() {
         // Move database file from bundle to documents folder
         
         let fileManager = FileManager.default
@@ -29,12 +31,12 @@ class DBManager {
             return // Could not find documents URL
         }
         
-        let finalDatabaseURL = documentsUrl.first!.appendingPathComponent(dbFileName)
+        let finalDatabaseURL = documentsUrl.first!.appendingPathComponent(DBManager.dbFileName)
         
         if !( (try? finalDatabaseURL.checkResourceIsReachable()) ?? false) {
             print("DB does not exist in documents folder")
             
-            let documentsURL = Bundle.main.resourceURL?.appendingPathComponent(dbFileName)
+            let documentsURL = Bundle.main.resourceURL?.appendingPathComponent(DBManager.dbFileName)
             
             do {
                 try fileManager.copyItem(atPath: (documentsURL?.path)!, toPath: finalDatabaseURL.path)
@@ -48,42 +50,20 @@ class DBManager {
         
     }
     
-    
-    func getMediaForTest(test: Int) {
-        
-        if Trackers.sharedInstance.currentTest == test {
-            
-            let query = "select * from Trial where test_id = \(test)"
-            
-            let results:FMResultSet? = ctomDB.executeQuery(query, withArgumentsIn: [])
-            
-            while results?.next() == true {
-                Trackers.sharedInstance.trialList.append((results?.string(forColumn: "trial_name"))!)
-            }
-            
-            
-            
-            
-        }
-        
-    }
-    
-    
-    func openDatabase() -> FMDatabase {
+    static func openDatabase() {
         
         let fileManager = FileManager.default
         let dirPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
         // get directory path for apps documents directory
         
-        let dbPath = dirPath[0].appendingPathComponent(dbFileName).path
+        let dbPath = dirPath[0].appendingPathComponent(DBManager.dbFileName).path
         // retrieve path of .db file
         
-        ctomDB = FMDatabase(path: dbPath as String)
+        DBManager.ctomDB = FMDatabase(path: dbPath as String)
         // create DB
         
-        ctomDB.open()
-        
-        return ctomDB
+        DBManager.ctomDB.open()
+
         
     }
     

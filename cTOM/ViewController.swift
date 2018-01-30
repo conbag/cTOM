@@ -9,18 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController {
+  
+    @IBOutlet weak var text: UITextField!
     
-    var ctomDB: FMDatabase = FMDatabase()
+    
+    @IBAction func actButton(_ sender: Any) {
+        
+        let update = "INSERT INTO `Participant`(`gender`) VALUES (?);"
+        
+        do {
+            try DBManager.ctomDB.executeUpdate(update, values: [text.text!])
+        } catch {
+            print(error)
+        }
+        
+    }
+    // test to make sure DB is talking with app
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Checks to see if .db file exists in documents directory and copies from main bundle if needed
-        DBManager.sharedInstance.copyDatabaseIfNeeded()
+        DBManager.copyDatabaseIfNeeded()
         
         
         // Opens DB
-        ctomDB = DBManager.sharedInstance.openDatabase()
+        DBManager.openDatabase()
     }
 
     override func didReceiveMemoryWarning() {

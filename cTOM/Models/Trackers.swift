@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Does this need to be singleton
 
 struct Trackers {
     
@@ -15,7 +16,7 @@ struct Trackers {
     
     var currentParticipant: Int?
     var currentTest: Int?
-    var trialList = [String] ()
+    
     var currentTrial: Int?
     
     

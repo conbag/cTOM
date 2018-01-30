@@ -9,10 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var ctomDB: FMDatabase = FMDatabase()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Checks to see if .db file exists in documents directory and copies from main bundle if needed
+        DBManager.sharedInstance.copyDatabaseIfNeeded()
+        
+        
+        // Opens DB
+        ctomDB = DBManager.sharedInstance.openDatabase()
     }
 
     override func didReceiveMemoryWarning() {

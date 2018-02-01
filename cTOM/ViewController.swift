@@ -9,25 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-  
-    @IBOutlet weak var text: UITextField!
-    
-    
-    @IBAction func actButton(_ sender: Any) {
-        
-        let update = "INSERT INTO `Participant`(`gender`) VALUES (?);"
-        
-        do {
-            try DBManager.ctomDB.executeUpdate(update, values: [text.text!])
-        } catch {
-            print(error)
-        }
-        
-    }
-    // test to make sure DB is talking with app -> will need to be deleted
-    
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()

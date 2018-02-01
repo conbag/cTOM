@@ -23,7 +23,7 @@ final class DBManager {
     
     
     static func getTrialInfoForTest(test: Int) {
-        if Trackers.sharedInstance.currentTest == test {
+        if Trackers.currentTest == test {
             
             let query = "select * from Trial where test_id = \(test)"
             // will need to change this to join for stories trials
@@ -43,7 +43,7 @@ final class DBManager {
         
         let update = "INSERT INTO `Trial-Session`(`trial_id`, `answer_tag`, `accuracy_measure`) VALUES (?, ?, ?);"
         
-        for result in Trackers.sharedInstance.resultsArray {
+        for result in Trackers.resultsArray {
             
             do {
                 try DBManager.ctomDB.executeUpdate(update, values: [result.getTrialID(), result.getAnswerTag(), result.getAccuracyMeasure()])

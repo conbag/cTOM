@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F434F7CD20207DAD0048035C /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434F7CC20207DAD0048035C /* MediaManager.swift */; };
+		F49E4B552022585500161F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49E4B542022585500161F15 /* Assets.xcassets */; };
 		F4B7189D2020D60A00BE3EB6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B7189C2020D60A00BE3EB6 /* Result.swift */; };
 		F4B7189F2020F85F00BE3EB6 /* cTOM.db in Resources */ = {isa = PBXBuildFile; fileRef = F4B7189E2020F85F00BE3EB6 /* cTOM.db */; };
 		F4CD745620209E8700C8A791 /* ViewControllerGaze.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD745520209E8700C8A791 /* ViewControllerGaze.swift */; };
 		F4D9FC2E201FB3BB004D0F4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FC2D201FB3BB004D0F4E /* AppDelegate.swift */; };
 		F4D9FC30201FB3BB004D0F4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FC2F201FB3BB004D0F4E /* ViewController.swift */; };
 		F4D9FC33201FB3BB004D0F4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC31201FB3BB004D0F4E /* Main.storyboard */; };
-		F4D9FC35201FB3BB004D0F4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC34201FB3BB004D0F4E /* Assets.xcassets */; };
 		F4D9FC38201FB3BB004D0F4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC36201FB3BB004D0F4E /* LaunchScreen.storyboard */; };
 		F4D9FC43201FB3BB004D0F4E /* cTOMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FC42201FB3BB004D0F4E /* cTOMTests.swift */; };
 		F4D9FC5B201FB3E3004D0F4E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FC4F201FB3E2004D0F4E /* FMResultSet.m */; };
@@ -120,7 +119,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F434F7CC20207DAD0048035C /* MediaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
+		F49E4B542022585500161F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4B7189C2020D60A00BE3EB6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		F4B7189E2020F85F00BE3EB6 /* cTOM.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cTOM.db; sourceTree = "<group>"; };
 		F4CD745520209E8700C8A791 /* ViewControllerGaze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGaze.swift; sourceTree = "<group>"; };
@@ -128,7 +127,6 @@
 		F4D9FC2D201FB3BB004D0F4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4D9FC2F201FB3BB004D0F4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F4D9FC32201FB3BB004D0F4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F4D9FC34201FB3BB004D0F4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4D9FC37201FB3BB004D0F4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4D9FC39201FB3BB004D0F4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4D9FC3E201FB3BB004D0F4E /* cTOMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cTOMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -279,7 +277,7 @@
 				F4D9FC2F201FB3BB004D0F4E /* ViewController.swift */,
 				F4CD745520209E8700C8A791 /* ViewControllerGaze.swift */,
 				F4D9FC31201FB3BB004D0F4E /* Main.storyboard */,
-				F4D9FC34201FB3BB004D0F4E /* Assets.xcassets */,
+				F49E4B542022585500161F15 /* Assets.xcassets */,
 				F4D9FC36201FB3BB004D0F4E /* LaunchScreen.storyboard */,
 				F4D9FC2D201FB3BB004D0F4E /* AppDelegate.swift */,
 				F4D9FC39201FB3BB004D0F4E /* Info.plist */,
@@ -322,7 +320,6 @@
 				F4D9FC67201FB4A9004D0F4E /* Trackers.swift */,
 				F4B7189C2020D60A00BE3EB6 /* Result.swift */,
 				F4D9FC65201FB47C004D0F4E /* DBManager.swift */,
-				F434F7CC20207DAD0048035C /* MediaManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -664,10 +661,10 @@
 				F4D9FCCF201FB5B1004D0F4E /* Jenny_N_20d_L.mp4 in Resources */,
 				F4D9FD19201FB5B1004D0F4E /* Jess_A_sa.mp4 in Resources */,
 				F4D9FCE8201FB5B1004D0F4E /* Chris_A_sa.mp4 in Resources */,
-				F4D9FC35201FB3BB004D0F4E /* Assets.xcassets in Resources */,
 				F4D9FCF7201FB5B1004D0F4E /* Brian_N_up.mp4 in Resources */,
 				F4D9FCCE201FB5B1004D0F4E /* Jenny_N_60d_R.mp4 in Resources */,
 				F4D9FCCB201FB5B1004D0F4E /* Jenny_N_60d_L.mp4 in Resources */,
+				F49E4B552022585500161F15 /* Assets.xcassets in Resources */,
 				F4D9FCDA201FB5B1004D0F4E /* Jenny_A_30d_R.mp4 in Resources */,
 				F4D9FCFF201FB5B1004D0F4E /* Brian_A_30d_R.mp4 in Resources */,
 				F4D9FD10201FB5B1004D0F4E /* Jess_N_60d_L.mp4 in Resources */,
@@ -720,7 +717,6 @@
 				F4D9FC68201FB4A9004D0F4E /* Trackers.swift in Sources */,
 				F4D9FC5C201FB3E3004D0F4E /* FMDatabasePool.m in Sources */,
 				F4D9FC30201FB3BB004D0F4E /* ViewController.swift in Sources */,
-				F434F7CD20207DAD0048035C /* MediaManager.swift in Sources */,
 				F4D9FC66201FB47C004D0F4E /* DBManager.swift in Sources */,
 				F4B7189D2020D60A00BE3EB6 /* Result.swift in Sources */,
 				F4D9FC5F201FB3E3004D0F4E /* FMDatabaseQueue.m in Sources */,

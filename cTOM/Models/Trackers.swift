@@ -8,17 +8,19 @@
 
 import Foundation
 
-// Does this need to be singleton
-
-struct Trackers {
+final class Trackers {
     
-    static var sharedInstance = Trackers()
+    // Singleton class to keep track of below variables
     
-    var currentParticipant: Int?
-    var currentTest: Int?
-    var currentSession: Int?
-    var currentTrial: Int?
-    var resultsArray = [Result]()
+    static let sharedInstance = Trackers()
+    
+    static var currentParticipant: Int?
+    static var currentTest: Int?
+    static var currentSession: Int?
+    static var currentTrial: Int?
+    static var resultsArray = [Result]()
     // used to store array of results as user proceeds through trials
+    
+    private init() {}
     
 }

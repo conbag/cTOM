@@ -15,7 +15,8 @@ final class DBManager {
     
     static let dbFileName: String = "cTOM.db"
     static var ctomDB: FMDatabase!
-    static var videoList = [String]()
+    static var trialList = [Int]()
+    static var trialWithVideo = [Int : String]()
     static var trialWithAnswer = [Int : Int]()
     // dictionary to story correct answers with id's
     
@@ -31,7 +32,8 @@ final class DBManager {
             let results:FMResultSet? = DBManager.ctomDB.executeQuery(query, withArgumentsIn: [])
             
             while results?.next() == true {
-                videoList.append((results?.string(forColumn: "trial_name"))!)
+                trialList.append(Int((results?.int(forColumn: "trial_id"))!))
+                trialWithVideo[Int((results?.int(forColumn: "trial_id"))!)] = (results?.string(forColumn: "trial_name"))!
                 trialWithAnswer[Int((results?.int(forColumn: "trial_id"))!)] = Int((results?.int(forColumn: "correct_answer_tag"))!)
             }
         }
@@ -41,12 +43,12 @@ final class DBManager {
     
     static func storeResultsToDatabase() {
         
-        let update = "INSERT INTO `Trial-Session`(`trial_id`, `answer_tag`, `accuracy_measure`) VALUES (?, ?, ?);"
+        let update = "INSERT INTO `Trial-Session`(`trial_id`, `answer_tag`, `accuracy_measure`, 'time_measure', 'trial_order') VALUES (?, ?, ?, ?, ?);"
         
         for result in Trackers.resultsArray {
             
             do {
-                try DBManager.ctomDB.executeUpdate(update, values: [result.getTrialID(), result.getAnswerTag(), result.getAccuracyMeasure()])
+                try DBManager.ctomDB.executeUpdate(update, values: [result.getTrialID(), result.getAnswerTag(), result.getAccuracyMeasure(), result.getSecondMeasure(), result.getOrder()])
             } catch {
                 print(error)
             }

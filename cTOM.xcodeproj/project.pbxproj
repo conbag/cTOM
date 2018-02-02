@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4994B8220247688001CE79C /* Ding Sound Effect.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4994B8120247688001CE79C /* Ding Sound Effect.m4a */; };
+		F4994B84202492B5001CE79C /* cTOM.db in Resources */ = {isa = PBXBuildFile; fileRef = F4994B83202492B5001CE79C /* cTOM.db */; };
 		F49E4B552022585500161F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49E4B542022585500161F15 /* Assets.xcassets */; };
 		F4B7189D2020D60A00BE3EB6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B7189C2020D60A00BE3EB6 /* Result.swift */; };
-		F4B7189F2020F85F00BE3EB6 /* cTOM.db in Resources */ = {isa = PBXBuildFile; fileRef = F4B7189E2020F85F00BE3EB6 /* cTOM.db */; };
 		F4CD745620209E8700C8A791 /* ViewControllerGaze.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD745520209E8700C8A791 /* ViewControllerGaze.swift */; };
 		F4D9FC2E201FB3BB004D0F4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FC2D201FB3BB004D0F4E /* AppDelegate.swift */; };
 		F4D9FC30201FB3BB004D0F4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FC2F201FB3BB004D0F4E /* ViewController.swift */; };
@@ -119,9 +120,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F4994B8120247688001CE79C /* Ding Sound Effect.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ding Sound Effect.m4a"; sourceTree = "<group>"; };
+		F4994B83202492B5001CE79C /* cTOM.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cTOM.db; sourceTree = "<group>"; };
 		F49E4B542022585500161F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4B7189C2020D60A00BE3EB6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		F4B7189E2020F85F00BE3EB6 /* cTOM.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cTOM.db; sourceTree = "<group>"; };
 		F4CD745520209E8700C8A791 /* ViewControllerGaze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGaze.swift; sourceTree = "<group>"; };
 		F4D9FC2A201FB3BB004D0F4E /* cTOM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cTOM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D9FC2D201FB3BB004D0F4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 		F4D9FC69201FB5A1004D0F4E /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				F4994B8120247688001CE79C /* Ding Sound Effect.m4a */,
 				F4D9FC6A201FB5B1004D0F4E /* c_TOM_Gaze */,
 			);
 			path = Media;
@@ -520,7 +523,7 @@
 		F4D9FD1B201FB6A8004D0F4E /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				F4B7189E2020F85F00BE3EB6 /* cTOM.db */,
+				F4994B83202492B5001CE79C /* cTOM.db */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -624,7 +627,6 @@
 				F4D9FCFA201FB5B1004D0F4E /* Brian_N_20d_R.mp4 in Resources */,
 				F4D9FCEB201FB5B1004D0F4E /* Chris_A_10d_L.mp4 in Resources */,
 				F4D9FD0C201FB5B1004D0F4E /* Jess_N_10d_L.mp4 in Resources */,
-				F4B7189F2020F85F00BE3EB6 /* cTOM.db in Resources */,
 				F4D9FCF1201FB5B1004D0F4E /* Montage.mp4 in Resources */,
 				F4D9FCD5201FB5B1004D0F4E /* Jenny_A_20d_L.mp4 in Resources */,
 				F4D9FD0D201FB5B1004D0F4E /* Jess_N_10d_R.mp4 in Resources */,
@@ -686,7 +688,9 @@
 				F4D9FCF0201FB5B1004D0F4E /* Chris_A_60d_L.mp4 in Resources */,
 				F4D9FCEF201FB5B1004D0F4E /* Chris_A_20d_R.mp4 in Resources */,
 				F4D9FD14201FB5B1004D0F4E /* Jess_A_20d_R.mp4 in Resources */,
+				F4994B8220247688001CE79C /* Ding Sound Effect.m4a in Resources */,
 				F4D9FCD2201FB5B1004D0F4E /* Jenny_N_10d_L.mp4 in Resources */,
+				F4994B84202492B5001CE79C /* cTOM.db in Resources */,
 				F4D9FCE1201FB5B1004D0F4E /* Chris_N_30d_L.mp4 in Resources */,
 				F4D9FCEE201FB5B1004D0F4E /* Chris_A_30d_R.mp4 in Resources */,
 				F4D9FD13201FB5B1004D0F4E /* Jess_A_60d_L.mp4 in Resources */,

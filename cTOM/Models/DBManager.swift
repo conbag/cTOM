@@ -43,12 +43,12 @@ final class DBManager {
     
     static func storeResultsToDatabase() {
         
-        let update = "INSERT INTO `Trial-Session`(`trial_id`, `answer_tag`, `accuracy_measure`, 'time_measure', 'trial_order') VALUES (?, ?, ?, ?, ?);"
+        let update = "INSERT INTO `Trial-Session`(`trial_id`, `answer_tag`, `accuracy_measure`, 'time_measure', 'trial_order', 'timestamp') VALUES (?, ?, ?, ?, ?, ?);"
         
         for result in Trackers.resultsArray {
             
             do {
-                try DBManager.ctomDB.executeUpdate(update, values: [result.getTrialID(), result.getAnswerTag(), result.getAccuracyMeasure(), result.getSecondMeasure(), result.getOrder()])
+                try DBManager.ctomDB.executeUpdate(update, values: [result.getTrialID(), result.getAnswerTag(), result.getAccuracyMeasure(), result.getSecondMeasure(), result.getOrder(), result.getDate()])
             } catch {
                 print(error)
             }

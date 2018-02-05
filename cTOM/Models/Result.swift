@@ -18,14 +18,16 @@ class Result {
     private var trialID: Int
     private var secondMeasure: Double
     private var order: Int
+    private var date: String
     
     
-    init(answerTag: Int, accuracyMeasure: String, trialID: Int, secondMeasure: Double, order: Int) {
+    init(answerTag: Int, accuracyMeasure: String, trialID: Int, secondMeasure: Double, order: Int, date: String) {
         self.answerTag = answerTag
         self.accuracyMeasure = accuracyMeasure
         self.trialID = trialID
         self.secondMeasure = secondMeasure
         self.order = order
+        self.date = date
     }
     
     func getAnswerTag() -> Int {
@@ -47,6 +49,10 @@ class Result {
     
     func getOrder() -> Int {
         return self.order
+    }
+    
+    func getDate() -> String {
+        return self.date
     }
     
 }

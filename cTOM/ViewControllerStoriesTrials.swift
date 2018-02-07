@@ -1,8 +1,8 @@
 //
-//  ViewControllerGaze.swift
+//  ViewControllerStoriesTrials.swift
 //  cTOM
 //
-//  Created by Conor O'Grady on 30/01/2018.
+//  Created by Conor O'Grady on 06/02/2018.
 //  Copyright © 2018 Conor O'Grady. All rights reserved.
 //
 
@@ -10,50 +10,49 @@ import UIKit
 import AVFoundation
 import AVKit
 
-class ViewControllerGaze: UIViewController {
+class ViewControllerStoriesTrials: UIViewController {
+    
+    var trialOrder = 0
+    
+    var counter = 0
+    var timer = Timer()
+    // timer object used to question and answer slots
     
     var videoDate: Date?
     var buttonDate: Date?
     var dbDate: String?
     // timestamp that will be recorded in db for each trial
     
-    var trialOrder = 0
-    
-    var counter = 0
-    var timer = Timer()
-    // timer object used to display cross for 2 seconds
-    
     var player: AVPlayer!
     var playerLayer: AVPlayerLayer!
     var audioPlayer: AVAudioPlayer?
     // video and audio players
     
-    @IBOutlet weak var finishMessage: UILabel!
-    @IBOutlet weak var mainMenu: UIButton!
+    var activeTrial = false
     
     @IBOutlet weak var videoView: UIView!
-    @IBOutlet weak var crossView: UIView!
-    // subviews for video and cross displays
+    @IBOutlet weak var questionLabel: UILabel!
     
-    var activeTrial = true
-    
-    @IBAction func gazeButton(_ sender: UIButton) {
- 
+    @IBOutlet weak var finishMessage: UILabel!
+    @IBOutlet weak var mainMenuButton: UIButton!
+
+    @IBAction func answerButton(_ sender: UIButton) {
+        
         if activeTrial == true {
-            
-            buttonDate = Date()
             
             let currentTrial = Trackers.currentTrial!
             let correctAnswer = DBManager.trialWithAnswer[currentTrial]
             // retrieve correct answer from trialWithAnswer dict from DBManager singleton class
+        
+            buttonDate = Date()
             
             let result: Result
- 
+            
             let reactionTime = round(1000 * (currentTimeInMiliseconds(date: buttonDate!) - currentTimeInMiliseconds(date: videoDate!))) / 1000
             // get seconds(to 3 decimal places) by taking away video start time minus button time
             
             if sender.tag as Int == correctAnswer {
-                playAudio()
+                playAudio(path: "Ding Sound Effect")
                 // plays 'ding' audio for correct answer
                 
                 result = Result(answerTag: sender.tag, accuracyMeasure: "True", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!)
@@ -65,13 +64,10 @@ class ViewControllerGaze: UIViewController {
             Trackers.resultsArray.append(result)
             
             activeTrial = false
-
+     
         }
-
     }
-    // button method for Gaze trials
-    
-    
+  
     func currentTimeInMiliseconds(date: Date) -> Double {
         
         let since1970 = date.timeIntervalSince1970
@@ -81,42 +77,8 @@ class ViewControllerGaze: UIViewController {
     // returns seconds for passed in date since 1970
     
     
-    func startTimingTrials() {
-        
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(callVideo), userInfo: nil, repeats: false)
-    }
-    // delays the callVideo method for 2 seconds
-    
-    
-    @objc func callVideo() {
-        
-        if (trialOrder + 1) < Trackers.randomizedTrialList.count {
-            trialOrder += 1
-            Trackers.currentTrial! = Trackers.randomizedTrialList[trialOrder]
-            activeTrial = true
-            
-            playTestVideo(videoView: videoView)
-        } else {
-            finishMessage.isHidden = false
-            mainMenu.isHidden = false
-            mainMenu.isEnabled = true
-            
-            crossView.layer.sublayers = nil
-            
-            DBManager.storeResultsToDatabase()
-            Trackers.resultsArray.removeAll()
-            Trackers.randomizedTrialList.removeAll()
-            DBManager.trialList.removeAll()
-            DBManager.trialWithAnswer.removeAll()
-            DBManager.trialWithVideo.removeAll()
-            // Reset various arrays on test finish
-        }
-        // logic for when trials are finished. Displays text label and stores Result array to DB
-    }
-    
-    
     func playTestVideo(videoView: UIView) {
-
+        
         let path = Bundle.main.path(forResource: DBManager.trialWithVideo[Trackers
             .currentTrial!], ofType: "mp4")
         
@@ -134,46 +96,101 @@ class ViewControllerGaze: UIViewController {
         player.play()
         
         NotificationCenter.default.addObserver(self, selector:#selector(self.playerDidFinishPlaying(note:)),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem)
-        
-        videoDate = Date()
-        dbDate = dateToString(date: videoDate!)
-        
     }
     
     @objc func playerDidFinishPlaying(note: NSNotification){
         //Called when player finished playing
         
+        questionLabel.text = DBManager.trialWithText[Trackers.currentTrial!]
+        playAudio(path: DBManager.trialWithAudio[Trackers.currentTrial!]!)
+        
+        let when = DispatchTime.now() + 2
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.showAllAnswerButton()
+            self.activeTrial = true
+            self.videoDate = Date()
+            self.dbDate = self.dateToString(date: self.videoDate!)
+            
+            self.timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(self.closeQuestion), userInfo: nil, repeats: false)
+        }
+        
+    }
+    
+    @objc func closeQuestion() {
         if activeTrial == true {
             
             let result = Result(answerTag: 0, accuracyMeasure: "False", trialID: Trackers.currentTrial!, secondMeasure: 0.0, order: (trialOrder + 1), date: dbDate!)
             
             Trackers.resultsArray.append(result)
-            activeTrial = false
-            
         }
-        // if trial is not answered store result with 0 for 'answerTag' and 0.0 for time measure
         
-        playerLayer.sublayers = nil
-        // removes videoplayer to make way for cross image
+        if Trackers.currentTrial == DBManager.trialList[DBManager.trialList.count] {
+            
+            finishMessage.isHidden = false
+            mainMenuButton.isHidden = false
+            mainMenuButton.isEnabled = true
+            
+            videoView.layer.sublayers = nil
+            questionLabel.text = ""
+            hideAllAnswerButton()
+            
+            DBManager.storeResultsToDatabase()
+            Trackers.resultsArray.removeAll()
+            DBManager.trialList.removeAll()
+            DBManager.trialWithAnswer.removeAll()
+            DBManager.trialWithVideo.removeAll()
+            DBManager.trialWithImages.removeAll()
+            DBManager.trialWithText.removeAll()
+            DBManager.trialWithAudio.removeAll()
+            
+        } else {
         
-        let cross = UIImage(named: "Cross")?.cgImage
-    
-        let imageLayer = CALayer()
-        //let blankLayer = CALayer()
-    
-        imageLayer.contents = cross
-        imageLayer.frame = crossView.bounds
-    
-        crossView.layer.addSublayer(imageLayer)
-    
-        startTimingTrials()
+            activeTrial = true
+            
+            trialOrder += 1
+            Trackers.currentTrial! += 1
+            
+            hideAllAnswerButton()
+            questionLabel.text = ""
+            playTestVideo(videoView: videoView)
+        }
 
     }
-    // function that is called when video is finished playing
     
+    func dateToString(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateDB: String = dateFormatter.string(from: date)
+        
+        return dateDB
+    }
     
-    func playAudio() {
-        let url = Bundle.main.url(forResource: "Ding Sound Effect", withExtension: "m4a")!
+    func hideAllAnswerButton() {
+        for index in 1...4 {
+            
+            let button = self.view.viewWithTag(index) as? UIButton
+            
+            button!.isHidden = true
+        }
+    }
+    // hides all 4 answer buttons
+    
+    func showAllAnswerButton() {
+        
+        var imageList = DBManager.trialWithImages[Trackers.currentTrial!]
+        
+        for index in 1...4 {
+            let image = UIImage(named: imageList![index - 1]) as UIImage?
+            
+            let button = self.view.viewWithTag(index) as? UIButton
+            button!.isHidden = false
+            button?.setBackgroundImage(image!, for: UIControlState.normal)
+        }
+    }
+    // displays all 4 answer buttons
+    
+    func playAudio(path: String) {
+        let url = Bundle.main.url(forResource: path, withExtension: "m4a")!
         
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -186,41 +203,31 @@ class ViewControllerGaze: UIViewController {
         }
     }
     // when called plays "Ding Sound Effect" audio file
-    
-    
-    func dateToString(date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let dateDB: String = dateFormatter.string(from: date)
-        
-        return dateDB
-    }
-    // to convert swift date object to String that is storable in sqlite DB
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        trialOrder = 0
-        
-        Trackers.currentTest = 1
-        DBManager.getTrialInfoForTest(test: Trackers.currentTest!)
-        // set current test to 1 as this is Gaze view and retrieve the info from DB
-        
-        DBManager.getVideoDataForTest()
-        
-        Trackers.randomizeArray(array: DBManager.trialList)
-        Trackers.currentTrial = Trackers.randomizedTrialList[0]
-        // call randomizeArray function on Gaze trial list and set the current trial to first element in this array
-        
         finishMessage.isHidden = true
-        mainMenu.isHidden = true
-        mainMenu.isEnabled = false
+        mainMenuButton.isHidden = true
+        mainMenuButton.isEnabled = false
+        
+        trialOrder = 0
+
+        Trackers.currentTest = 2
+    
+        DBManager.getTrialInfoForTest(test: Trackers.currentTest!)
+        // set current test to 2 as this is Stories view and retrieve the info from DB
+        Trackers.currentTrial = DBManager.trialList[trialOrder]
+        
+        DBManager.getTextDataForTest()
+        DBManager.getAudioDataForTest()
+        DBManager.getVideoDataForTest()
+        DBManager.getImageDataForTest()
         
         playTestVideo(videoView: videoView)
         
+        hideAllAnswerButton()
     }
-    // Sets current test to 1 (Gaze) and retrieves media for this test on view load
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

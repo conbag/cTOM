@@ -19,6 +19,9 @@ final class DBManager {
     static var trialWithVideo = [Int : String]()
     static var trialWithAnswer = [Int : Int]()
     // dictionary to story correct answers with id's
+    static var trialWithImages = [Int : [String]]()
+    static var trialWithText = [Int : String]()
+    static var trialWithAudio = [Int : String]()
     
     private init() {}
     
@@ -33,12 +36,78 @@ final class DBManager {
             
             while results?.next() == true {
                 trialList.append(Int((results?.int(forColumn: "trial_id"))!))
-                trialWithVideo[Int((results?.int(forColumn: "trial_id"))!)] = (results?.string(forColumn: "trial_name"))!
                 trialWithAnswer[Int((results?.int(forColumn: "trial_id"))!)] = Int((results?.int(forColumn: "correct_answer_tag"))!)
             }
+            
         }
     }
     // extracts video paths for specific test and stors in array. Also store trial id and correct answers in dictionary
+    
+    
+    static func getImageDataForTest() {
+        for trial in trialList {
+        
+            let query = "select t.media_id, m.name, m.media_type from 'Trial-Media' as t inner join Media as m on t.media_id = m.media_id where t.trial_id = \(trial) AND m.media_type = 'Image' order by t.'order'"
+            
+            let results:FMResultSet? = DBManager.ctomDB.executeQuery(query, withArgumentsIn: [])
+            var imageArray = [String]()
+            
+            while results?.next() == true {
+                imageArray.append(String((results?.string(forColumn: "name"))!))
+            }
+            
+            trialWithImages[trial] = imageArray
+        }
+    }
+    // returns dict with current trial list and corresponding image file names
+    
+    
+    static func getTextDataForTest() {
+        for trial in trialList {
+            
+            let query = "select t.media_id, m.name, m.media_type from 'Trial-Media' as t inner join Media as m on t.media_id = m.media_id where t.trial_id = \(trial) AND m.media_type = 'Text'"
+            
+            let results:FMResultSet? = DBManager.ctomDB.executeQuery(query, withArgumentsIn: [])
+            
+            while results?.next() == true {
+                trialWithText[trial] = (results?.string(forColumn: "name"))!
+            }
+        }
+    }
+    // returns dict with current trial list and corresponding text file names
+    
+    
+    static func getAudioDataForTest() {
+        for trial in trialList {
+            
+            let query = "select t.media_id, m.name, m.media_type from 'Trial-Media' as t inner join Media as m on t.media_id = m.media_id where t.trial_id = \(trial) AND m.media_type = 'Audio'"
+            
+            let results:FMResultSet? = DBManager.ctomDB.executeQuery(query, withArgumentsIn: [])
+            
+            while results?.next() == true {
+                trialWithAudio[trial] = (results?.string(forColumn: "name"))!
+            }
+        }
+        
+    }
+    // returns dict with current trial list and corresponding audio file names
+    
+    
+    static func getVideoDataForTest() {
+        for trial in trialList {
+            
+            let query = "select t.media_id, m.name, m.media_type from 'Trial-Media' as t inner join Media as m on t.media_id = m.media_id where t.trial_id = \(trial) AND m.media_type = 'Video'"
+            
+            let results:FMResultSet? = DBManager.ctomDB.executeQuery(query, withArgumentsIn: [])
+            
+            while results?.next() == true {
+                trialWithVideo[trial] = (results?.string(forColumn: "name"))!
+            }
+        }
+        
+    }
+    // returns dict with current trial list and corresponding audio file names
+    
     
     
     static func storeResultsToDatabase() {

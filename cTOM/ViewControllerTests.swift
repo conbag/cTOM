@@ -8,17 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewControllerTests: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Checks to see if .db file exists in documents directory and copies from main bundle if needed
-        DBManager.copyDatabaseIfNeeded()
         
-        
-        // Opens DB
-        DBManager.openDatabase()
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,6 +14,10 @@ final class Trackers {
     
     static let sharedInstance = Trackers()
     
+    static var adminLoggedIn = false
+    static var currentAdmin: Int?
+    // keeps track of currently logged in admin_id
+    
     static var currentParticipant: Int?
     static var currentTest: Int?
     static var currentSession: Int?

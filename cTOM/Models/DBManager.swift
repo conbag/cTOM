@@ -25,12 +25,68 @@ final class DBManager {
     
     private init() {}
     
+    static func getCurrentAdmin(email: String) -> Int {
+        
+        var currentAdmin: Int?
+        let query = "select * from Administrator where email = \"\(email)\""
+        
+        if let results:FMResultSet = DBManager.ctomDB.executeQuery(query, withArgumentsIn: []) {
+            while results.next() == true {
+                currentAdmin = Int(results.int(forColumn: "admin_id"))
+            }
+        }
+        
+        return currentAdmin!
+    }
+    // retrieves id for currently logged in admin
+    
+    static func checkEmailAndPasswordCorrect(email: String, password: String) -> Bool {
+        let query = "select * from Administrator where email = \"\(email)\""
+        
+        if let results:FMResultSet = DBManager.ctomDB.executeQuery(query, withArgumentsIn: []) {
+            while results.next() == true {
+                if results.string(forColumn: "password") == password {
+                    return true
+                } else {
+                    print("incorrect password")
+                }
+            }
+        } else {
+            print("incorrect email")
+            print(query)
+        }
+        return false
+    }
+    // Checks database to ensure email and password exist -> used for login
+    
+    static func checkEmailForRegister(email: String, password: String, fName: String, lName: String) -> Bool {
+        let query = "select * from Administrator where email = \"\(email)\""
+        
+        if let results:FMResultSet = DBManager.ctomDB.executeQuery(query, withArgumentsIn: []) {
+            while results.next() == true {
+                if results.string(forColumn: "email") == email {
+                    print("email already exists")
+                    return false
+                }
+            }
+        }
+        
+        let update = "INSERT INTO `Administrator`(`password`, `first_name`, `surname`, 'email') VALUES (?, ?, ?, ?);"
+        
+        do {
+            try DBManager.ctomDB.executeUpdate(update, values: [password, fName, lName, email])
+        } catch {
+            print(error)
+        }
+        
+        return true
+    }
+    // Checks database to ensure email is not already in use -> used for register
     
     static func getTrialInfoForTest(test: Int) {
         if Trackers.currentTest == test {
             
             let query = "select * from Trial where test_id = \(test)"
-            // will need to change this to join for stories trials
             
             let results:FMResultSet? = DBManager.ctomDB.executeQuery(query, withArgumentsIn: [])
             

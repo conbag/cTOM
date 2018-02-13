@@ -18,7 +18,7 @@ class ViewControllerStoriesTrials: UIViewController {
     var timer = Timer()
     // timer object used to question and answer slots
     
-    var videoDate: Date?
+    var questionDate: Date?
     var buttonDate: Date?
     var dbDate: String?
     // timestamp that will be recorded in db for each trial
@@ -48,8 +48,8 @@ class ViewControllerStoriesTrials: UIViewController {
             
             let result: Result
             
-            let reactionTime = round(1000 * (currentTimeInMiliseconds(date: buttonDate!) - currentTimeInMiliseconds(date: videoDate!))) / 1000
-            // get seconds(to 3 decimal places) by taking away video start time minus button time
+            let reactionTime = round(1000 * (currentTimeInMiliseconds(date: buttonDate!) - currentTimeInMiliseconds(date: questionDate!))) / 1000
+            // get seconds(to 3 decimal places) by taking away question start time minus button time
             
             if sender.tag as Int == correctAnswer {
                 playAudio(path: "Ding Sound Effect")
@@ -81,6 +81,7 @@ class ViewControllerStoriesTrials: UIViewController {
         
         let path = Bundle.main.path(forResource: DBManager.trialWithVideo[Trackers
             .currentTrial!], ofType: "mp4")
+        // searched trialWithVideo dict for correct video to play for current trial
         
         player = AVPlayer(url: URL(fileURLWithPath: path!))
         
@@ -88,6 +89,7 @@ class ViewControllerStoriesTrials: UIViewController {
         playerLayer.videoGravity = .resize
         
         playerLayer.frame = videoView.bounds
+        // set video to bounds of videoView
         
         videoView.layer.addSublayer(playerLayer)
         
@@ -95,7 +97,12 @@ class ViewControllerStoriesTrials: UIViewController {
         // disable volume on gaze videos as direct is indicated
         player.play()
         
+        videoView.layer.borderWidth = 3
+        videoView.layer.cornerRadius = 3
+        // add border and radius to video outline
+        
         NotificationCenter.default.addObserver(self, selector:#selector(self.playerDidFinishPlaying(note:)),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem)
+        // notification for when video finishes
     }
     
     @objc func playerDidFinishPlaying(note: NSNotification){
@@ -103,15 +110,18 @@ class ViewControllerStoriesTrials: UIViewController {
         
         questionLabel.text = DBManager.trialWithText[Trackers.currentTrial!]
         playAudio(path: DBManager.trialWithAudio[Trackers.currentTrial!]!)
+        // displya question audio and text for current trial
         
-        let when = DispatchTime.now() + 2
+        let when = DispatchTime.now() + 4
         DispatchQueue.main.asyncAfter(deadline: when) {
             self.showAllAnswerButton()
             self.activeTrial = true
-            self.videoDate = Date()
-            self.dbDate = self.dateToString(date: self.videoDate!)
+            self.questionDate = Date()
+            self.dbDate = self.dateToString(date: self.questionDate!)
+            // wait 4 seconds before displaying answer buttons and setting trial to active
             
             self.timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(self.closeQuestion), userInfo: nil, repeats: false)
+            // wait another 4 seconds before calling closeQuestion function below
         }
         
     }
@@ -123,8 +133,9 @@ class ViewControllerStoriesTrials: UIViewController {
             
             Trackers.resultsArray.append(result)
         }
+        // when user fails to press button in time we record the above as their result
         
-        if Trackers.currentTrial == DBManager.trialList[DBManager.trialList.count] {
+        if Trackers.currentTrial == DBManager.trialList[DBManager.trialList.count - 1] {
             
             finishMessage.isHidden = false
             mainMenuButton.isHidden = false
@@ -143,9 +154,11 @@ class ViewControllerStoriesTrials: UIViewController {
             DBManager.trialWithText.removeAll()
             DBManager.trialWithAudio.removeAll()
             
+            // on completion of last trial we display finish message and main menu button. Also reset all DBManager and Tracker variables
+            
         } else {
         
-            activeTrial = true
+            activeTrial = false
             
             trialOrder += 1
             Trackers.currentTrial! += 1
@@ -154,6 +167,7 @@ class ViewControllerStoriesTrials: UIViewController {
             questionLabel.text = ""
             playTestVideo(videoView: videoView)
         }
+        // increment current trial and trial order by one and hide answer buttons
 
     }
     
@@ -185,6 +199,8 @@ class ViewControllerStoriesTrials: UIViewController {
             let button = self.view.viewWithTag(index) as? UIButton
             button!.isHidden = false
             button?.setBackgroundImage(image!, for: UIControlState.normal)
+            button?.layer.borderWidth = 3
+            button?.layer.cornerRadius = 3
         }
     }
     // displays all 4 answer buttons
@@ -227,6 +243,7 @@ class ViewControllerStoriesTrials: UIViewController {
         playTestVideo(videoView: videoView)
         
         hideAllAnswerButton()
+        
     }
 
     override func didReceiveMemoryWarning() {

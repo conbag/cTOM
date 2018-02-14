@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51541D06A6341694FD846A0B /* Pods_cTOMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6FCF397165E9619EA936879 /* Pods_cTOMTests.framework */; };
+		5684E6763C1CEA4A1B13BC6E /* Pods_cTOM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADBDB6E1C3E79DF95807711 /* Pods_cTOM.framework */; };
 		F42797FC2031D52C007F5BE8 /* ViewControllerAdminLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42797FB2031D52C007F5BE8 /* ViewControllerAdminLogin.swift */; };
 		F42797FE2031D5B0007F5BE8 /* ViewControllerAdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42797FD2031D5B0007F5BE8 /* ViewControllerAdminHome.swift */; };
 		F42798002031D76E007F5BE8 /* cTOM.db in Resources */ = {isa = PBXBuildFile; fileRef = F42797FF2031D76E007F5BE8 /* cTOM.db */; };
 		F427980220321051007F5BE8 /* ViewControllerAdminRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F427980120321051007F5BE8 /* ViewControllerAdminRegister.swift */; };
+		F4499AE72034AA8100AD2CFD /* c-TOM Stories introduction.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4499AE62034AA8100AD2CFD /* c-TOM Stories introduction.m4a */; };
 		F46375DD2028D3B0007CC87F /* ViewControllerStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46375DC2028D3B0007CC87F /* ViewControllerStories.swift */; };
 		F4994B8220247688001CE79C /* Ding Sound Effect.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4994B8120247688001CE79C /* Ding Sound Effect.m4a */; };
 		F49E4B552022585500161F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49E4B542022585500161F15 /* Assets.xcassets */; };
@@ -148,10 +151,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7CF00571102A36FF722BD165 /* Pods-cTOM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cTOM.release.xcconfig"; path = "Pods/Target Support Files/Pods-cTOM/Pods-cTOM.release.xcconfig"; sourceTree = "<group>"; };
+		A9EE84371BFE9603AF11687A /* Pods-cTOM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cTOM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cTOM/Pods-cTOM.debug.xcconfig"; sourceTree = "<group>"; };
+		AADBDB6E1C3E79DF95807711 /* Pods_cTOM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cTOM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADEAE1624F9FBD6227BD4F3A /* Pods-cTOMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cTOMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-cTOMTests/Pods-cTOMTests.release.xcconfig"; sourceTree = "<group>"; };
+		B6FCF397165E9619EA936879 /* Pods_cTOMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cTOMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42797FB2031D52C007F5BE8 /* ViewControllerAdminLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminLogin.swift; sourceTree = "<group>"; };
 		F42797FD2031D5B0007F5BE8 /* ViewControllerAdminHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminHome.swift; sourceTree = "<group>"; };
 		F42797FF2031D76E007F5BE8 /* cTOM.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cTOM.db; sourceTree = "<group>"; };
 		F427980120321051007F5BE8 /* ViewControllerAdminRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminRegister.swift; sourceTree = "<group>"; };
+		F4499AE62034AA8100AD2CFD /* c-TOM Stories introduction.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "c-TOM Stories introduction.m4a"; sourceTree = "<group>"; };
 		F46375DC2028D3B0007CC87F /* ViewControllerStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStories.swift; sourceTree = "<group>"; };
 		F4994B8120247688001CE79C /* Ding Sound Effect.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ding Sound Effect.m4a"; sourceTree = "<group>"; };
 		F49E4B542022585500161F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -287,6 +296,7 @@
 		F4D9FCC6201FB5B1004D0F4E /* Jess_A_20d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_20d_L.mp4; sourceTree = "<group>"; };
 		F4D9FCC7201FB5B1004D0F4E /* Jess_A_sa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_sa.mp4; sourceTree = "<group>"; };
 		F4D9FCC8201FB5B1004D0F4E /* Jess_A_10d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_10d_L.mp4; sourceTree = "<group>"; };
+		F842EE00EDF60EDB87DB497C /* Pods-cTOMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cTOMTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cTOMTests/Pods-cTOMTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +304,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5684E6763C1CEA4A1B13BC6E /* Pods_cTOM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,12 +312,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51541D06A6341694FD846A0B /* Pods_cTOMTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3441ED3A7C8F2915389A07F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AADBDB6E1C3E79DF95807711 /* Pods_cTOM.framework */,
+				B6FCF397165E9619EA936879 /* Pods_cTOMTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E167F1AF11556CF4C5AACD46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9EE84371BFE9603AF11687A /* Pods-cTOM.debug.xcconfig */,
+				7CF00571102A36FF722BD165 /* Pods-cTOM.release.xcconfig */,
+				F842EE00EDF60EDB87DB497C /* Pods-cTOMTests.debug.xcconfig */,
+				ADEAE1624F9FBD6227BD4F3A /* Pods-cTOMTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F4CEFB8C202B637100AE1291 /* c_TOM_Stories */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +356,7 @@
 		F4CEFB99202B66A600AE1291 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				F4499AE62034AA8100AD2CFD /* c-TOM Stories introduction.m4a */,
 				F4CEFBA8202B678600AE1291 /* What Does Jane Assume Tom Thinks Is In The Box.m4a */,
 				F4CEFBA5202B678500AE1291 /* What Does Jane Think Is In The Box.m4a */,
 				F4CEFBA4202B678500AE1291 /* What Does John Assume Kate Thinks Is In Her Backpack.m4a */,
@@ -351,6 +384,8 @@
 				F4D9FC2C201FB3BB004D0F4E /* cTOM */,
 				F4D9FC41201FB3BB004D0F4E /* cTOMTests */,
 				F4D9FC2B201FB3BB004D0F4E /* Products */,
+				E167F1AF11556CF4C5AACD46 /* Pods */,
+				3441ED3A7C8F2915389A07F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -635,9 +670,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4D9FC47201FB3BB004D0F4E /* Build configuration list for PBXNativeTarget "cTOM" */;
 			buildPhases = (
+				AF4BF2E5531B29C4B7DD3388 /* [CP] Check Pods Manifest.lock */,
 				F4D9FC26201FB3BB004D0F4E /* Sources */,
 				F4D9FC27201FB3BB004D0F4E /* Frameworks */,
 				F4D9FC28201FB3BB004D0F4E /* Resources */,
+				A8BC1E1A56A9685FE18F9FCA /* [CP] Embed Pods Frameworks */,
+				0D41D7BF303F1B7B818CA515 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -652,9 +690,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4D9FC4A201FB3BB004D0F4E /* Build configuration list for PBXNativeTarget "cTOMTests" */;
 			buildPhases = (
+				9EA682EA2514C0EBEF1984F7 /* [CP] Check Pods Manifest.lock */,
 				F4D9FC3A201FB3BB004D0F4E /* Sources */,
 				F4D9FC3B201FB3BB004D0F4E /* Frameworks */,
 				F4D9FC3C201FB3BB004D0F4E /* Resources */,
+				E3589BCD258CED11E90FE812 /* [CP] Embed Pods Frameworks */,
+				E7DE4FD158C59E478FA75205 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -769,6 +810,7 @@
 				F4CEFB96202B63B900AE1291 /* Apple_2.mp4 in Resources */,
 				F4D9FD08201FB5B1004D0F4E /* Jess_N_up.mp4 in Resources */,
 				F4D9FCE4201FB5B1004D0F4E /* Chris_N_20d_L.mp4 in Resources */,
+				F4499AE72034AA8100AD2CFD /* c-TOM Stories introduction.m4a in Resources */,
 				F4D9FCF3201FB5B1004D0F4E /* Brian_N_20d_L.mp4 in Resources */,
 				F4CEFBAC202B678600AE1291 /* What Does John Think Is In His Backpack.m4a in Resources */,
 				F4D9FCF8201FB5B1004D0F4E /* Brian_N_10d_R.mp4 in Resources */,
@@ -833,6 +875,108 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D41D7BF303F1B7B818CA515 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cTOM/Pods-cTOM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EA682EA2514C0EBEF1984F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cTOMTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8BC1E1A56A9685FE18F9FCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-cTOM/Pods-cTOM-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cTOM/Pods-cTOM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF4BF2E5531B29C4B7DD3388 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cTOM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3589BCD258CED11E90FE812 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cTOMTests/Pods-cTOMTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7DE4FD158C59E478FA75205 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cTOMTests/Pods-cTOMTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4D9FC26201FB3BB004D0F4E /* Sources */ = {
@@ -1006,6 +1150,7 @@
 		};
 		F4D9FC48201FB3BB004D0F4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9EE84371BFE9603AF11687A /* Pods-cTOM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1023,6 +1168,7 @@
 		};
 		F4D9FC49201FB3BB004D0F4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CF00571102A36FF722BD165 /* Pods-cTOM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1039,6 +1185,7 @@
 		};
 		F4D9FC4B201FB3BB004D0F4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F842EE00EDF60EDB87DB497C /* Pods-cTOMTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1055,6 +1202,7 @@
 		};
 		F4D9FC4C201FB3BB004D0F4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADEAE1624F9FBD6227BD4F3A /* Pods-cTOMTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

@@ -7,13 +7,40 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class ViewControllerStories: UIViewController {
+    
+    var audioPlayer: AVAudioPlayer?
+    
+    @IBAction func beginButton(_ sender: UIButton) {
+        
+        audioPlayer?.stop()
+        
+    }
+    // stop audio when 'begin' button is pressed
+    
+    func playAudio(path: String) {
+        let url = Bundle.main.url(forResource: path, withExtension: "m4a")!
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            guard let dingSound = audioPlayer else { return }
+            
+            dingSound.prepareToPlay()
+            dingSound.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    // function to play instuctions audio on view load
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        playAudio(path: "c-TOM Stories introduction")
+        // play instruction audio when view loads
     }
 
     override func didReceiveMemoryWarning() {

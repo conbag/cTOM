@@ -35,36 +35,45 @@ class ViewControllerGazePractice: UIViewController {
     
     
     @IBAction func practiceButton(_ sender: UIButton) {
-        
         if sender.tag == buttonTag! {
             
             sender.isHidden = true
             
-            if sender.tag < 3 {
-
+            if sender.tag == 1 {
                 buttonTag! += 1
                 
                 self.view.viewWithTag(buttonTag!)?.isHidden = false
+                let button = self.view.viewWithTag(4) as? UIButton
+                let img = UIImage(named: "c-TOM_Gaze_practice_looking_left")
                 
+                button?.setBackgroundImage(img, for: .normal)
+            } else if sender.tag == 2 {
+                buttonTag! += 1
+                
+                self.view.viewWithTag(buttonTag!)?.isHidden = false
+                let button = self.view.viewWithTag(4) as? UIButton
+                let img = UIImage(named: "c-TOM_Gaze_practice_looking_up")
+                
+                button?.setBackgroundImage(img, for: .normal)
             } else if sender.tag == 3 {
-
                 buttonTag! += 1
                 self.view.viewWithTag(buttonTag!)?.isHidden = false
                 
                 straightInstruction.isHidden = false
+                let button = self.view.viewWithTag(4) as? UIButton
+                let img = UIImage(named: "c-TOM_Gaze_practice_looking_straight_ahead")
                 
+                button?.setBackgroundImage(img, for: .normal)
             } else {
-                
                 buttonTag = 1
                 readyButton.isEnabled = true
                 readyButton.isHidden = false
                 
                 straightInstruction.isHidden = true
-                
             }
         }
     }
-    // logic for displaying and hiding the various practice buttons
+    // logic for displaying and hiding the various practice buttons and changing centre image
 
 
     override func viewDidLoad() {

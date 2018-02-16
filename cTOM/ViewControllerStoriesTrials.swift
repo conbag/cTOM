@@ -79,6 +79,10 @@ class ViewControllerStoriesTrials: UIViewController {
     
     func playTestVideo(videoView: UIView) {
         
+        videoView.layer.borderWidth = 3
+        videoView.layer.cornerRadius = 3
+        // add border and radius to video outline
+        
         let path = Bundle.main.path(forResource: DBManager.trialWithVideo[Trackers
             .currentTrial!], ofType: "mp4")
         // searched trialWithVideo dict for correct video to play for current trial
@@ -97,10 +101,6 @@ class ViewControllerStoriesTrials: UIViewController {
         // disable volume on gaze videos as direct is indicated
         player.play()
         
-        videoView.layer.borderWidth = 3
-        videoView.layer.cornerRadius = 3
-        // add border and radius to video outline
-        
         NotificationCenter.default.addObserver(self, selector:#selector(self.playerDidFinishPlaying(note:)),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem)
         // notification for when video finishes
     }
@@ -109,8 +109,9 @@ class ViewControllerStoriesTrials: UIViewController {
         //Called when player finished playing
         
         questionLabel.text = DBManager.trialWithText[Trackers.currentTrial!]
+        questionLabel.adjustsFontSizeToFitWidth = true
         playAudio(path: DBManager.trialWithAudio[Trackers.currentTrial!]!)
-        // displya question audio and text for current trial
+        // display question audio and text for current trial
         
         let when = DispatchTime.now() + 4
         DispatchQueue.main.asyncAfter(deadline: when) {
@@ -223,6 +224,9 @@ class ViewControllerStoriesTrials: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UIDevice.current.setValue(UIInterfaceOrientation.landscapeRight.rawValue, forKey: "orientation")
+        // to force landscape view only
+        
         finishMessage.isHidden = true
         mainMenuButton.isHidden = true
         mainMenuButton.isEnabled = false
@@ -240,11 +244,28 @@ class ViewControllerStoriesTrials: UIViewController {
         DBManager.getVideoDataForTest()
         DBManager.getImageDataForTest()
         
-        playTestVideo(videoView: videoView)
-        
         hideAllAnswerButton()
-        
     }
+    
+    override var shouldAutorotate : Bool {
+        return true
+    }
+    
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscapeRight
+    }
+    
+    override var preferredInterfaceOrientationForPresentation : UIInterfaceOrientation {
+        return UIInterfaceOrientation.landscapeRight
+    }
+    // above 3 functions used to force landscape view only
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        playTestVideo(videoView: videoView)
+    }
+    // need to put play method here in order for constraints to update first
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

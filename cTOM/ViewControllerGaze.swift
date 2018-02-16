@@ -200,6 +200,9 @@ class ViewControllerGaze: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UIDevice.current.setValue(UIInterfaceOrientation.landscapeRight.rawValue, forKey: "orientation")
+        // to force landscape view only
+        
         trialOrder = 0
         
         Trackers.currentTest = 1
@@ -216,12 +219,31 @@ class ViewControllerGaze: UIViewController {
         mainMenu.isHidden = true
         mainMenu.isEnabled = false
         
-        playTestVideo(videoView: videoView)
+        //playTestVideo(videoView: videoView)
         
     }
     // Sets current test to 1 (Gaze) and retrieves media for this test on view load
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        playTestVideo(videoView: videoView)
+    }
+    // need to put play method here in order for constraints to update first
+    
+    override var shouldAutorotate : Bool {
+        return true
+    }
+    
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscapeRight
+    }
+    
+    override var preferredInterfaceOrientationForPresentation : UIInterfaceOrientation {
+        return UIInterfaceOrientation.landscapeRight
+    }
+    // above 3 functions used to force landscape view only
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

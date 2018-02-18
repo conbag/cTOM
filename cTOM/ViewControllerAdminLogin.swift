@@ -24,6 +24,7 @@ class ViewControllerAdminLogin: UIViewController {
         } else if DBManager.checkEmailAndPasswordCorrect(email: emailField.text!, password: passwordField.text!) == true {
             Trackers.adminLoggedIn = true
             Trackers.currentAdmin = DBManager.getCurrentAdmin(email: emailField.text!)
+            Trackers.currentAdminEmail = emailField.text!
             self.performSegue(withIdentifier: "successfulLogin", sender: self)  
         } else {
             errorMessage.isHidden = false

@@ -11,7 +11,6 @@
 		5684E6763C1CEA4A1B13BC6E /* Pods_cTOM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADBDB6E1C3E79DF95807711 /* Pods_cTOM.framework */; };
 		F42797FC2031D52C007F5BE8 /* ViewControllerAdminLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42797FB2031D52C007F5BE8 /* ViewControllerAdminLogin.swift */; };
 		F42797FE2031D5B0007F5BE8 /* ViewControllerAdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42797FD2031D5B0007F5BE8 /* ViewControllerAdminHome.swift */; };
-		F42798002031D76E007F5BE8 /* cTOM.db in Resources */ = {isa = PBXBuildFile; fileRef = F42797FF2031D76E007F5BE8 /* cTOM.db */; };
 		F427980220321051007F5BE8 /* ViewControllerAdminRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F427980120321051007F5BE8 /* ViewControllerAdminRegister.swift */; };
 		F4499AE72034AA8100AD2CFD /* c-TOM Stories introduction.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4499AE62034AA8100AD2CFD /* c-TOM Stories introduction.m4a */; };
 		F46375DD2028D3B0007CC87F /* ViewControllerStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46375DC2028D3B0007CC87F /* ViewControllerStories.swift */; };
@@ -20,6 +19,8 @@
 		F4B7189D2020D60A00BE3EB6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B7189C2020D60A00BE3EB6 /* Result.swift */; };
 		F4B99F07202891DC003C25C0 /* ViewControllerGazePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B99F06202891DC003C25C0 /* ViewControllerGazePractice.swift */; };
 		F4B99F0920289585003C25C0 /* GazePractice.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B99F0820289585003C25C0 /* GazePractice.png */; };
+		F4BA870220388EAC00340BE0 /* ViewControllerNewParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA870120388EAC00340BE0 /* ViewControllerNewParticipant.swift */; };
+		F4BA8704203892CB00340BE0 /* cTOM.db in Resources */ = {isa = PBXBuildFile; fileRef = F4BA8703203892CB00340BE0 /* cTOM.db */; };
 		F4BC1F69202A275500A2E2B1 /* ViewControllerStoriesTrials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC1F68202A275500A2E2B1 /* ViewControllerStoriesTrials.swift */; };
 		F4CD745620209E8700C8A791 /* ViewControllerGaze.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD745520209E8700C8A791 /* ViewControllerGaze.swift */; };
 		F4CEFB93202B63B900AE1291 /* Robbery_3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4CEFB8D202B63B900AE1291 /* Robbery_3.mp4 */; };
@@ -158,7 +159,6 @@
 		B6FCF397165E9619EA936879 /* Pods_cTOMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cTOMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42797FB2031D52C007F5BE8 /* ViewControllerAdminLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminLogin.swift; sourceTree = "<group>"; };
 		F42797FD2031D5B0007F5BE8 /* ViewControllerAdminHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminHome.swift; sourceTree = "<group>"; };
-		F42797FF2031D76E007F5BE8 /* cTOM.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cTOM.db; sourceTree = "<group>"; };
 		F427980120321051007F5BE8 /* ViewControllerAdminRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminRegister.swift; sourceTree = "<group>"; };
 		F4499AE62034AA8100AD2CFD /* c-TOM Stories introduction.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "c-TOM Stories introduction.m4a"; sourceTree = "<group>"; };
 		F46375DC2028D3B0007CC87F /* ViewControllerStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStories.swift; sourceTree = "<group>"; };
@@ -167,6 +167,8 @@
 		F4B7189C2020D60A00BE3EB6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		F4B99F06202891DC003C25C0 /* ViewControllerGazePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGazePractice.swift; sourceTree = "<group>"; };
 		F4B99F0820289585003C25C0 /* GazePractice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GazePractice.png; sourceTree = "<group>"; };
+		F4BA870120388EAC00340BE0 /* ViewControllerNewParticipant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNewParticipant.swift; sourceTree = "<group>"; };
+		F4BA8703203892CB00340BE0 /* cTOM.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cTOM.db; sourceTree = "<group>"; };
 		F4BC1F68202A275500A2E2B1 /* ViewControllerStoriesTrials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStoriesTrials.swift; sourceTree = "<group>"; };
 		F4CD745520209E8700C8A791 /* ViewControllerGaze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGaze.swift; sourceTree = "<group>"; };
 		F4CEFB8D202B63B900AE1291 /* Robbery_3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Robbery_3.mp4; path = "../../../../Dropbox/Software Design and Development - NUIG/FYP/Media/c_TOM_Stories/Robbery_3.mp4"; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 				F42797FB2031D52C007F5BE8 /* ViewControllerAdminLogin.swift */,
 				F427980120321051007F5BE8 /* ViewControllerAdminRegister.swift */,
 				F42797FD2031D5B0007F5BE8 /* ViewControllerAdminHome.swift */,
+				F4BA870120388EAC00340BE0 /* ViewControllerNewParticipant.swift */,
 				F4D9FC2F201FB3BB004D0F4E /* ViewControllerTests.swift */,
 				F46375DC2028D3B0007CC87F /* ViewControllerStories.swift */,
 				F4BC1F68202A275500A2E2B1 /* ViewControllerStoriesTrials.swift */,
@@ -658,7 +661,7 @@
 		F4D9FD1B201FB6A8004D0F4E /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				F42797FF2031D76E007F5BE8 /* cTOM.db */,
+				F4BA8703203892CB00340BE0 /* cTOM.db */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -777,6 +780,7 @@
 				F4D9FCF1201FB5B1004D0F4E /* Montage.mp4 in Resources */,
 				F4D9FCD5201FB5B1004D0F4E /* Jenny_A_20d_L.mp4 in Resources */,
 				F4D9FD0D201FB5B1004D0F4E /* Jess_N_10d_R.mp4 in Resources */,
+				F4BA8704203892CB00340BE0 /* cTOM.db in Resources */,
 				F4D9FD12201FB5B1004D0F4E /* Jess_A_30d_R.mp4 in Resources */,
 				F4CEFBB0202B678600AE1291 /* Where Is The Apple.m4a in Resources */,
 				F4D9FCE0201FB5B1004D0F4E /* Chris_N_20d_R.mp4 in Resources */,
@@ -787,7 +791,6 @@
 				F4D9FD00201FB5B1004D0F4E /* Brian_A_sa.mp4 in Resources */,
 				F4D9FCD3201FB5B1004D0F4E /* Jenny_A_sa.mp4 in Resources */,
 				F4D9FCDC201FB5B1004D0F4E /* Jenny_A_60d_L.mp4 in Resources */,
-				F42798002031D76E007F5BE8 /* cTOM.db in Resources */,
 				F4D9FCD1201FB5B1004D0F4E /* Jenny_N_up.mp4 in Resources */,
 				F4D9FD11201FB5B1004D0F4E /* Jess_A_10d_R.mp4 in Resources */,
 				F4D9FD18201FB5B1004D0F4E /* Jess_A_20d_L.mp4 in Resources */,
@@ -990,6 +993,7 @@
 				F46375DD2028D3B0007CC87F /* ViewControllerStories.swift in Sources */,
 				F4D9FC30201FB3BB004D0F4E /* ViewControllerTests.swift in Sources */,
 				F4B99F07202891DC003C25C0 /* ViewControllerGazePractice.swift in Sources */,
+				F4BA870220388EAC00340BE0 /* ViewControllerNewParticipant.swift in Sources */,
 				F4D9FC66201FB47C004D0F4E /* DBManager.swift in Sources */,
 				F4B7189D2020D60A00BE3EB6 /* Result.swift in Sources */,
 				F42797FE2031D5B0007F5BE8 /* ViewControllerAdminHome.swift in Sources */,
@@ -1157,7 +1161,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39UPL9DKZ7;
 				INFOPLIST_FILE = cTOM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctom.cTOM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1177,7 +1181,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39UPL9DKZ7;
 				INFOPLIST_FILE = cTOM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctom.cTOM;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -85,7 +85,7 @@ class ViewControllerGaze: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(callVideo), userInfo: nil, repeats: false)
     }
-    // delays the callVideo method for 2 seconds
+    // delays the callVideo method for 1 second
     
     
     @objc func callVideo() {
@@ -116,7 +116,6 @@ class ViewControllerGaze: UIViewController {
     
     
     func playTestVideo(videoView: UIView) {
-
         let path = Bundle.main.path(forResource: DBManager.trialWithVideo[Trackers
             .currentTrial!], ofType: "mp4")
         
@@ -137,7 +136,6 @@ class ViewControllerGaze: UIViewController {
         
         videoDate = Date()
         dbDate = dateToString(date: videoDate!)
-        
     }
     
     @objc func playerDidFinishPlaying(note: NSNotification){
@@ -153,7 +151,10 @@ class ViewControllerGaze: UIViewController {
         }
         // if trial is not answered store result with 0 for 'answerTag' and 0.0 for time measure
         
-        playerLayer.sublayers = nil
+        NotificationCenter.default.removeObserver(self)
+        playerLayer.player = nil
+        playerLayer.removeFromSuperlayer()
+        // problem area. need to remove playerlayer from its super layer or there will be memory leak
         // removes videoplayer to make way for cross image
         
         let cross = UIImage(named: "Cross")?.cgImage
@@ -218,8 +219,6 @@ class ViewControllerGaze: UIViewController {
         finishMessage.isHidden = true
         mainMenu.isHidden = true
         mainMenu.isEnabled = false
-        
-        //playTestVideo(videoView: videoView)
         
     }
     // Sets current test to 1 (Gaze) and retrieves media for this test on view load

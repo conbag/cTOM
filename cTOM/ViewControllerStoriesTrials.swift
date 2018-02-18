@@ -158,6 +158,11 @@ class ViewControllerStoriesTrials: UIViewController {
             // on completion of last trial we display finish message and main menu button. Also reset all DBManager and Tracker variables
             
         } else {
+            
+            NotificationCenter.default.removeObserver(self)
+            playerLayer.player = nil
+            playerLayer.removeFromSuperlayer()
+            // removes player and observer objects to clear memory
         
             activeTrial = false
             

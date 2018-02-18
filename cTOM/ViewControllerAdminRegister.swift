@@ -37,6 +37,7 @@ class ViewControllerAdminRegister: UIViewController {
         } else {
             Trackers.adminLoggedIn = true
             Trackers.currentAdmin = DBManager.getCurrentAdmin(email: emailField.text!)
+            Trackers.currentAdminEmail = emailField.text!
             self.performSegue(withIdentifier: "registerToHome", sender: self)
         }
     }

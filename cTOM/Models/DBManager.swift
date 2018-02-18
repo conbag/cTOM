@@ -22,8 +22,49 @@ final class DBManager {
     static var trialWithImages = [Int : [String]]()
     static var trialWithText = [Int : String]()
     static var trialWithAudio = [Int : String]()
+    static var allParticipants = [String]()
     
     private init() {}
+    
+    static func getAllAddedParticipants() {
+        allParticipants.removeAll()
+        
+        let query = "select participant_id from Participant"
+        
+        if let results:FMResultSet = DBManager.ctomDB.executeQuery(query, withArgumentsIn: []) {
+            while results.next() == true {
+                allParticipants.append(String((results.string(forColumn: "participant_id"))!))
+            }
+        }
+    }
+    // stores all added participants to allParticipants String array
+    
+    static func checkParticipantID(id: String, dob: String, gender: String) -> Bool {
+        let query = "select * from Participant where participant_id = \"\(id)\""
+        
+        if let results:FMResultSet = DBManager.ctomDB.executeQuery(query, withArgumentsIn: []) {
+            while results.next() == true {
+                if results.string(forColumn: "participant_id") == id {
+                    print("id already exists")
+                    return false
+                }
+            }
+        }
+        // return false if participant_id already exists
+        
+        let update = "INSERT INTO `Participant`(`participant_id`, `gender`, `dob`, `admin_id`) VALUES (?, ?, ?, ?);"
+        
+        do {
+            try DBManager.ctomDB.executeUpdate(update, values: [id, gender, dob, Trackers.currentAdmin!])
+        } catch {
+            print(error)
+        }
+        // store new participant and return true otherwise
+        
+        return true
+    }
+    // Checks database to participant_id is not already in use -> used for new participant
+    
     
     static func getCurrentAdmin(email: String) -> Int {
         

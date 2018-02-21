@@ -26,6 +26,26 @@ final class DBManager {
     
     private init() {}
     
+    static func createNewSession() {
+        let update = "INSERT INTO `Session`('participant_id', 'admin_id') VALUES (?, ?);"
+        
+        do {
+            try DBManager.ctomDB.executeUpdate(update, values: [Trackers.currentParticipant!, Trackers.currentAdmin!])
+        } catch {
+            print(error)
+        }
+        // stores new session to database for current participant
+        
+        let query = "select * from Session order by session_id desc limit 1"
+        
+        if let results:FMResultSet = DBManager.ctomDB.executeQuery(query, withArgumentsIn: []) {
+            while results.next() == true {
+                Trackers.currentSession = (Int(results.int(forColumn: "session_id")))
+            }
+        }
+        // check last record to retrieve session_id and store to currentSession variable
+    }
+    
     static func getAllAddedParticipants() {
         allParticipants.removeAll()
         
@@ -209,18 +229,18 @@ final class DBManager {
     
     static func storeResultsToDatabase() {
         
-        let update = "INSERT INTO `Trial-Session`(`trial_id`, `answer_tag`, `accuracy_measure`, 'time_measure', 'trial_order', 'timestamp') VALUES (?, ?, ?, ?, ?, ?);"
+        let update = "INSERT INTO `Trial-Session`(`trial_id`, 'session_id', `answer_tag`, `accuracy_measure`, 'time_measure', 'trial_order', 'timestamp') VALUES (?, ?, ?, ?, ?, ?, ?);"
         
         for result in Trackers.resultsArray {
             
             do {
-                try DBManager.ctomDB.executeUpdate(update, values: [result.getTrialID(), result.getAnswerTag(), result.getAccuracyMeasure(), result.getSecondMeasure(), result.getOrder(), result.getDate()])
+                try DBManager.ctomDB.executeUpdate(update, values: [result.getTrialID(), result.getSession(), result.getAnswerTag(), result.getAccuracyMeasure(), result.getSecondMeasure(), result.getOrder(), result.getDate()])
             } catch {
                 print(error)
             }
         }
     }
-    // Store various data from various result objects to DB
+    // Store data from various result objects to DB
     
     
     static func copyDatabaseIfNeeded() {

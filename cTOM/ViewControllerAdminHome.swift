@@ -16,13 +16,16 @@ class ViewControllerAdminHome: UIViewController {
     @IBOutlet weak var participantError: UILabel!
     @IBOutlet weak var selectParticipant: UITextField!
     @IBOutlet weak var currentAdmin: UILabel!
+    @IBOutlet weak var addParticipant: UIButton!
+    
     
     var selectedParticipant: String?
     
     @IBAction func enterTestsButton(_ sender: UIButton) {
-        if selectParticipant.text == "" {
+        if selectParticipant.text == "" || selectParticipant.text == "Select Participant" {
             participantError.isHidden = false
         } else {
+            Trackers.currentParticipant = selectParticipant.text
             self.performSegue(withIdentifier: "testsFromAdmin", sender: self)
         }
     }
@@ -42,10 +45,16 @@ class ViewControllerAdminHome: UIViewController {
         DBManager.getAllAddedParticipants()
         createParticipantPicker()
         
+        selectParticipant.text = "Select Participant"
+        
         currentAdmin.text = "\(Trackers.currentAdminEmail!) is logged in"
         
         testButtom.layer.cornerRadius = 10
         testButtom.layer.borderWidth = 3
+        
+        addParticipant.layer.cornerRadius = 10
+        addParticipant.layer.borderWidth = 3
+        addParticipant.titleLabel?.adjustsFontSizeToFitWidth = true
         
         selectParticipant.layer.borderWidth = 2
         selectParticipant.layer.cornerRadius = 8

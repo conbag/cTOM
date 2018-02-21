@@ -19,9 +19,11 @@ final class Trackers {
     static var currentAdmin: Int?
     // keeps track of currently logged in admin_id
     
-    static var currentParticipant: Int?
-    static var currentTest: Int?
+    static var currentParticipant: String?
+    
     static var currentSession: Int?
+    
+    static var currentTest: Int?
     static var currentTrial: Int?
     static var randomizedTrialList = [Int]()
     // randomized trial list for sequence of videos

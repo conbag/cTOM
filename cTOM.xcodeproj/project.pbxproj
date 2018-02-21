@@ -20,7 +20,6 @@
 		F4B99F07202891DC003C25C0 /* ViewControllerGazePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B99F06202891DC003C25C0 /* ViewControllerGazePractice.swift */; };
 		F4B99F0920289585003C25C0 /* GazePractice.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B99F0820289585003C25C0 /* GazePractice.png */; };
 		F4BA870220388EAC00340BE0 /* ViewControllerNewParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA870120388EAC00340BE0 /* ViewControllerNewParticipant.swift */; };
-		F4BA8704203892CB00340BE0 /* cTOM.db in Resources */ = {isa = PBXBuildFile; fileRef = F4BA8703203892CB00340BE0 /* cTOM.db */; };
 		F4BC1F69202A275500A2E2B1 /* ViewControllerStoriesTrials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC1F68202A275500A2E2B1 /* ViewControllerStoriesTrials.swift */; };
 		F4CD745620209E8700C8A791 /* ViewControllerGaze.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD745520209E8700C8A791 /* ViewControllerGaze.swift */; };
 		F4CEFB93202B63B900AE1291 /* Robbery_3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4CEFB8D202B63B900AE1291 /* Robbery_3.mp4 */; };
@@ -139,6 +138,7 @@
 		F4D9FD18201FB5B1004D0F4E /* Jess_A_20d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCC6201FB5B1004D0F4E /* Jess_A_20d_L.mp4 */; };
 		F4D9FD19201FB5B1004D0F4E /* Jess_A_sa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCC7201FB5B1004D0F4E /* Jess_A_sa.mp4 */; };
 		F4D9FD1A201FB5B1004D0F4E /* Jess_A_10d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCC8201FB5B1004D0F4E /* Jess_A_10d_L.mp4 */; };
+		F4F9630F203B2CEF006779DA /* cTOM.db in Resources */ = {isa = PBXBuildFile; fileRef = F4F9630E203B2CEF006779DA /* cTOM.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,7 +168,6 @@
 		F4B99F06202891DC003C25C0 /* ViewControllerGazePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGazePractice.swift; sourceTree = "<group>"; };
 		F4B99F0820289585003C25C0 /* GazePractice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GazePractice.png; sourceTree = "<group>"; };
 		F4BA870120388EAC00340BE0 /* ViewControllerNewParticipant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNewParticipant.swift; sourceTree = "<group>"; };
-		F4BA8703203892CB00340BE0 /* cTOM.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cTOM.db; sourceTree = "<group>"; };
 		F4BC1F68202A275500A2E2B1 /* ViewControllerStoriesTrials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStoriesTrials.swift; sourceTree = "<group>"; };
 		F4CD745520209E8700C8A791 /* ViewControllerGaze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGaze.swift; sourceTree = "<group>"; };
 		F4CEFB8D202B63B900AE1291 /* Robbery_3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Robbery_3.mp4; path = "../../../../Dropbox/Software Design and Development - NUIG/FYP/Media/c_TOM_Stories/Robbery_3.mp4"; sourceTree = "<group>"; };
@@ -298,6 +297,7 @@
 		F4D9FCC6201FB5B1004D0F4E /* Jess_A_20d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_20d_L.mp4; sourceTree = "<group>"; };
 		F4D9FCC7201FB5B1004D0F4E /* Jess_A_sa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_sa.mp4; sourceTree = "<group>"; };
 		F4D9FCC8201FB5B1004D0F4E /* Jess_A_10d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_10d_L.mp4; sourceTree = "<group>"; };
+		F4F9630E203B2CEF006779DA /* cTOM.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cTOM.db; sourceTree = "<group>"; };
 		F842EE00EDF60EDB87DB497C /* Pods-cTOMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cTOMTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cTOMTests/Pods-cTOMTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -661,7 +661,7 @@
 		F4D9FD1B201FB6A8004D0F4E /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				F4BA8703203892CB00340BE0 /* cTOM.db */,
+				F4F9630E203B2CEF006779DA /* cTOM.db */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -780,7 +780,7 @@
 				F4D9FCF1201FB5B1004D0F4E /* Montage.mp4 in Resources */,
 				F4D9FCD5201FB5B1004D0F4E /* Jenny_A_20d_L.mp4 in Resources */,
 				F4D9FD0D201FB5B1004D0F4E /* Jess_N_10d_R.mp4 in Resources */,
-				F4BA8704203892CB00340BE0 /* cTOM.db in Resources */,
+				F4F9630F203B2CEF006779DA /* cTOM.db in Resources */,
 				F4D9FD12201FB5B1004D0F4E /* Jess_A_30d_R.mp4 in Resources */,
 				F4CEFBB0202B678600AE1291 /* Where Is The Apple.m4a in Resources */,
 				F4D9FCE0201FB5B1004D0F4E /* Chris_N_20d_R.mp4 in Resources */,
@@ -1161,7 +1161,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39UPL9DKZ7;
 				INFOPLIST_FILE = cTOM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctom.cTOM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1181,7 +1181,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39UPL9DKZ7;
 				INFOPLIST_FILE = cTOM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctom.cTOM;
 				PRODUCT_NAME = "$(TARGET_NAME)";

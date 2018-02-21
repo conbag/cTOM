@@ -13,7 +13,8 @@ class ViewControllerTests: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        DBManager.createNewSession()
+        // creates new session for 
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,13 +14,15 @@ class ViewControllerNewParticipant: UIViewController {
     @IBOutlet weak var dobField: UITextField!
     @IBOutlet weak var genderField: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet weak var addParticipantButton: UIButton!
+    
     
     let gender = ["Male", "Female"]
     var selectedGender: String?
     
     let picker = UIDatePicker()
     //let genderPicker = UIPickerView()
-    
+
     @IBAction func newParticipantButton(_ sender: UIButton) {
         
         if idField.text! == "" {
@@ -109,6 +111,8 @@ class ViewControllerNewParticipant: UIViewController {
 
         createDatePicker()
         createGenderPicker()
+        
+        addParticipantButton.titleLabel?.adjustsFontSizeToFitWidth = true
     }
 
     override func didReceiveMemoryWarning() {

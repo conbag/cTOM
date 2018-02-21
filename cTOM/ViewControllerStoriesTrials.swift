@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import AVKit
 
-class ViewControllerStoriesTrials: UIViewController {
+class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     
     var trialOrder = 0
     
@@ -25,8 +25,11 @@ class ViewControllerStoriesTrials: UIViewController {
     
     var player: AVPlayer!
     var playerLayer: AVPlayerLayer!
-    var audioPlayer: AVAudioPlayer?
+    var dingAudioPlayer: AVAudioPlayer?
     // video and audio players
+    
+    var audioPlayer: AVAudioPlayer?
+    // seperate audioPlayers so I can call delegate to listen for when audio finishes - then display answer boxes
     
     var activeTrial = false
     
@@ -52,12 +55,12 @@ class ViewControllerStoriesTrials: UIViewController {
             // get seconds(to 3 decimal places) by taking away question start time minus button time
             
             if sender.tag as Int == correctAnswer {
-                playAudio(path: "Ding Sound Effect")
+                playDingSound()
                 // plays 'ding' audio for correct answer
                 
-                result = Result(answerTag: sender.tag, accuracyMeasure: "True", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!)
+                result = Result(answerTag: sender.tag, accuracyMeasure: "True", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
             } else {
-                result = Result(answerTag: sender.tag, accuracyMeasure: "False", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!)
+                result = Result(answerTag: sender.tag, accuracyMeasure: "False", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
             }
             // create new instance of result object to store trial data
             
@@ -110,27 +113,14 @@ class ViewControllerStoriesTrials: UIViewController {
         
         questionLabel.text = DBManager.trialWithText[Trackers.currentTrial!]
         questionLabel.adjustsFontSizeToFitWidth = true
-        playAudio(path: DBManager.trialWithAudio[Trackers.currentTrial!]!)
+        playSound(path: DBManager.trialWithAudio[Trackers.currentTrial!]!)
         // display question audio and text for current trial
-        
-        let when = DispatchTime.now() + 4
-        DispatchQueue.main.asyncAfter(deadline: when) {
-            self.showAllAnswerButton()
-            self.activeTrial = true
-            self.questionDate = Date()
-            self.dbDate = self.dateToString(date: self.questionDate!)
-            // wait 4 seconds before displaying answer buttons and setting trial to active
-            
-            self.timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(self.closeQuestion), userInfo: nil, repeats: false)
-            // wait another 4 seconds before calling closeQuestion function below
-        }
-        
     }
     
     @objc func closeQuestion() {
         if activeTrial == true {
             
-            let result = Result(answerTag: 0, accuracyMeasure: "False", trialID: Trackers.currentTrial!, secondMeasure: 0.0, order: (trialOrder + 1), date: dbDate!)
+            let result = Result(answerTag: 0, accuracyMeasure: "False", trialID: Trackers.currentTrial!, secondMeasure: 0.0, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
             
             Trackers.resultsArray.append(result)
         }
@@ -211,12 +201,12 @@ class ViewControllerStoriesTrials: UIViewController {
     }
     // displays all 4 answer buttons
     
-    func playAudio(path: String) {
-        let url = Bundle.main.url(forResource: path, withExtension: "m4a")!
+    func playDingSound() {
+        let url = Bundle.main.url(forResource: "Ding Sound Effect", withExtension: "m4a")!
         
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            guard let dingSound = audioPlayer else { return }
+            dingAudioPlayer = try AVAudioPlayer(contentsOf: url)
+            guard let dingSound = dingAudioPlayer else { return }
             
             dingSound.prepareToPlay()
             dingSound.play()
@@ -224,8 +214,41 @@ class ViewControllerStoriesTrials: UIViewController {
             print(error.localizedDescription)
         }
     }
-    // when called plays "Ding Sound Effect" audio file
+    // function to play ding sound on correct answer
 
+    func playSound(path: String) {
+        guard let url = Bundle.main.url(forResource: path, withExtension: "m4a") else {
+            print("url not found")
+            return
+        }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            // this codes for making this app ready to takeover the device audio
+            
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            
+            audioPlayer?.delegate = self
+
+            audioPlayer!.play()
+        } catch let error as NSError {
+            print("error: \(error.localizedDescription)")
+        }
+    }
+    // when called plays audio file of passed in path
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        showAllAnswerButton()
+        activeTrial = true
+        questionDate = Date()
+        dbDate = dateToString(date: questionDate!)
+        // displaying answer buttons and setting trial to active when audio finishes
+        
+        timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(closeQuestion), userInfo: nil, repeats: false)
+        // wait 4 seconds before calling closeQuestion function below
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

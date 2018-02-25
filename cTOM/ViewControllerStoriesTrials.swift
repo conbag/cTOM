@@ -54,28 +54,25 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
             let reactionTime = round(1000 * (currentTimeInMiliseconds(date: buttonDate!) - currentTimeInMiliseconds(date: questionDate!))) / 1000
             // get seconds(to 3 decimal places) by taking away question start time minus button time
             
-            if sender.tag as Int == correctAnswer {
+            if sender.currentBackgroundImage?.accessibilityIdentifier == correctAnswer! {
                 playDingSound()
                 // plays 'ding' audio for correct answer
                 
-                result = Result(answerTag: sender.tag, accuracyMeasure: "True", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
+                result = Result(answerTag: (sender.currentBackgroundImage?.accessibilityIdentifier)!, accuracyMeasure: "True", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
             } else {
-                result = Result(answerTag: sender.tag, accuracyMeasure: "False", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
+                result = Result(answerTag: (sender.currentBackgroundImage?.accessibilityIdentifier)!, accuracyMeasure: "False", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
             }
             // create new instance of result object to store trial data
             
             Trackers.resultsArray.append(result)
             
             activeTrial = false
-     
         }
     }
   
     func currentTimeInMiliseconds(date: Date) -> Double {
-        
         let since1970 = date.timeIntervalSince1970
         return Double(since1970)
-        
     }
     // returns seconds for passed in date since 1970
     
@@ -120,7 +117,7 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     @objc func closeQuestion() {
         if activeTrial == true {
             
-            let result = Result(answerTag: 0, accuracyMeasure: "False", trialID: Trackers.currentTrial!, secondMeasure: 0.0, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
+            let result = Result(answerTag: "0", accuracyMeasure: "False", trialID: Trackers.currentTrial!, secondMeasure: 0.0, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
             
             Trackers.resultsArray.append(result)
         }
@@ -187,10 +184,15 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     
     func showAllAnswerButton() {
         
-        var imageList = DBManager.trialWithImages[Trackers.currentTrial!]
+        let imageList = DBManager.trialWithImages[Trackers.currentTrial!]
+        
+        var randomisedImageArray = randomizeStringArray(array: imageList!)
         
         for index in 1...4 {
-            let image = UIImage(named: imageList![index - 1]) as UIImage?
+            let image = UIImage(named: randomisedImageArray[index - 1]) as UIImage?
+            // randomize the correct answer images for each of the 4 buttons
+            image?.accessibilityIdentifier = randomisedImageArray[index - 1]
+            // tag each image with its filename so can be identified
             
             let button = self.view.viewWithTag(index) as? UIButton
             button!.isHidden = false
@@ -248,6 +250,21 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
         timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(closeQuestion), userInfo: nil, repeats: false)
         // wait 4 seconds before calling closeQuestion function below
     }
+    
+    func randomizeStringArray(array : [String]) -> [String] {
+        var randomizedArray : [String] = []
+        var copyOfArray = array
+        while !copyOfArray.isEmpty {
+            let arrayCount = copyOfArray.count
+            let randomElement = Int(arc4random_uniform(UInt32(arrayCount)))
+            let arraySlice = copyOfArray[randomElement]
+            randomizedArray.append(arraySlice)
+            copyOfArray.remove(at : randomElement)
+        }
+        
+        return randomizedArray
+    }
+    // function to randomize elements in String array
     
     override func viewDidLoad() {
         super.viewDidLoad()

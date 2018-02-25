@@ -13,7 +13,7 @@ class Result {
     // Object to capture results for each trial
     
     
-    private var answerTag: Int
+    private var answerTag: String
     private var accuracyMeasure: String
     private var trialID: Int
     private var secondMeasure: Double
@@ -22,7 +22,7 @@ class Result {
     private var session: Int
     
     
-    init(answerTag: Int, accuracyMeasure: String, trialID: Int, secondMeasure: Double, order: Int, date: String, session: Int) {
+    init(answerTag: String, accuracyMeasure: String, trialID: Int, secondMeasure: Double, order: Int, date: String, session: Int) {
         self.answerTag = answerTag
         self.accuracyMeasure = accuracyMeasure
         self.trialID = trialID
@@ -32,7 +32,7 @@ class Result {
         self.session = session
     }
     
-    func getAnswerTag() -> Int {
+    func getAnswerTag() -> String {
         return self.answerTag
     }
     

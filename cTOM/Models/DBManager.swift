@@ -17,7 +17,7 @@ final class DBManager {
     static var ctomDB: FMDatabase!
     static var trialList = [Int]()
     static var trialWithVideo = [Int : String]()
-    static var trialWithAnswer = [Int : Int]()
+    static var trialWithAnswer = [Int : String]()
     // dictionary to story correct answers with id's
     static var trialWithImages = [Int : [String]]()
     static var trialWithText = [Int : String]()
@@ -153,7 +153,7 @@ final class DBManager {
             
             while results?.next() == true {
                 trialList.append(Int((results?.int(forColumn: "trial_id"))!))
-                trialWithAnswer[Int((results?.int(forColumn: "trial_id"))!)] = Int((results?.int(forColumn: "correct_answer_tag"))!)
+                trialWithAnswer[Int((results?.int(forColumn: "trial_id"))!)] = String((results?.string(forColumn: "correct_answer_tag"))!)
             }
             
         }
@@ -164,7 +164,7 @@ final class DBManager {
     static func getImageDataForTest() {
         for trial in trialList {
         
-            let query = "select t.media_id, m.name, m.media_type from 'Trial-Media' as t inner join Media as m on t.media_id = m.media_id where t.trial_id = \(trial) AND m.media_type = 'Image' order by t.'order'"
+            let query = "select t.media_id, m.name, m.media_type from 'Trial-Media' as t inner join Media as m on t.media_id = m.media_id where t.trial_id = \(trial) AND m.media_type = 'Image'"
             
             let results:FMResultSet? = DBManager.ctomDB.executeQuery(query, withArgumentsIn: [])
             var imageArray = [String]()
@@ -209,6 +209,21 @@ final class DBManager {
     }
     // returns dict with current trial list and corresponding audio file names
     
+    static func getLongestMediaForTest(test: Int) -> Double {
+        
+        var longestDuration: Double?
+
+        let query = "select max(m.second_duration) as 'second_duration' from Media as m inner join 'Trial-Media' as t on m.media_id = t.media_id inner join 'Trial' as r on t.trial_id = r.trial_id where r.test_id = \(test)"
+        
+        let results:FMResultSet? = DBManager.ctomDB.executeQuery(query, withArgumentsIn: [])
+        
+        while results?.next() == true {
+            longestDuration = (Double)((results?.double(forColumn: "second_duration"))!)
+        }
+      
+        return longestDuration!
+    }
+    // returns dict with current trial list and corresponding audio file names
     
     static func getVideoDataForTest() {
         for trial in trialList {
@@ -224,8 +239,6 @@ final class DBManager {
         
     }
     // returns dict with current trial list and corresponding audio file names
-    
-    
     
     static func storeResultsToDatabase() {
         

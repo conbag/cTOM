@@ -17,6 +17,9 @@ class ViewControllerGaze: UIViewController {
     var dbDate: String?
     // timestamp that will be recorded in db for each trial
     
+    var longestTrialDuration: Double?
+    // store longest trial duration in seconds
+    
     var trialOrder = 0
     
     var counter = 0
@@ -52,13 +55,13 @@ class ViewControllerGaze: UIViewController {
             let reactionTime = round(1000 * (currentTimeInMiliseconds(date: buttonDate!) - currentTimeInMiliseconds(date: videoDate!))) / 1000
             // get seconds(to 3 decimal places) by taking away video start time minus button time
             
-            if sender.tag as Int == correctAnswer {
+            if sender.tag as Int == Int(correctAnswer!)! {
                 playAudio()
                 // plays 'ding' audio for correct answer
                 
-                result = Result(answerTag: sender.tag, accuracyMeasure: "True", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
+                result = Result(answerTag: String(sender.tag), accuracyMeasure: "True", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
             } else {
-                result = Result(answerTag: sender.tag, accuracyMeasure: "False", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
+                result = Result(answerTag: String(sender.tag), accuracyMeasure: "False", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
             }
             // create new instance of result object to store trial data
             
@@ -132,18 +135,21 @@ class ViewControllerGaze: UIViewController {
         // disable volume on gaze videos as direct is indicated
         player.play()
         
-        NotificationCenter.default.addObserver(self, selector:#selector(self.playerDidFinishPlaying(note:)),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem)
+        let when = DispatchTime.now() + longestTrialDuration!
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.videoDidFinishPlaying()
+        }
         
         videoDate = Date()
         dbDate = dateToString(date: videoDate!)
     }
     
-    @objc func playerDidFinishPlaying(note: NSNotification){
+    func videoDidFinishPlaying(){
         //Called when player finished playing
         
         if activeTrial == true {
             
-            let result = Result(answerTag: 0, accuracyMeasure: "False", trialID: Trackers.currentTrial!, secondMeasure: 0.0, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
+            let result = Result(answerTag: "0", accuracyMeasure: "False", trialID: Trackers.currentTrial!, secondMeasure: 0.0, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
             
             Trackers.resultsArray.append(result)
             activeTrial = false
@@ -151,7 +157,6 @@ class ViewControllerGaze: UIViewController {
         }
         // if trial is not answered store result with 0 for 'answerTag' and 0.0 for time measure
         
-        NotificationCenter.default.removeObserver(self)
         playerLayer.player = nil
         playerLayer.removeFromSuperlayer()
         // problem area. need to remove playerlayer from its super layer or there will be memory leak
@@ -209,6 +214,9 @@ class ViewControllerGaze: UIViewController {
         Trackers.currentTest = 1
         DBManager.getTrialInfoForTest(test: Trackers.currentTest!)
         // set current test to 1 as this is Gaze view and retrieve the info from DB
+        
+        longestTrialDuration = DBManager.getLongestMediaForTest(test: Trackers.currentTest!)
+        // get longest trial duration for test in seconds
         
         DBManager.getVideoDataForTest()
         

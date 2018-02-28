@@ -3,3 +3,6 @@
 //
 
 #import "FMDB.h"
+// needed to work with SQLite DB
+#import <MailCore/MailCore.h>
+// needed to send email of results to admin

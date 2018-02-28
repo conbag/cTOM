@@ -30,7 +30,7 @@ class ViewControllerGaze: UIViewController {
     var playerLayer: AVPlayerLayer!
     var audioPlayer: AVAudioPlayer?
     // video and audio players
-    
+
     @IBOutlet weak var finishMessage: UILabel!
     @IBOutlet weak var mainMenu: UIButton!
     
@@ -159,7 +159,7 @@ class ViewControllerGaze: UIViewController {
         
         playerLayer.player = nil
         playerLayer.removeFromSuperlayer()
-        // problem area. need to remove playerlayer from its super layer or there will be memory leak
+        // was problem area. need to remove playerlayer from its super layer or there will be memory leak
         // removes videoplayer to make way for cross image
         
         let cross = UIImage(named: "Cross")?.cgImage
@@ -192,8 +192,7 @@ class ViewControllerGaze: UIViewController {
         }
     }
     // when called plays "Ding Sound Effect" audio file
-    
-    
+
     func dateToString(date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -227,7 +226,6 @@ class ViewControllerGaze: UIViewController {
         finishMessage.isHidden = true
         mainMenu.isHidden = true
         mainMenu.isEnabled = false
-        
     }
     // Sets current test to 1 (Gaze) and retrieves media for this test on view load
     

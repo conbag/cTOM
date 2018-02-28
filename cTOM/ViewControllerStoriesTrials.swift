@@ -23,6 +23,7 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     var dbDate: String?
     // timestamp that will be recorded in db for each trial
     
+    var videoPaused = false
     var player: AVPlayer!
     var playerLayer: AVPlayerLayer!
     var dingAudioPlayer: AVAudioPlayer?
@@ -32,6 +33,8 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     // seperate audioPlayers so I can call delegate to listen for when audio finishes - then display answer boxes
     
     var activeTrial = false
+    
+    @IBOutlet weak var pausedButton: UIButton!
     
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var questionLabel: UILabel!
@@ -69,6 +72,17 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
             activeTrial = false
         }
     }
+    
+    @IBAction func pauseButton(_ sender: UIButton) {
+        if videoPaused == false {
+            player.pause()
+            videoPaused = true
+        } else {
+            player.play()
+            videoPaused = false
+        }
+    }
+    // pauses video player
   
     func currentTimeInMiliseconds(date: Date) -> Double {
         let since1970 = date.timeIntervalSince1970
@@ -100,6 +114,7 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
         player.volume = 0.0
         // disable volume on gaze videos as direct is indicated
         player.play()
+        pausedButton.isEnabled = true
         
         NotificationCenter.default.addObserver(self, selector:#selector(self.playerDidFinishPlaying(note:)),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem)
         // notification for when video finishes
@@ -112,6 +127,8 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
         questionLabel.adjustsFontSizeToFitWidth = true
         playSound(path: DBManager.trialWithAudio[Trackers.currentTrial!]!)
         // display question audio and text for current trial
+        
+        pausedButton.isEnabled = false
     }
     
     @objc func closeQuestion() {
@@ -247,8 +264,8 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
         dbDate = dateToString(date: questionDate!)
         // displaying answer buttons and setting trial to active when audio finishes
         
-        timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(closeQuestion), userInfo: nil, repeats: false)
-        // wait 4 seconds before calling closeQuestion function below
+        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(closeQuestion), userInfo: nil, repeats: false)
+        // wait 5 seconds before calling closeQuestion function below
     }
     
     func randomizeStringArray(array : [String]) -> [String] {
@@ -290,6 +307,7 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
         DBManager.getImageDataForTest()
         
         hideAllAnswerButton()
+        pausedButton.isEnabled = false
     }
     
     override var shouldAutorotate : Bool {

@@ -1,12 +1,15 @@
 PODS:
   - IQKeyboardManagerSwift (5.0.7)
+  - mailcore2-ios (0.6.4)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
+  - mailcore2-ios
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
+  mailcore2-ios: 3ff0be2fa553d4da9c11d39c11d51863c768f24f
 
-PODFILE CHECKSUM: ba05f8395251aeea78d1632344a1cd5c9941b5b3
+PODFILE CHECKSUM: cd1ba4d7368fe68f7b9a10dcf77b995d10f5b9a9
 
 COCOAPODS: 1.4.0

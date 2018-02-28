@@ -26,6 +26,48 @@ final class DBManager {
     
     private init() {}
     
+    static func createResultsCSV() -> URL {
+        
+        let fileName = "Results.csv"
+        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
+        // url for results csv file to be exported
+        
+        var csvText = "test_id,trial_id,participant_id,session_id,answer,accuracy,time_measure,timestamp,trial_order,admin_id\n"
+        // headers for csv file
+        
+        let query = "select t.test_id, tr.trial_id, s.participant_id, tr.session_id, tr.answer_tag, tr.accuracy_measure, tr.time_measure, tr.timestamp, tr.trial_order, s.admin_id from 'Trial-Session' as tr inner join Trial as t on tr.trial_id = t.trial_id inner join Session as s on tr.session_id = s.session_id"
+        
+        if let results:FMResultSet = DBManager.ctomDB.executeQuery(query, withArgumentsIn: []) {
+            while results.next() == true {
+                var newLine = ""
+                newLine.append(results.string(forColumn: "test_id")! + ",")
+                newLine.append(results.string(forColumn: "trial_id")! + ",")
+                newLine.append(results.string(forColumn: "participant_id")! + ",")
+                newLine.append(results.string(forColumn: "session_id")! + ",")
+                newLine.append(results.string(forColumn: "answer_tag")! + ",")
+                newLine.append(results.string(forColumn: "accuracy_measure")! + ",")
+                newLine.append(results.string(forColumn: "time_measure")! + ",")
+                newLine.append(results.string(forColumn: "timestamp")! + ",")
+                newLine.append(results.string(forColumn: "trial_order")! + ",")
+                newLine.append(results.string(forColumn: "admin_id")! + "\n")
+                
+                csvText.append(newLine)
+            }
+        }
+        // creating new lines in csv file resulting from SQL query
+        
+        do {
+            try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
+        } catch {
+            print("Failed to create file")
+            print("\(error)")
+        }
+        // writing csv data to url path created above
+        
+        return path!
+    }
+    // creates csv file to be exported with results data
+    
     static func createNewSession() {
         let update = "INSERT INTO `Session`('participant_id', 'admin_id') VALUES (?, ?);"
         
@@ -94,12 +136,13 @@ final class DBManager {
         if let results:FMResultSet = DBManager.ctomDB.executeQuery(query, withArgumentsIn: []) {
             while results.next() == true {
                 currentAdmin = Int(results.int(forColumn: "admin_id"))
+                Trackers.currentAdminFirstName = results.string(forColumn: "first_name")
             }
         }
         
         return currentAdmin!
     }
-    // retrieves id for currently logged in admin
+    // retrieves id for currently logged in admin and stores admin first name in Trackers class
     
     static func checkEmailAndPasswordCorrect(email: String, password: String) -> Bool {
         let query = "select * from Administrator where email = \"\(email)\""

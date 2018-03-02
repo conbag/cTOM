@@ -26,6 +26,81 @@ final class DBManager {
     
     private init() {}
     
+    static func checkForNoSession(test: Int) -> Bool {
+        
+        var sessionArray = [Int]()
+        // array to store session_id's
+        
+        let query = "select ss.session_id from 'Trial-Session' as s inner join Trial as t on s.trial_id = t.trial_id inner join Session as ss on ss.session_id = s.session_id where t.test_id = \(test)"
+        
+        if let results:FMResultSet = DBManager.ctomDB.executeQuery(query, withArgumentsIn: []) {
+            while results.next() == true {
+                sessionArray.append(Int(results.int(forColumn: "session_id")))
+            }
+        }
+        
+        return sessionArray.isEmpty
+        // check if array is empty
+    }
+    // checks if any results exist. Returns true if no rows in Trial-Session table
+    
+    static func getLatestResultSummary(test: Int) -> ResultSummary {
+        var latestSession: Int?
+        var latestParticipant: String?
+        var sessionDate: String?
+        
+        let query = "select MAX(ss.session_id) as session_id, ss.participant_id, ss.timestamp from 'Trial-Session' as s inner join Trial as t on s.trial_id = t.trial_id inner join Session as ss on ss.session_id = s.session_id where t.test_id = \(test)"
+        
+        if let results:FMResultSet = DBManager.ctomDB.executeQuery(query, withArgumentsIn: []) {
+            while results.next() == true {
+                latestSession = (Int(results.int(forColumn: "session_id")))
+                latestParticipant = results.string(forColumn: "participant_id")
+                sessionDate = results.string(forColumn: "timestamp")
+            }
+        }
+        // checks and stores latest session for passed in test_id
+        
+        var accuracyArray = [String]()
+        var ReactionDict = [String : Double]()
+        
+        let resultQuery = "select accuracy_measure, time_measure, answer_tag from 'Trial-Session' where session_id = \(latestSession!)"
+        
+        if let results:FMResultSet = DBManager.ctomDB.executeQuery(resultQuery, withArgumentsIn: []) {
+            while results.next() == true {
+                accuracyArray.append(results.string(forColumn: "accuracy_measure")!)
+                ReactionDict[(results.string(forColumn: "answer_tag")!)] = Double((results.double(forColumn: "time_measure")))
+            }
+        }
+        // extracting results data for latest session id from above
+        
+        var accuracyTotal = 0
+        let trialTotal = accuracyArray.count
+        
+        for measure in accuracyArray {
+            
+            if measure == "True" {
+                accuracyTotal += 1
+            }
+        }
+        // iterating through results array and incrementing by 1 for every 'true'
+        
+        var totalReactionTime = 0.0
+        
+        for (key, value) in ReactionDict {
+            if key != "0" {
+                totalReactionTime += value
+            }
+        }
+        // iterating through ReactionDict Dictionary and getting total reaction time for rows where answer tag is not 0
+        
+        let averageReaction = totalReactionTime / (Double)(ReactionDict.count)
+        // get average reaction time
+        
+        return ResultSummary(accuracyMeasure: "\(accuracyTotal) / \(trialTotal)", sessionID: latestSession!, meanReaction: "\(averageReaction) seconds", participantID: latestParticipant!, date: sessionDate!)
+        // store and return result data in ResultSummary object
+    }
+    // gets most recent result data for passed in test
+    
     static func createResultsCSV() -> URL {
         
         let fileName = "Results.csv"

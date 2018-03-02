@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		51541D06A6341694FD846A0B /* Pods_cTOMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6FCF397165E9619EA936879 /* Pods_cTOMTests.framework */; };
 		5684E6763C1CEA4A1B13BC6E /* Pods_cTOM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADBDB6E1C3E79DF95807711 /* Pods_cTOM.framework */; };
+		F405413720497B1300202ABD /* ViewControllerResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405413620497B1300202ABD /* ViewControllerResults.swift */; };
+		F405413920497F0100202ABD /* ResultSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405413820497F0100202ABD /* ResultSummary.swift */; };
 		F4131A3920435ACA007F34E1 /* cTOM.db in Resources */ = {isa = PBXBuildFile; fileRef = F4131A3820435ACA007F34E1 /* cTOM.db */; };
 		F42797FC2031D52C007F5BE8 /* ViewControllerAdminLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42797FB2031D52C007F5BE8 /* ViewControllerAdminLogin.swift */; };
 		F42797FE2031D5B0007F5BE8 /* ViewControllerAdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42797FD2031D5B0007F5BE8 /* ViewControllerAdminHome.swift */; };
@@ -157,6 +159,8 @@
 		AADBDB6E1C3E79DF95807711 /* Pods_cTOM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cTOM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADEAE1624F9FBD6227BD4F3A /* Pods-cTOMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cTOMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-cTOMTests/Pods-cTOMTests.release.xcconfig"; sourceTree = "<group>"; };
 		B6FCF397165E9619EA936879 /* Pods_cTOMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cTOMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F405413620497B1300202ABD /* ViewControllerResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerResults.swift; sourceTree = "<group>"; };
+		F405413820497F0100202ABD /* ResultSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSummary.swift; sourceTree = "<group>"; };
 		F4131A3820435ACA007F34E1 /* cTOM.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cTOM.db; sourceTree = "<group>"; };
 		F42797FB2031D52C007F5BE8 /* ViewControllerAdminLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminLogin.swift; sourceTree = "<group>"; };
 		F42797FD2031D5B0007F5BE8 /* ViewControllerAdminHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminHome.swift; sourceTree = "<group>"; };
@@ -408,6 +412,7 @@
 				F42797FB2031D52C007F5BE8 /* ViewControllerAdminLogin.swift */,
 				F427980120321051007F5BE8 /* ViewControllerAdminRegister.swift */,
 				F42797FD2031D5B0007F5BE8 /* ViewControllerAdminHome.swift */,
+				F405413620497B1300202ABD /* ViewControllerResults.swift */,
 				F4BA870120388EAC00340BE0 /* ViewControllerNewParticipant.swift */,
 				F4D9FC2F201FB3BB004D0F4E /* ViewControllerTests.swift */,
 				F46375DC2028D3B0007CC87F /* ViewControllerStories.swift */,
@@ -458,6 +463,7 @@
 				F4D9FC67201FB4A9004D0F4E /* Trackers.swift */,
 				F4B7189C2020D60A00BE3EB6 /* Result.swift */,
 				F4D9FC65201FB47C004D0F4E /* DBManager.swift */,
+				F405413820497F0100202ABD /* ResultSummary.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1000,6 +1006,8 @@
 				F4D9FC5F201FB3E3004D0F4E /* FMDatabaseQueue.m in Sources */,
 				F4D9FC5E201FB3E3004D0F4E /* FMDatabase.m in Sources */,
 				F427980220321051007F5BE8 /* ViewControllerAdminRegister.swift in Sources */,
+				F405413720497B1300202ABD /* ViewControllerResults.swift in Sources */,
+				F405413920497F0100202ABD /* ResultSummary.swift in Sources */,
 				F4D9FC2E201FB3BB004D0F4E /* AppDelegate.swift in Sources */,
 				F42797FC2031D52C007F5BE8 /* ViewControllerAdminLogin.swift in Sources */,
 				F4CD745620209E8700C8A791 /* ViewControllerGaze.swift in Sources */,

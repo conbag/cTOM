@@ -37,55 +37,6 @@ class ViewControllerAdminHome: UIViewController {
         Trackers.currentAdminEmail = nil
     }
     
-    @IBAction func exportResults(_ sender: UIButton) {
-        
-        let smtpSession = MCOSMTPSession()
-        smtpSession.hostname = "smtp.gmail.com"
-        smtpSession.username = "ctomresults@gmail.com"
-        smtpSession.password = "ctomNUIG"
-        smtpSession.port = 465
-        smtpSession.authType = MCOAuthType.saslPlain
-        smtpSession.connectionType = MCOConnectionType.TLS
-        smtpSession.connectionLogger = {(connectionID, type, data) in
-            if data != nil {
-                if let string = NSString(data: data!, encoding: String.Encoding.utf8.rawValue){
-                    print("Connectionlogger: \(string)")
-                }
-            }
-        }
-        let builder = MCOMessageBuilder()
-        builder.header.to = [MCOAddress(displayName: Trackers.currentAdminFirstName!, mailbox: Trackers.currentAdminEmail!)]
-        // display name and email address are taken from current logged in admin
-        builder.header.from = MCOAddress(displayName: "cTOM Results", mailbox: "ctomresults@gmail.com")
-        builder.header.subject = "cTOM Results"
-        builder.htmlBody="<p>Please find results in csv format attached</p>"
-        
-        let attachment = MCOAttachment()
-        var dataCSV: Data?
-
-        do {
-            dataCSV = try Data(contentsOf: DBManager.createResultsCSV())
-        } catch {
-            print(error)
-        }
-
-        attachment.data = dataCSV
-        attachment.filename = "results.csv"
-        builder.addAttachment(attachment)
-        // exporting results csv file generated in DBManager
-        
-        let rfc822Data = builder.data()
-        let sendOperation = smtpSession.sendOperation(with: rfc822Data)
-        sendOperation?.start { (error) -> Void in
-            if (error != nil) {
-                print("Error sending email: \(error.debugDescription)")
-            } else {
-                print("Successfully sent email!")
-            }
-        }
-    }
-    // function to email results to Admin
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -128,10 +79,10 @@ class ViewControllerAdminHome: UIViewController {
         
         selectParticipant.inputAccessoryView = toolbar
         
-        let genderPicker = UIPickerView()
-        genderPicker.delegate = self
+        let participantPicker = UIPickerView()
+        participantPicker.delegate = self
         
-        selectParticipant.inputView = genderPicker
+        selectParticipant.inputView = participantPicker
     }
     // creates participant picker
     

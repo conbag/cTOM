@@ -241,7 +241,7 @@ class ViewControllerGaze: UIViewController {
     // Sets current test to 1 (Gaze) and retrieves media for this test on view load
     
     @objc func oneFingerTapDetected(sender:UITapGestureRecognizer) {
-        let button = self.view.viewWithTag(pauseButton.tag) as? UIButton
+        let button = self.view.viewWithTag(1) as? UIButton
         gazeButton(button!)
     }
     
@@ -250,6 +250,9 @@ class ViewControllerGaze: UIViewController {
         let videoSeconds = currentTimeInMiliseconds(date: videoDate!)
         // seconds since video started
         
+        let oneFingerTap = UITapGestureRecognizer(target: self, action:#selector(ViewControllerGaze.oneFingerTapDetected(sender:)))
+        oneFingerTap.numberOfTouchesRequired = 1
+        
         if videoPaused == false {
             timer.invalidate()
             player.pause()
@@ -257,17 +260,42 @@ class ViewControllerGaze: UIViewController {
 
             pauseSeconds = currentTimeInMiliseconds(date: Date())
             // seconds since video paused
+            
+            activateGazeButtons(bool: false)
+            // deactivates all gazebuttons when pauseButton is presed
+            pauseButton.removeGestureRecognizer(oneFingerTap)
             videoPaused = true
         } else {
             timer = Timer.scheduledTimer(timeInterval: (longestTrialDuration! - (pauseSeconds! - videoSeconds)), target: self, selector: #selector(videoDidFinishPlaying), userInfo: nil, repeats: false)
             // restart timer with original seconds less time played before paused
             player.play()
             
+            activateGazeButtons(bool: true)
+            // activates all gazebuttons when pauseButton is presed
+            pauseButton.addGestureRecognizer(oneFingerTap)
             videoPaused = false
         }
     }
     
     // above two functions apply to pauseButton depending on number of taps. Two taps required for pause
+    
+    func activateGazeButtons(bool: Bool) {
+        let rightButton = self.view.viewWithTag(1) as? UIButton
+        rightButton?.isEnabled = bool
+        
+        let leftButton = self.view.viewWithTag(2) as? UIButton
+        leftButton?.isEnabled = bool
+        
+        let topButton = self.view.viewWithTag(3) as? UIButton
+        topButton?.isEnabled = bool
+        
+        let centerButton = self.view.viewWithTag(4) as? UIButton
+        centerButton?.isEnabled = bool
+        
+        let downButton = self.view.viewWithTag(5) as? UIButton
+        downButton?.isEnabled = bool
+    }
+    // (de)activates all gazebuttons
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

@@ -353,17 +353,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4D-0N-HGA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4D-0N-HGA">
                                 <rect key="frame" x="86" y="295" width="940" height="41.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of Birth:" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Rrz-Bg-N8p">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age:" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Rrz-Bg-N8p">
                                 <rect key="frame" x="86" y="344.5" width="940" height="32"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waz-gJ-yeU">
                                 <rect key="frame" x="86" y="384.5" width="940" height="41"/>
@@ -478,7 +478,7 @@
                     </view>
                     <connections>
                         <outlet property="addParticipantButton" destination="r5Y-Fx-Qft" id="9sJ-uJ-d9h"/>
-                        <outlet property="dobField" destination="Rrz-Bg-N8p" id="pKd-ug-g0Z"/>
+                        <outlet property="ageField" destination="Rrz-Bg-N8p" id="pKd-ug-g0Z"/>
                         <outlet property="errorMessage" destination="UkY-K9-eaJ" id="xCW-tL-kD7"/>
                         <outlet property="genderField" destination="qu9-Qx-pug" id="mgF-OK-MeW"/>
                         <outlet property="idField" destination="lOO-HI-9Qz" id="YLH-4Y-0aa"/>
@@ -1516,7 +1516,7 @@
                                     <action selector="gazeButton:" destination="jnl-NZ-Xjw" eventType="touchUpInside" id="jQh-1d-8jZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AM5-T7-TMC">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AM5-T7-TMC">
                                 <rect key="frame" x="892" y="20" width="200" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </button>

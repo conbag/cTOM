@@ -11,7 +11,7 @@ import UIKit
 class ViewControllerNewParticipant: UIViewController {
     
     @IBOutlet weak var idField: UITextField!
-    @IBOutlet weak var dobField: UITextField!
+    @IBOutlet weak var ageField: UITextField!
     @IBOutlet weak var genderField: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
     @IBOutlet weak var addParticipantButton: UIButton!
@@ -19,19 +19,18 @@ class ViewControllerNewParticipant: UIViewController {
     
     let gender = ["Male", "Female"]
     var selectedGender: String?
-    
-    let picker = UIDatePicker()
-    //let genderPicker = UIPickerView()
 
     @IBAction func newParticipantButton(_ sender: UIButton) {
         
         if idField.text! == "" {
             createAlert(title: "Error", message: "Participant ID Field Is Empty!")
-        } else if dobField.text! == "" {
+        } else if ageField.text! == "" {
             createAlert(title: "Error", message: "Date of Birth Field Is Empty!")
+        } else if Int(ageField.text!) == nil {
+            createAlert(title: "Error", message: "Please enter valid age!")
         } else if genderField.text! == "" {
             createAlert(title: "Error", message: "Gender Field Is Empty!")
-        } else if DBManager.checkParticipantID(id: idField.text!, dob: dobField.text!, gender: genderField.text!) == false {
+        } else if DBManager.checkParticipantID(id: idField.text!, age: ageField.text!, gender: genderField.text!) == false {
             errorMessage.isHidden = false
         } else {
             DBManager.getAllAddedParticipants()
@@ -39,36 +38,6 @@ class ViewControllerNewParticipant: UIViewController {
         }  
     }
     // logic for completing new participant form
-    
-    func createDatePicker() {
-        
-        // toolbar
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        
-        // done button for toolbar
-        let done = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
-        toolbar.setItems([done], animated: false)
-        
-        dobField.inputAccessoryView = toolbar
-        dobField.inputView = picker
-        
-        //format picker for date
-        picker.datePickerMode = .date
-    }
-    // creates date picker for when dobField is pressed
-    
-    @objc func donePressed() {
-        
-        // format date
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        let dateString = formatter.string(from: picker.date)
-        
-        dobField.text = "\(dateString)"
-        self.view.endEditing(true)
-    }
-    // save date to text field when done is pressed
     
     func createGenderPicker() {
         // toolbar
@@ -109,7 +78,6 @@ class ViewControllerNewParticipant: UIViewController {
         
         errorMessage.isHidden = true
 
-        createDatePicker()
         createGenderPicker()
         
         addParticipantButton.titleLabel?.adjustsFontSizeToFitWidth = true

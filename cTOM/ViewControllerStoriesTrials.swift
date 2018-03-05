@@ -142,6 +142,7 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
         
         if Trackers.currentTrial == DBManager.trialList[DBManager.trialList.count - 1] {
             
+            videoView.layer.borderWidth = 0
             finishMessage.isHidden = false
             mainMenuButton.isHidden = false
             mainMenuButton.isEnabled = true

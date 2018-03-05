@@ -96,7 +96,7 @@ final class DBManager {
         let averageReaction = totalReactionTime / (Double)(ReactionDict.count)
         // get average reaction time
         
-        return ResultSummary(accuracyMeasure: "\(accuracyTotal) / \(trialTotal)", sessionID: latestSession!, meanReaction: "\(averageReaction) seconds", participantID: latestParticipant!, date: sessionDate!)
+        return ResultSummary(accuracyMeasure: "\(accuracyTotal) / \(trialTotal)", sessionID: latestSession!, meanReaction: "\(String(format: "%.3f", averageReaction)) seconds", participantID: latestParticipant!, date: sessionDate!)
         // store and return result data in ResultSummary object
     }
     // gets most recent result data for passed in test
@@ -107,10 +107,10 @@ final class DBManager {
         let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
         // url for results csv file to be exported
         
-        var csvText = "test_id,trial_id,participant_id,session_id,answer,accuracy,time_measure,timestamp,trial_order,admin_id\n"
+        var csvText = "test_id,trial_id,participant_id,gender,dob,session_id,answer,accuracy,time_measure,timestamp,trial_order,admin_id\n"
         // headers for csv file
         
-        let query = "select t.test_id, tr.trial_id, s.participant_id, tr.session_id, tr.answer_tag, tr.accuracy_measure, tr.time_measure, tr.timestamp, tr.trial_order, s.admin_id from 'Trial-Session' as tr inner join Trial as t on tr.trial_id = t.trial_id inner join Session as s on tr.session_id = s.session_id"
+        let query = "select t.test_id, tr.trial_id, s.participant_id, p.gender, p.dob, tr.session_id, tr.answer_tag, tr.accuracy_measure, tr.time_measure, tr.timestamp, tr.trial_order, s.admin_id from 'Trial-Session' as tr inner join Trial as t on tr.trial_id = t.trial_id inner join Session as s on tr.session_id = s.session_id inner join Participant as p on s.participant_id = p.participant_id"
         
         if let results:FMResultSet = DBManager.ctomDB.executeQuery(query, withArgumentsIn: []) {
             while results.next() == true {
@@ -118,6 +118,8 @@ final class DBManager {
                 newLine.append(results.string(forColumn: "test_id")! + ",")
                 newLine.append(results.string(forColumn: "trial_id")! + ",")
                 newLine.append(results.string(forColumn: "participant_id")! + ",")
+                newLine.append(results.string(forColumn: "gender")! + ",")
+                newLine.append(results.string(forColumn: "dob")! + ",")
                 newLine.append(results.string(forColumn: "session_id")! + ",")
                 newLine.append(results.string(forColumn: "answer_tag")! + ",")
                 newLine.append(results.string(forColumn: "accuracy_measure")! + ",")

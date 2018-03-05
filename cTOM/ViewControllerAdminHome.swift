@@ -108,7 +108,9 @@ extension ViewControllerAdminHome: UIPickerViewDelegate, UIPickerViewDataSource 
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedParticipant = DBManager.allParticipants[row]
-        selectParticipant.text = selectedParticipant
+        if !DBManager.allParticipants.isEmpty {
+            selectedParticipant = DBManager.allParticipants[row]
+            selectParticipant.text = selectedParticipant
+        }
     }
 }

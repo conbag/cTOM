@@ -79,14 +79,32 @@ class ViewControllerResults: UIViewController {
             let sendOperation = smtpSession.sendOperation(with: rfc822Data)
             sendOperation?.start { (error) -> Void in
                 if (error != nil) {
+                    self.createAlert(title: "Sending Failed", message: "Please check internet connection and/or entered email address!")
+                    // alert that pops up on screen for user if email fails
+                    
                     print("Error sending email: \(error.debugDescription)")
                 } else {
+                    self.createAlert(title: "Success", message: "Email has been sent!")
+                    // alert that pops up on screen for user if email is success
+                    
                     print("Successfully sent email!")
                 }
             }
         }
     }
     // function to email results to Admin
+    
+    func createAlert (title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    // function to create alert
     
     override func viewDidLoad() {
         super.viewDidLoad()

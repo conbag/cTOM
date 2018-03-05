@@ -12,6 +12,10 @@ import AVKit
 
 class ViewControllerGaze: UIViewController {
     
+    @IBOutlet weak var pauseButton: UIButton!
+    var videoPaused = false
+    var pauseSeconds: Double?
+    
     var videoDate: Date?
     var buttonDate: Date?
     var dbDate: String?
@@ -135,16 +139,13 @@ class ViewControllerGaze: UIViewController {
         // disable volume on gaze videos as direct is indicated
         player.play()
         
-        let when = DispatchTime.now() + longestTrialDuration!
-        DispatchQueue.main.asyncAfter(deadline: when) {
-            self.videoDidFinishPlaying()
-        }
+        timer = Timer.scheduledTimer(timeInterval: longestTrialDuration!, target: self, selector: #selector(videoDidFinishPlaying), userInfo: nil, repeats: false)
         
         videoDate = Date()
         dbDate = dateToString(date: videoDate!)
     }
     
-    func videoDidFinishPlaying(){
+    @objc func videoDidFinishPlaying(){
         //Called when player finished playing
         
         if activeTrial == true {
@@ -209,6 +210,7 @@ class ViewControllerGaze: UIViewController {
         // to force landscape view only
         
         trialOrder = 0
+        videoPaused = false
         
         Trackers.currentTest = 1
         DBManager.getTrialInfoForTest(test: Trackers.currentTest!)
@@ -226,8 +228,46 @@ class ViewControllerGaze: UIViewController {
         finishMessage.isHidden = true
         mainMenu.isHidden = true
         mainMenu.isEnabled = false
+        
+        let oneFingerTap = UITapGestureRecognizer(target: self, action:#selector(ViewControllerGaze.oneFingerTapDetected(sender:)))
+        oneFingerTap.numberOfTouchesRequired = 1
+        let twoFingerTap = UITapGestureRecognizer(target: self, action:#selector(ViewControllerGaze.twoFingerTapDetected(sender:)))
+        twoFingerTap.numberOfTouchesRequired = 2
+        
+        pauseButton.addGestureRecognizer(oneFingerTap)
+        pauseButton.addGestureRecognizer(twoFingerTap)
+        // creating gestures for pause button
     }
     // Sets current test to 1 (Gaze) and retrieves media for this test on view load
+    
+    @objc func oneFingerTapDetected(sender:UITapGestureRecognizer) {
+        let button = self.view.viewWithTag(pauseButton.tag) as? UIButton
+        gazeButton(button!)
+    }
+    
+    @objc func twoFingerTapDetected(sender:UITapGestureRecognizer) {
+        
+        let videoSeconds = currentTimeInMiliseconds(date: videoDate!)
+        // seconds since video started
+        
+        if videoPaused == false {
+            timer.invalidate()
+            player.pause()
+            // pause video and cancel timer
+
+            pauseSeconds = currentTimeInMiliseconds(date: Date())
+            // seconds since video paused
+            videoPaused = true
+        } else {
+            timer = Timer.scheduledTimer(timeInterval: (longestTrialDuration! - (pauseSeconds! - videoSeconds)), target: self, selector: #selector(videoDidFinishPlaying), userInfo: nil, repeats: false)
+            // restart timer with original seconds less time played before paused
+            player.play()
+            
+            videoPaused = false
+        }
+    }
+    
+    // above two functions apply to pauseButton depending on number of taps. Two taps required for pause
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

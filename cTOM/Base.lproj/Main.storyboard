@@ -1235,6 +1235,14 @@
                                     <action selector="pauseButton:" destination="ly6-aw-fJ9" eventType="touchUpInside" id="N9I-Hq-3vY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOe-Lc-I4D">
+                                <rect key="frame" x="20" y="20" width="105" height="86"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="escapeButton:" destination="ly6-aw-fJ9" eventType="touchUpInside" id="8bz-jj-D97"/>
+                                    <segue destination="81v-1v-teP" kind="presentation" id="3kX-Zl-rIm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1266,6 +1274,7 @@
                         <viewLayoutGuide key="safeArea" id="oqb-Ex-5yb"/>
                     </view>
                     <connections>
+                        <outlet property="escapeTest" destination="zOe-Lc-I4D" id="jkY-eP-G1L"/>
                         <outlet property="finishMessage" destination="oZL-bi-891" id="FFa-1i-GiV"/>
                         <outlet property="mainMenuButton" destination="yfL-fU-qYL" id="W6i-ec-ImA"/>
                         <outlet property="pausedButton" destination="pxl-6h-Nb0" id="Dpx-F8-Qxj"/>
@@ -1469,6 +1478,14 @@
                                     <constraint firstItem="zj8-JC-vkL" firstAttribute="leading" secondItem="haM-0T-K8V" secondAttribute="leading" constant="8" id="umC-YA-x01"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRb-tJ-9E6">
+                                <rect key="frame" x="20" y="20" width="200" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="escapeButton:" destination="jnl-NZ-Xjw" eventType="touchUpInside" id="7Bn-3S-oWf"/>
+                                    <segue destination="81v-1v-teP" kind="presentation" id="CNA-PM-Stc"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYa-W0-W0A">
                                 <rect key="frame" x="20" y="20" width="200" height="794"/>
                                 <connections>
@@ -1535,6 +1552,7 @@
                     </view>
                     <connections>
                         <outlet property="crossView" destination="SMG-o8-Mla" id="rHF-D3-IcD"/>
+                        <outlet property="escapeTest" destination="pRb-tJ-9E6" id="ywp-DB-Xva"/>
                         <outlet property="finishMessage" destination="MGn-aC-iPd" id="m4S-Eq-Jwo"/>
                         <outlet property="mainMenu" destination="tDq-Bv-yVB" id="w2M-3R-wjC"/>
                         <outlet property="pauseButton" destination="AM5-T7-TMC" id="ADr-gT-W83"/>

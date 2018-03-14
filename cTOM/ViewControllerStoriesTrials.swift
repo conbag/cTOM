@@ -14,6 +14,8 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     
     var trialOrder = 0
     
+    @IBOutlet weak var escapeTest: UIButton!
+    
     var counter = 0
     var timer = Timer()
     // timer object used to question and answer slots
@@ -23,7 +25,14 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     var dbDate: String?
     // timestamp that will be recorded in db for each trial
     
-    var videoPaused = false
+    var testPaused = false
+    var pauseSeconds: Double?
+    
+    var videoState = false
+    var audioState = false
+    var answerState = false
+    // to implement pause feature, I set up 3 different states that will help identify what players and timers need to be paused depending on when button is pressed.
+
     var player: AVPlayer!
     var playerLayer: AVPlayerLayer!
     var dingAudioPlayer: AVAudioPlayer?
@@ -74,15 +83,63 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     }
     
     @IBAction func pauseButton(_ sender: UIButton) {
-        if videoPaused == false {
-            player.pause()
-            videoPaused = true
+        if testPaused == false {
+            if videoState == true {
+                player.pause()
+                // pause video player
+            } else if audioState == true {
+                audioPlayer?.pause()
+                // pause audio player
+            } else if answerState == true {
+                timer.invalidate()
+                // cancel timer
+                
+                pauseSeconds = currentTimeInMiliseconds(date: Date())
+                // seconds since video paused
+                
+                activateAnswerButtons(bool: false)
+                // disable answer buttons on pause
+            }
+            
+            escapeTest.isEnabled = true
+            // enable escaping only when test is paused
+            
+            testPaused = true
         } else {
-            player.play()
-            videoPaused = false
+            if videoState == true {
+                player.play()
+                // play video player
+            } else if audioState == true {
+                audioPlayer?.play()
+                // play audio player
+            } else if answerState == true {
+                timer = Timer.scheduledTimer(timeInterval: 5.0 - (pauseSeconds! - currentTimeInMiliseconds(date: questionDate!)), target: self, selector: #selector(closeQuestion), userInfo: nil, repeats: false)
+                // restart timer with original seconds less time played before paused
+                
+                activateAnswerButtons(bool: true)
+                // enable answer buttons
+            }
+            
+            escapeTest.isEnabled = false
+            // disable escaping
+            
+            testPaused = false
         }
     }
-    // pauses video player
+    // pauses test
+    
+    @IBAction func escapeButton(_ sender: UIButton) {
+        
+        DBManager.storeResultsToDatabase()
+        Trackers.resultsArray.removeAll()
+        DBManager.trialList.removeAll()
+        DBManager.trialWithAnswer.removeAll()
+        DBManager.trialWithVideo.removeAll()
+        DBManager.trialWithImages.removeAll()
+        DBManager.trialWithText.removeAll()
+        DBManager.trialWithAudio.removeAll()
+    }
+    // escape button that is enabled when test is paused
   
     func currentTimeInMiliseconds(date: Date) -> Double {
         let since1970 = date.timeIntervalSince1970
@@ -92,6 +149,8 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     
     
     func playTestVideo(videoView: UIView) {
+        videoState = true
+        answerState = false
         
         let path = Bundle.main.path(forResource: DBManager.trialWithVideo[Trackers
             .currentTrial!], ofType: "mp4")
@@ -119,12 +178,13 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     @objc func playerDidFinishPlaying(note: NSNotification){
         //Called when player finished playing
         
+        videoState = false
+        audioState = true
+        
         questionLabel.text = DBManager.trialWithText[Trackers.currentTrial!]
         questionLabel.adjustsFontSizeToFitWidth = true
         playSound(path: DBManager.trialWithAudio[Trackers.currentTrial!]!)
         // display question audio and text for current trial
-        
-        pausedButton.isEnabled = false
     }
     
     @objc func closeQuestion() {
@@ -184,6 +244,16 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
         
         return dateDB
     }
+    
+    func activateAnswerButtons(bool: Bool) {
+        for index in 1...4 {
+            
+            let button = self.view.viewWithTag(index) as? UIButton
+            
+            button!.isEnabled = bool
+        }
+    }
+    // function to disabel and enable answer buttons when game is paused/resumed
     
     func hideAllAnswerButton() {
         for index in 1...4 {
@@ -254,6 +324,9 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     // when called plays audio file of passed in path
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        audioState = false
+        answerState = true
+        
         showAllAnswerButton()
         activeTrial = true
         questionDate = Date()
@@ -304,6 +377,13 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
         
         hideAllAnswerButton()
         pausedButton.isEnabled = false
+        
+        videoState = false
+        audioState = false
+        answerState = false
+        // reset states on load
+        
+        escapeTest.isEnabled = false
     }
     
     override var shouldAutorotate : Bool {

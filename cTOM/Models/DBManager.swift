@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 final class DBManager {
@@ -103,30 +104,38 @@ final class DBManager {
     
     static func createResultsCSV() -> URL {
         
+        let deviceID = UIDevice.current.identifierForVendor!.uuidString
+        // devices unique ID
+        
         let fileName = "Results.csv"
         let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
         // url for results csv file to be exported
         
-        var csvText = "test_id,trial_id,participant_id,gender,age,session_id,answer,accuracy,time_measure,timestamp,trial_order,admin_id\n"
+        var csvText = "test_id,test_name,trial_id,trial_name,participant_id,gender,age,session_id,correct_answer,participant_answer,accuracy,time_measure,timestamp,trial_order,admin_id,admin_email,device_id\n"
         // headers for csv file
         
-        let query = "select t.test_id, tr.trial_id, s.participant_id, p.gender, p.age, tr.session_id, tr.answer_tag, tr.accuracy_measure, tr.time_measure, tr.timestamp, tr.trial_order, s.admin_id from 'Trial-Session' as tr inner join Trial as t on tr.trial_id = t.trial_id inner join Session as s on tr.session_id = s.session_id inner join Participant as p on s.participant_id = p.participant_id"
+        let query = "select t.test_id, te.test_name, tr.trial_id, t.trial_name, s.participant_id, p.gender, p.age, tr.session_id, t.correct_answer_tag, tr.answer_tag, tr.accuracy_measure, tr.time_measure, tr.timestamp, tr.trial_order, s.admin_id, ad.email from 'Trial-Session' as tr inner join Trial as t on tr.trial_id = t.trial_id inner join Session as s on tr.session_id = s.session_id inner join Participant as p on s.participant_id = p.participant_id inner join Test as te on t.test_id = te.test_id inner join Administrator as ad on s.admin_id = ad.admin_id"
         
         if let results:FMResultSet = DBManager.ctomDB.executeQuery(query, withArgumentsIn: []) {
             while results.next() == true {
                 var newLine = ""
                 newLine.append(results.string(forColumn: "test_id")! + ",")
+                newLine.append(results.string(forColumn: "test_name")! + ",")
                 newLine.append(results.string(forColumn: "trial_id")! + ",")
+                newLine.append(results.string(forColumn: "trial_name")! + ",")
                 newLine.append(results.string(forColumn: "participant_id")! + ",")
                 newLine.append(results.string(forColumn: "gender")! + ",")
                 newLine.append(results.string(forColumn: "age")! + ",")
                 newLine.append(results.string(forColumn: "session_id")! + ",")
+                newLine.append(results.string(forColumn: "correct_answer_tag")! + ",")
                 newLine.append(results.string(forColumn: "answer_tag")! + ",")
                 newLine.append(results.string(forColumn: "accuracy_measure")! + ",")
                 newLine.append(results.string(forColumn: "time_measure")! + ",")
                 newLine.append(results.string(forColumn: "timestamp")! + ",")
                 newLine.append(results.string(forColumn: "trial_order")! + ",")
-                newLine.append(results.string(forColumn: "admin_id")! + "\n")
+                newLine.append(results.string(forColumn: "admin_id")! + ",")
+                newLine.append(results.string(forColumn: "email")! + ",")
+                newLine.append(deviceID + "\n")
                 
                 csvText.append(newLine)
             }

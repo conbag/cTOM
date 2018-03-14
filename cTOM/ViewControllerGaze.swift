@@ -26,6 +26,8 @@ class ViewControllerGaze: UIViewController {
     
     var trialOrder = 0
     
+    @IBOutlet weak var escapeTest: UIButton!
+    
     var counter = 0
     var timer = Timer()
     // timer object used to display cross for 2 seconds
@@ -78,6 +80,17 @@ class ViewControllerGaze: UIViewController {
     }
     // button method for Gaze trials
     
+    @IBAction func escapeButton(_ sender: UIButton) {
+        
+        DBManager.storeResultsToDatabase()
+        Trackers.resultsArray.removeAll()
+        Trackers.randomizedTrialList.removeAll()
+        DBManager.trialList.removeAll()
+        DBManager.trialWithAnswer.removeAll()
+        DBManager.trialWithVideo.removeAll()
+        // Reset various arrays on test finish
+    }
+    // escape button that is enabled when test is paused
     
     func currentTimeInMiliseconds(date: Date) -> Double {
         
@@ -86,7 +99,6 @@ class ViewControllerGaze: UIViewController {
         
     }
     // returns seconds for passed in date since 1970
-    
     
     func startTimingTrials() {
         
@@ -234,6 +246,8 @@ class ViewControllerGaze: UIViewController {
         let twoFingerTap = UITapGestureRecognizer(target: self, action:#selector(ViewControllerGaze.twoFingerTapDetected(sender:)))
         twoFingerTap.numberOfTouchesRequired = 2
         
+        escapeTest.isEnabled = false
+        
         pauseButton.addGestureRecognizer(oneFingerTap)
         pauseButton.addGestureRecognizer(twoFingerTap)
         // creating gestures for pause button
@@ -264,6 +278,10 @@ class ViewControllerGaze: UIViewController {
             activateGazeButtons(bool: false)
             // deactivates all gazebuttons when pauseButton is presed
             pauseButton.removeGestureRecognizer(oneFingerTap)
+            
+            escapeTest.isEnabled = true
+            // enable escaping only when test is paused
+            
             videoPaused = true
         } else {
             timer = Timer.scheduledTimer(timeInterval: (longestTrialDuration! - (pauseSeconds! - videoSeconds)), target: self, selector: #selector(videoDidFinishPlaying), userInfo: nil, repeats: false)
@@ -273,6 +291,10 @@ class ViewControllerGaze: UIViewController {
             activateGazeButtons(bool: true)
             // activates all gazebuttons when pauseButton is presed
             pauseButton.addGestureRecognizer(oneFingerTap)
+            
+            escapeTest.isEnabled = false
+            // disable escaping
+            
             videoPaused = false
         }
     }

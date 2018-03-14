@@ -31,66 +31,59 @@ class ViewControllerResults: UIViewController {
     @IBOutlet weak var storiesReaction: UILabel!
     // stories result fields
 
-    @IBOutlet weak var resultEmail: UITextField!
-    @IBOutlet weak var emailErrorMsg: UILabel!
     @IBAction func exportResultsButton(_ sender: UIButton) {
-    // button, text field and error message for exporting results
-        
-        if resultEmail.text == "" {
-            emailErrorMsg.isHidden = false
-        } else {
-        
-            let smtpSession = MCOSMTPSession()
-            smtpSession.hostname = "smtp.gmail.com"
-            smtpSession.username = "ctomresults@gmail.com"
-            smtpSession.password = "ctomNUIG"
-            smtpSession.port = 465
-            smtpSession.authType = MCOAuthType.saslPlain
-            smtpSession.connectionType = MCOConnectionType.TLS
-            smtpSession.connectionLogger = {(connectionID, type, data) in
-                if data != nil {
-                    if let string = NSString(data: data!, encoding: String.Encoding.utf8.rawValue){
-                        print("Connectionlogger: \(string)")
-                    }
-                }
-            }
-            let builder = MCOMessageBuilder()
-            builder.header.to = [MCOAddress(displayName: Trackers.currentAdminFirstName!, mailbox: resultEmail.text)]
-            // display name is takenfrom current logged in admin. Email is passed in through text field
-            builder.header.from = MCOAddress(displayName: "cTOM Results", mailbox: "ctomresults@gmail.com")
-            builder.header.subject = "cTOM Results"
-            builder.htmlBody="<p>Please find results in csv format attached</p>"
-            
-            let attachment = MCOAttachment()
-            var dataCSV: Data?
-            
-            do {
-                dataCSV = try Data(contentsOf: DBManager.createResultsCSV())
-            } catch {
-                print(error)
-            }
-            
-            attachment.data = dataCSV
-            attachment.filename = "results.csv"
-            builder.addAttachment(attachment)
-            // exporting results csv file generated in DBManager
-            
-            let rfc822Data = builder.data()
-            let sendOperation = smtpSession.sendOperation(with: rfc822Data)
-            sendOperation?.start { (error) -> Void in
-                if (error != nil) {
-                    self.createAlert(title: "Sending Failed", message: "Please check internet connection and/or entered email address!")
-                    // alert that pops up on screen for user if email fails
-                    
-                    print("Error sending email: \(error.debugDescription)")
-                } else {
-                    self.createAlert(title: "Success", message: "Email has been sent!")
-                    // alert that pops up on screen for user if email is success
-                    
-                    print("Successfully sent email!")
+
+        let smtpSession = MCOSMTPSession()
+        smtpSession.hostname = "smtp.gmail.com"
+        smtpSession.username = "ctomresults@gmail.com"
+        smtpSession.password = "ctomNUIG"
+        smtpSession.port = 465
+        smtpSession.authType = MCOAuthType.saslPlain
+        smtpSession.connectionType = MCOConnectionType.TLS
+        smtpSession.connectionLogger = {(connectionID, type, data) in
+            if data != nil {
+                if let string = NSString(data: data!, encoding: String.Encoding.utf8.rawValue){
+                    print("Connectionlogger: \(string)")
                 }
             }
         }
+        let builder = MCOMessageBuilder()
+        builder.header.to = [MCOAddress(displayName: Trackers.currentAdminFirstName!, mailbox: Trackers.currentAdminEmail!)]
+        // display name is takenfrom current logged in admin. Email is passed in through text field
+        builder.header.from = MCOAddress(displayName: "cTOM Results", mailbox: "ctomresults@gmail.com")
+        builder.header.subject = "cTOM Results"
+        builder.htmlBody="<p>Please find results in csv format attached</p>"
+        
+        let attachment = MCOAttachment()
+        var dataCSV: Data?
+        
+        do {
+            dataCSV = try Data(contentsOf: DBManager.createResultsCSV())
+        } catch {
+            print(error)
+        }
+        
+        attachment.data = dataCSV
+        attachment.filename = "results.csv"
+        builder.addAttachment(attachment)
+        // exporting results csv file generated in DBManager
+        
+        let rfc822Data = builder.data()
+        let sendOperation = smtpSession.sendOperation(with: rfc822Data)
+        sendOperation?.start { (error) -> Void in
+            if (error != nil) {
+                self.createAlert(title: "Sending Failed", message: "Please check internet connection and/or admin email address!")
+                // alert that pops up on screen for user if email fails
+                
+                print("Error sending email: \(error.debugDescription)")
+            } else {
+                self.createAlert(title: "Success", message: "Email has been sent!")
+                // alert that pops up on screen for user if email is success
+                
+                print("Successfully sent email!")
+            }
+        }
+        
     }
     // function to email results to Admin
     
@@ -109,7 +102,6 @@ class ViewControllerResults: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailErrorMsg.isHidden = true
         gazeView.layer.borderWidth = 3
         storiesView.layer.borderWidth = 3
         

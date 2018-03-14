@@ -93,10 +93,6 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     
     func playTestVideo(videoView: UIView) {
         
-        videoView.layer.borderWidth = 3
-        videoView.layer.cornerRadius = 3
-        // add border and radius to video outline
-        
         let path = Bundle.main.path(forResource: DBManager.trialWithVideo[Trackers
             .currentTrial!], ofType: "mp4")
         // searched trialWithVideo dict for correct video to play for current trial
@@ -142,7 +138,6 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
         
         if Trackers.currentTrial == DBManager.trialList[DBManager.trialList.count - 1] {
             
-            videoView.layer.borderWidth = 0
             finishMessage.isHidden = false
             mainMenuButton.isHidden = false
             mainMenuButton.isEnabled = true

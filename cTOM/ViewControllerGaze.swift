@@ -15,6 +15,9 @@ class ViewControllerGaze: UIViewController {
     @IBOutlet weak var pauseButton: UIButton!
     var videoPaused = false
     var pauseSeconds: Double?
+    var resumeSeconds: Double?
+    var pausedTime: Double?
+    // variable to keep track of pause times for trials
     
     var videoDate: Date?
     var buttonDate: Date?
@@ -57,9 +60,11 @@ class ViewControllerGaze: UIViewController {
             // retrieve correct answer from trialWithAnswer dict from DBManager singleton class
             
             let result: Result
+            
+            print(pausedTime!)
  
-            let reactionTime = round(1000 * (currentTimeInMiliseconds(date: buttonDate!) - currentTimeInMiliseconds(date: videoDate!))) / 1000
-            // get seconds(to 3 decimal places) by taking away video start time minus button time
+            let reactionTime = (round(1000 * (currentTimeInMiliseconds(date: buttonDate!) - currentTimeInMiliseconds(date: videoDate!) - pausedTime!))) / 1000
+            // get seconds(to 3 decimal places) by taking away video start time minus button time. Less any time trial was paused
             
             if sender.tag as Int == Int(correctAnswer!)! {
                 playAudio()
@@ -135,6 +140,9 @@ class ViewControllerGaze: UIViewController {
     
     
     func playTestVideo(videoView: UIView) {
+        pausedTime = 0;
+        // reset accumulated pause time
+        
         let path = Bundle.main.path(forResource: DBManager.trialWithVideo[Trackers
             .currentTrial!], ofType: "mp4")
         
@@ -273,7 +281,7 @@ class ViewControllerGaze: UIViewController {
             // pause video and cancel timer
 
             pauseSeconds = currentTimeInMiliseconds(date: Date())
-            // seconds since video paused
+            // seconds when video paused
             
             activateGazeButtons(bool: false)
             // deactivates all gazebuttons when pauseButton is presed
@@ -284,10 +292,16 @@ class ViewControllerGaze: UIViewController {
             
             videoPaused = true
         } else {
-            timer = Timer.scheduledTimer(timeInterval: (longestTrialDuration! - (pauseSeconds! - videoSeconds)), target: self, selector: #selector(videoDidFinishPlaying), userInfo: nil, repeats: false)
+            resumeSeconds = currentTimeInMiliseconds(date: Date())
+            // seconds when video resumed
+            
+            pausedTime = pausedTime! + (resumeSeconds! - pauseSeconds!)
+            // calculates accumulated pause time per trial. Resets when new video is called
+            
+            timer = Timer.scheduledTimer(timeInterval: (longestTrialDuration! - (resumeSeconds! - videoSeconds - pausedTime!)), target: self, selector: #selector(videoDidFinishPlaying), userInfo: nil, repeats: false)
             // restart timer with original seconds less time played before paused
             player.play()
-            
+
             activateGazeButtons(bool: true)
             // activates all gazebuttons when pauseButton is presed
             pauseButton.addGestureRecognizer(oneFingerTap)

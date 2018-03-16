@@ -74,9 +74,6 @@ final class DBManager {
         }
         // extracting results data for latest session id from above
         
-        print(reactionArray)
-        print("breakl")
-        
         var accuracyTotal = 0
         let trialTotal = accuracyArray.count
         
@@ -99,12 +96,6 @@ final class DBManager {
             }
         }
         // iterating through reactionArray and getting total reaction time for rows where reaction time is not 0
-        
-        print(totalReactionTime)
-        print(reactionArray.count - unansweredTrials)
-        print(reactionArray)
-        print("hello")
-        print(accuracyArray)
         
         let averageReaction = totalReactionTime / (Double)(reactionArray.count - unansweredTrials)
         // get average reaction time

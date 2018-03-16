@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class ViewControllerGazePractice: UIViewController {
     
+    var audioPlayer: AVAudioPlayer?
 
     @IBOutlet weak var readyButton: UIButton!
     @IBOutlet weak var straightInstruction: UILabel!
@@ -20,20 +23,7 @@ class ViewControllerGazePractice: UIViewController {
     @IBOutlet weak var centerButton: UIButton!
     
     var buttonTag: Int?
-    
-    
-    @IBAction func beginPractice(_ sender: UIButton) {
-        
-        rightButton.isHidden = false
-        centerButton.isHidden = false
-        
-        sender.isEnabled = false
-        sender.isHidden = true
-        
-    }
-    // Initial button to begin parctice. Hidden and disabled once pressed
-    
-    
+
     @IBAction func practiceButton(_ sender: UIButton) {
         if sender.tag == buttonTag! {
             
@@ -46,6 +36,8 @@ class ViewControllerGazePractice: UIViewController {
                 let button = self.view.viewWithTag(4) as? UIButton
                 let img = UIImage(named: "c-TOM_Gaze_practice_looking_left")
                 
+                playAudio(path: "Press Here If The Actor Is Looking To The Left")
+                
                 button?.setBackgroundImage(img, for: .normal)
             } else if sender.tag == 2 {
                 buttonTag! += 1
@@ -53,6 +45,8 @@ class ViewControllerGazePractice: UIViewController {
                 self.view.viewWithTag(buttonTag!)?.isHidden = false
                 let button = self.view.viewWithTag(4) as? UIButton
                 let img = UIImage(named: "c-TOM_Gaze_practice_looking_up")
+                
+                playAudio(path: "Press Here If The Actor Is Looking Above")
                 
                 button?.setBackgroundImage(img, for: .normal)
             } else if sender.tag == 3 {
@@ -63,18 +57,36 @@ class ViewControllerGazePractice: UIViewController {
                 let button = self.view.viewWithTag(4) as? UIButton
                 let img = UIImage(named: "c-TOM_Gaze_practice_looking_straight_ahead")
                 
+                playAudio(path: "Press Here If The Actor Is Looking Directly At You")
+                
                 button?.setBackgroundImage(img, for: .normal)
             } else {
                 buttonTag = 1
                 readyButton.isEnabled = true
                 readyButton.isHidden = false
                 
+                audioPlayer?.stop()
+                
                 straightInstruction.isHidden = true
             }
         }
     }
     // logic for displaying and hiding the various practice buttons and changing centre image
-
+    
+    func playAudio(path: String) {
+        let url = Bundle.main.url(forResource: path, withExtension: "m4a")!
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            guard let dingSound = audioPlayer else { return }
+            
+            dingSound.prepareToPlay()
+            dingSound.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    // function to play instuctions audio on different buttons
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,17 +98,18 @@ class ViewControllerGazePractice: UIViewController {
         leftButton.isHidden = true
         leftButton.layer.cornerRadius = 15
         
-        rightButton.isHidden = true
+        rightButton.isHidden = false
         rightButton.layer.cornerRadius = 15
         
         topButton.isHidden = true
         topButton.layer.cornerRadius = 15
         
-        centerButton.isHidden = true
+        centerButton.isHidden = false
         
         straightInstruction.isHidden = true
 
         buttonTag = 1
+        playAudio(path: "Press Here If The Actor Is Looking To The Right")
         
         UIDevice.current.setValue(UIInterfaceOrientation.landscapeRight.rawValue, forKey: "orientation")
         // to force landscape view only

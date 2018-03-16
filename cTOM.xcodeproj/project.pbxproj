@@ -69,6 +69,15 @@
 		F42797FE2031D5B0007F5BE8 /* ViewControllerAdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42797FD2031D5B0007F5BE8 /* ViewControllerAdminHome.swift */; };
 		F427980220321051007F5BE8 /* ViewControllerAdminRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F427980120321051007F5BE8 /* ViewControllerAdminRegister.swift */; };
 		F4499AE72034AA8100AD2CFD /* c-TOM Stories introduction.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4499AE62034AA8100AD2CFD /* c-TOM Stories introduction.m4a */; };
+		F4630C69205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Left.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4630C65205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Left.m4a */; };
+		F4630C6A205C5BC80041CC61 /* Press Here If The Actor Is Looking Directly At You.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4630C66205C5BC80041CC61 /* Press Here If The Actor Is Looking Directly At You.m4a */; };
+		F4630C6B205C5BC80041CC61 /* Press Here If The Actor Is Looking Above.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4630C67205C5BC80041CC61 /* Press Here If The Actor Is Looking Above.m4a */; };
+		F4630C6C205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Right.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4630C68205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Right.m4a */; };
+		F4630C6E205C5DF90041CC61 /* ViewControllerGazeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4630C6D205C5DF90041CC61 /* ViewControllerGazeControl.swift */; };
+		F4630C73205C609A0041CC61 /* Press Here If The Circle Moves Up.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4630C6F205C60990041CC61 /* Press Here If The Circle Moves Up.m4a */; };
+		F4630C74205C609A0041CC61 /* Press Here If The Circle Moves To The Left.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4630C70205C60990041CC61 /* Press Here If The Circle Moves To The Left.m4a */; };
+		F4630C75205C609A0041CC61 /* Press Here If The Circle Moves To The Right.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4630C71205C60990041CC61 /* Press Here If The Circle Moves To The Right.m4a */; };
+		F4630C76205C609A0041CC61 /* Sometimes You Will See A Circle.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4630C72205C60990041CC61 /* Sometimes You Will See A Circle.m4a */; };
 		F46375DD2028D3B0007CC87F /* ViewControllerStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46375DC2028D3B0007CC87F /* ViewControllerStories.swift */; };
 		F4994B8220247688001CE79C /* Ding Sound Effect.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4994B8120247688001CE79C /* Ding Sound Effect.m4a */; };
 		F49E4B552022585500161F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49E4B542022585500161F15 /* Assets.xcassets */; };
@@ -77,6 +86,8 @@
 		F4B99F0920289585003C25C0 /* GazePractice.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B99F0820289585003C25C0 /* GazePractice.png */; };
 		F4BA870220388EAC00340BE0 /* ViewControllerNewParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA870120388EAC00340BE0 /* ViewControllerNewParticipant.swift */; };
 		F4BC1F69202A275500A2E2B1 /* ViewControllerStoriesTrials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC1F68202A275500A2E2B1 /* ViewControllerStoriesTrials.swift */; };
+		F4C3ABC3205C52A000520B31 /* c-TOM Gaze Introduction.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4C3ABC2205C52A000520B31 /* c-TOM Gaze Introduction.m4a */; };
+		F4C3ABC5205C568400520B31 /* ViewControllerGazeIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3ABC4205C568400520B31 /* ViewControllerGazeIntro.swift */; };
 		F4CD745620209E8700C8A791 /* ViewControllerGaze.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD745520209E8700C8A791 /* ViewControllerGaze.swift */; };
 		F4CEFB94202B63B900AE1291 /* Apple_1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4CEFB8E202B63B900AE1291 /* Apple_1.mp4 */; };
 		F4CEFB95202B63B900AE1291 /* Present_2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4CEFB8F202B63B900AE1291 /* Present_2.mp4 */; };
@@ -189,6 +200,15 @@
 		F42797FD2031D5B0007F5BE8 /* ViewControllerAdminHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminHome.swift; sourceTree = "<group>"; };
 		F427980120321051007F5BE8 /* ViewControllerAdminRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminRegister.swift; sourceTree = "<group>"; };
 		F4499AE62034AA8100AD2CFD /* c-TOM Stories introduction.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "c-TOM Stories introduction.m4a"; sourceTree = "<group>"; };
+		F4630C65205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Left.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Press Here If The Actor Is Looking To The Left.m4a"; sourceTree = "<group>"; };
+		F4630C66205C5BC80041CC61 /* Press Here If The Actor Is Looking Directly At You.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Press Here If The Actor Is Looking Directly At You.m4a"; sourceTree = "<group>"; };
+		F4630C67205C5BC80041CC61 /* Press Here If The Actor Is Looking Above.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Press Here If The Actor Is Looking Above.m4a"; sourceTree = "<group>"; };
+		F4630C68205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Right.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Press Here If The Actor Is Looking To The Right.m4a"; sourceTree = "<group>"; };
+		F4630C6D205C5DF90041CC61 /* ViewControllerGazeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGazeControl.swift; sourceTree = "<group>"; };
+		F4630C6F205C60990041CC61 /* Press Here If The Circle Moves Up.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Press Here If The Circle Moves Up.m4a"; sourceTree = "<group>"; };
+		F4630C70205C60990041CC61 /* Press Here If The Circle Moves To The Left.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Press Here If The Circle Moves To The Left.m4a"; sourceTree = "<group>"; };
+		F4630C71205C60990041CC61 /* Press Here If The Circle Moves To The Right.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Press Here If The Circle Moves To The Right.m4a"; sourceTree = "<group>"; };
+		F4630C72205C60990041CC61 /* Sometimes You Will See A Circle.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sometimes You Will See A Circle.m4a"; sourceTree = "<group>"; };
 		F46375DC2028D3B0007CC87F /* ViewControllerStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStories.swift; sourceTree = "<group>"; };
 		F4994B8120247688001CE79C /* Ding Sound Effect.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ding Sound Effect.m4a"; sourceTree = "<group>"; };
 		F49E4B542022585500161F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,6 +217,8 @@
 		F4B99F0820289585003C25C0 /* GazePractice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GazePractice.png; sourceTree = "<group>"; };
 		F4BA870120388EAC00340BE0 /* ViewControllerNewParticipant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNewParticipant.swift; sourceTree = "<group>"; };
 		F4BC1F68202A275500A2E2B1 /* ViewControllerStoriesTrials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStoriesTrials.swift; sourceTree = "<group>"; };
+		F4C3ABC2205C52A000520B31 /* c-TOM Gaze Introduction.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "c-TOM Gaze Introduction.m4a"; sourceTree = "<group>"; };
+		F4C3ABC4205C568400520B31 /* ViewControllerGazeIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGazeIntro.swift; sourceTree = "<group>"; };
 		F4CD745520209E8700C8A791 /* ViewControllerGaze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGaze.swift; sourceTree = "<group>"; };
 		F4CEFB8E202B63B900AE1291 /* Apple_1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Apple_1.mp4; path = "../../../../Dropbox/Software Design and Development - NUIG/FYP/Media/c_TOM_Stories/Apple_1.mp4"; sourceTree = "<group>"; };
 		F4CEFB8F202B63B900AE1291 /* Present_2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Present_2.mp4; path = "../../../../Dropbox/Software Design and Development - NUIG/FYP/Media/c_TOM_Stories/Present_2.mp4"; sourceTree = "<group>"; };
@@ -295,6 +317,22 @@
 			path = Control;
 			sourceTree = "<group>";
 		};
+		F4C3ABC1205C52A000520B31 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				F4630C67205C5BC80041CC61 /* Press Here If The Actor Is Looking Above.m4a */,
+				F4630C66205C5BC80041CC61 /* Press Here If The Actor Is Looking Directly At You.m4a */,
+				F4630C65205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Left.m4a */,
+				F4630C68205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Right.m4a */,
+				F4C3ABC2205C52A000520B31 /* c-TOM Gaze Introduction.m4a */,
+				F4630C70205C60990041CC61 /* Press Here If The Circle Moves To The Left.m4a */,
+				F4630C71205C60990041CC61 /* Press Here If The Circle Moves To The Right.m4a */,
+				F4630C6F205C60990041CC61 /* Press Here If The Circle Moves Up.m4a */,
+				F4630C72205C60990041CC61 /* Sometimes You Will See A Circle.m4a */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		F4CEFB8C202B637100AE1291 /* c_TOM_Stories */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,7 +413,9 @@
 				F4D9FC2F201FB3BB004D0F4E /* ViewControllerTests.swift */,
 				F46375DC2028D3B0007CC87F /* ViewControllerStories.swift */,
 				F4BC1F68202A275500A2E2B1 /* ViewControllerStoriesTrials.swift */,
+				F4C3ABC4205C568400520B31 /* ViewControllerGazeIntro.swift */,
 				F4B99F06202891DC003C25C0 /* ViewControllerGazePractice.swift */,
+				F4630C6D205C5DF90041CC61 /* ViewControllerGazeControl.swift */,
 				F4CD745520209E8700C8A791 /* ViewControllerGaze.swift */,
 				F4D9FC31201FB3BB004D0F4E /* Main.storyboard */,
 				F49E4B542022585500161F15 /* Assets.xcassets */,
@@ -439,6 +479,7 @@
 		F4D9FC6A201FB5B1004D0F4E /* c_TOM_Gaze */ = {
 			isa = PBXGroup;
 			children = (
+				F4C3ABC1205C52A000520B31 /* Audio */,
 				F405E22A205BE0C700A50BFA /* Control */,
 				F4B99F0820289585003C25C0 /* GazePractice.png */,
 				F4D9FC6B201FB5B1004D0F4E /* Jenny */,
@@ -662,6 +703,7 @@
 				F405E228205BE07300A50BFA /* Jess_20d_R.mp4 in Resources */,
 				F4CEFBB3202B678600AE1291 /* What Does John Assume Kate Thinks Is In Her Backpack.m4a in Resources */,
 				F405E1FB205BE02700A50BFA /* Chris_10d_R.mp4 in Resources */,
+				F4C3ABC3205C52A000520B31 /* c-TOM Gaze Introduction.m4a in Resources */,
 				F4CEFBAA202B678600AE1291 /* Where Does Tom Think His Apple Is.m4a in Resources */,
 				F42693BA2056CB7900EDA31A /* Robbery_1.mp4 in Resources */,
 				F4D9FCF1201FB5B1004D0F4E /* Montage.mp4 in Resources */,
@@ -691,6 +733,7 @@
 				F405E229205BE07300A50BFA /* Jess_60d_L.mp4 in Resources */,
 				F4CEFBAC202B678600AE1291 /* What Does John Think Is In His Backpack.m4a in Resources */,
 				F405E1E4205BDFFA00A50BFA /* Brian_20d_R.mp4 in Resources */,
+				F4630C6C205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Right.m4a in Resources */,
 				F4CEFB95202B63B900AE1291 /* Present_2.mp4 in Resources */,
 				F405E1FE205BE02700A50BFA /* Chris_60d_R.mp4 in Resources */,
 				F4CEFBB6202B678600AE1291 /* What Does Tom Assume Jane Thinks Is In The Box.m4a in Resources */,
@@ -708,14 +751,20 @@
 				F405E223205BE07300A50BFA /* Jess_up.mp4 in Resources */,
 				F405E1EC205BDFFA00A50BFA /* Brian_sa.mp4 in Resources */,
 				F4D9FC33201FB3BB004D0F4E /* Main.storyboard in Resources */,
+				F4630C76205C609A0041CC61 /* Sometimes You Will See A Circle.m4a in Resources */,
 				F405E1E8205BDFFA00A50BFA /* Brian_30d_L.mp4 in Resources */,
 				F405E200205BE02700A50BFA /* Chris_30d_L.mp4 in Resources */,
 				F4CEFBB4202B678600AE1291 /* What Does Jane Think Is In The Box.m4a in Resources */,
 				F405E1FC205BE02700A50BFA /* Chris_60d_L.mp4 in Resources */,
 				F405E1E6205BDFFA00A50BFA /* Brian_20d_L.mp4 in Resources */,
+				F4630C69205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Left.m4a in Resources */,
 				F405E210205BE04F00A50BFA /* Jenny_60d_L.mp4 in Resources */,
 				F42693C82056CBCE00EDA31A /* What Does Tom Think Jane Thinks Is In The Box.m4a in Resources */,
+				F4630C73205C609A0041CC61 /* Press Here If The Circle Moves Up.m4a in Resources */,
+				F4630C6B205C5BC80041CC61 /* Press Here If The Actor Is Looking Above.m4a in Resources */,
+				F4630C6A205C5BC80041CC61 /* Press Here If The Actor Is Looking Directly At You.m4a in Resources */,
 				F42693C42056CBCE00EDA31A /* What Does Jane Think Tom Thinks Is In His Backpack.m4a in Resources */,
+				F4630C75205C609A0041CC61 /* Press Here If The Circle Moves To The Right.m4a in Resources */,
 				F405E1E9205BDFFA00A50BFA /* Brian_60d_R.mp4 in Resources */,
 				F4CEFBB7202B678600AE1291 /* What Does Jane Assume Tom Thinks Is In The Box.m4a in Resources */,
 				F4CEFBB2202B678600AE1291 /* What Is In The Box.m4a in Resources */,
@@ -724,6 +773,7 @@
 				F405E1F9205BE02700A50BFA /* Chris_20d_R.mp4 in Resources */,
 				F405E237205BE2EA00A50BFA /* Control_left.mp4 in Resources */,
 				F405E225205BE07300A50BFA /* Jess_10d_R.mp4 in Resources */,
+				F4630C74205C609A0041CC61 /* Press Here If The Circle Moves To The Left.m4a in Resources */,
 				F405E238205BE2EA00A50BFA /* Control_right.mp4 in Resources */,
 				F4CEFBAF202B678600AE1291 /* Where Does Jane Think Her Apple Is.m4a in Resources */,
 				F4CEFBB5202B678600AE1291 /* Where Does Jane Assume Tom Thinks His Apple Is.m4a in Resources */,
@@ -849,6 +899,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D9FC5B201FB3E3004D0F4E /* FMResultSet.m in Sources */,
+				F4C3ABC5205C568400520B31 /* ViewControllerGazeIntro.swift in Sources */,
 				F4D9FC68201FB4A9004D0F4E /* Trackers.swift in Sources */,
 				F4D9FC5C201FB3E3004D0F4E /* FMDatabasePool.m in Sources */,
 				F4BC1F69202A275500A2E2B1 /* ViewControllerStoriesTrials.swift in Sources */,
@@ -866,6 +917,7 @@
 				F405413920497F0100202ABD /* ResultSummary.swift in Sources */,
 				F4D9FC2E201FB3BB004D0F4E /* AppDelegate.swift in Sources */,
 				F42797FC2031D52C007F5BE8 /* ViewControllerAdminLogin.swift in Sources */,
+				F4630C6E205C5DF90041CC61 /* ViewControllerGazeControl.swift in Sources */,
 				F4CD745620209E8700C8A791 /* ViewControllerGaze.swift in Sources */,
 				F4D9FC5D201FB3E3004D0F4E /* FMDatabaseAdditions.m in Sources */,
 			);

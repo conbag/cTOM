@@ -60,8 +60,6 @@ class ViewControllerGaze: UIViewController {
             // retrieve correct answer from trialWithAnswer dict from DBManager singleton class
             
             let result: Result
-            
-            print(pausedTime!)
  
             let reactionTime = (round(1000 * (currentTimeInMiliseconds(date: buttonDate!) - currentTimeInMiliseconds(date: videoDate!) - pausedTime!))) / 1000
             // get seconds(to 3 decimal places) by taking away video start time minus button time. Less any time trial was paused
@@ -159,7 +157,7 @@ class ViewControllerGaze: UIViewController {
         // disable volume on gaze videos as direct is indicated
         player.play()
         
-        timer = Timer.scheduledTimer(timeInterval: longestTrialDuration!, target: self, selector: #selector(videoDidFinishPlaying), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: (longestTrialDuration! + 1), target: self, selector: #selector(videoDidFinishPlaying), userInfo: nil, repeats: false)
         
         videoDate = Date()
         dbDate = dateToString(date: videoDate!)

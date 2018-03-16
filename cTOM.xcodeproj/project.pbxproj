@@ -11,6 +11,50 @@
 		5684E6763C1CEA4A1B13BC6E /* Pods_cTOM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADBDB6E1C3E79DF95807711 /* Pods_cTOM.framework */; };
 		F405413720497B1300202ABD /* ViewControllerResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405413620497B1300202ABD /* ViewControllerResults.swift */; };
 		F405413920497F0100202ABD /* ResultSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405413820497F0100202ABD /* ResultSummary.swift */; };
+		F405E1E4205BDFFA00A50BFA /* Brian_20d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1DA205BDFF900A50BFA /* Brian_20d_R.mp4 */; };
+		F405E1E5205BDFFA00A50BFA /* Brian_10d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1DB205BDFF900A50BFA /* Brian_10d_L.mp4 */; };
+		F405E1E6205BDFFA00A50BFA /* Brian_20d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1DC205BDFF900A50BFA /* Brian_20d_L.mp4 */; };
+		F405E1E7205BDFFA00A50BFA /* Brian_30d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1DD205BDFFA00A50BFA /* Brian_30d_R.mp4 */; };
+		F405E1E8205BDFFA00A50BFA /* Brian_30d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1DE205BDFFA00A50BFA /* Brian_30d_L.mp4 */; };
+		F405E1E9205BDFFA00A50BFA /* Brian_60d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1DF205BDFFA00A50BFA /* Brian_60d_R.mp4 */; };
+		F405E1EA205BDFFA00A50BFA /* Brian_up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1E0205BDFFA00A50BFA /* Brian_up.mp4 */; };
+		F405E1EB205BDFFA00A50BFA /* Brian_10d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1E1205BDFFA00A50BFA /* Brian_10d_R.mp4 */; };
+		F405E1EC205BDFFA00A50BFA /* Brian_sa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1E2205BDFFA00A50BFA /* Brian_sa.mp4 */; };
+		F405E1ED205BDFFA00A50BFA /* Brian_60d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1E3205BDFFA00A50BFA /* Brian_60d_L.mp4 */; };
+		F405E1F8205BE02700A50BFA /* Chris_30d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1EE205BE02600A50BFA /* Chris_30d_R.mp4 */; };
+		F405E1F9205BE02700A50BFA /* Chris_20d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1EF205BE02600A50BFA /* Chris_20d_R.mp4 */; };
+		F405E1FA205BE02700A50BFA /* Chris_sa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1F0205BE02600A50BFA /* Chris_sa.mp4 */; };
+		F405E1FB205BE02700A50BFA /* Chris_10d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1F1205BE02600A50BFA /* Chris_10d_R.mp4 */; };
+		F405E1FC205BE02700A50BFA /* Chris_60d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1F2205BE02600A50BFA /* Chris_60d_L.mp4 */; };
+		F405E1FD205BE02700A50BFA /* Chris_20d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1F3205BE02700A50BFA /* Chris_20d_L.mp4 */; };
+		F405E1FE205BE02700A50BFA /* Chris_60d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1F4205BE02700A50BFA /* Chris_60d_R.mp4 */; };
+		F405E1FF205BE02700A50BFA /* Chris_up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1F5205BE02700A50BFA /* Chris_up.mp4 */; };
+		F405E200205BE02700A50BFA /* Chris_30d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1F6205BE02700A50BFA /* Chris_30d_L.mp4 */; };
+		F405E201205BE02700A50BFA /* Chris_10d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E1F7205BE02700A50BFA /* Chris_10d_L.mp4 */; };
+		F405E20C205BE04F00A50BFA /* Jenny_up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E202205BE04E00A50BFA /* Jenny_up.mp4 */; };
+		F405E20D205BE04F00A50BFA /* Jenny_30d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E203205BE04E00A50BFA /* Jenny_30d_R.mp4 */; };
+		F405E20E205BE04F00A50BFA /* Jenny_10d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E204205BE04E00A50BFA /* Jenny_10d_R.mp4 */; };
+		F405E20F205BE04F00A50BFA /* Jenny_20d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E205205BE04E00A50BFA /* Jenny_20d_L.mp4 */; };
+		F405E210205BE04F00A50BFA /* Jenny_60d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E206205BE04F00A50BFA /* Jenny_60d_L.mp4 */; };
+		F405E211205BE04F00A50BFA /* Jenny_10d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E207205BE04F00A50BFA /* Jenny_10d_L.mp4 */; };
+		F405E212205BE04F00A50BFA /* Jenny_20d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E208205BE04F00A50BFA /* Jenny_20d_R.mp4 */; };
+		F405E213205BE04F00A50BFA /* Jenny_60d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E209205BE04F00A50BFA /* Jenny_60d_R.mp4 */; };
+		F405E214205BE04F00A50BFA /* Jenny_30d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E20A205BE04F00A50BFA /* Jenny_30d_L.mp4 */; };
+		F405E215205BE04F00A50BFA /* Jenny_sa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E20B205BE04F00A50BFA /* Jenny_sa.mp4 */; };
+		F405E220205BE07300A50BFA /* Jess_60d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E216205BE07200A50BFA /* Jess_60d_R.mp4 */; };
+		F405E221205BE07300A50BFA /* Jess_30d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E217205BE07200A50BFA /* Jess_30d_R.mp4 */; };
+		F405E222205BE07300A50BFA /* Jess_30d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E218205BE07200A50BFA /* Jess_30d_L.mp4 */; };
+		F405E223205BE07300A50BFA /* Jess_up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E219205BE07200A50BFA /* Jess_up.mp4 */; };
+		F405E224205BE07300A50BFA /* Jess_sa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E21A205BE07300A50BFA /* Jess_sa.mp4 */; };
+		F405E225205BE07300A50BFA /* Jess_10d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E21B205BE07300A50BFA /* Jess_10d_R.mp4 */; };
+		F405E226205BE07300A50BFA /* Jess_10d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E21C205BE07300A50BFA /* Jess_10d_L.mp4 */; };
+		F405E227205BE07300A50BFA /* Jess_20d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E21D205BE07300A50BFA /* Jess_20d_L.mp4 */; };
+		F405E228205BE07300A50BFA /* Jess_20d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E21E205BE07300A50BFA /* Jess_20d_R.mp4 */; };
+		F405E229205BE07300A50BFA /* Jess_60d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E21F205BE07300A50BFA /* Jess_60d_L.mp4 */; };
+		F405E232205BE10C00A50BFA /* cTOM.db in Resources */ = {isa = PBXBuildFile; fileRef = F405E231205BE10C00A50BFA /* cTOM.db */; };
+		F405E236205BE2EA00A50BFA /* Control_up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E233205BE2EA00A50BFA /* Control_up.mp4 */; };
+		F405E237205BE2EA00A50BFA /* Control_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E234205BE2EA00A50BFA /* Control_left.mp4 */; };
+		F405E238205BE2EA00A50BFA /* Control_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E235205BE2EA00A50BFA /* Control_right.mp4 */; };
 		F42693BA2056CB7900EDA31A /* Robbery_1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F42693B82056CB7900EDA31A /* Robbery_1.mp4 */; };
 		F42693BB2056CB7900EDA31A /* Robbery_2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F42693B92056CB7900EDA31A /* Robbery_2.mp4 */; };
 		F42693C42056CBCE00EDA31A /* What Does Jane Think Tom Thinks Is In His Backpack.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F42693BC2056CBCD00EDA31A /* What Does Jane Think Tom Thinks Is In His Backpack.m4a */; };
@@ -33,7 +77,6 @@
 		F4B99F0920289585003C25C0 /* GazePractice.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B99F0820289585003C25C0 /* GazePractice.png */; };
 		F4BA870220388EAC00340BE0 /* ViewControllerNewParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA870120388EAC00340BE0 /* ViewControllerNewParticipant.swift */; };
 		F4BC1F69202A275500A2E2B1 /* ViewControllerStoriesTrials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC1F68202A275500A2E2B1 /* ViewControllerStoriesTrials.swift */; };
-		F4BD7D5D205939B300B89521 /* cTOM.db in Resources */ = {isa = PBXBuildFile; fileRef = F4BD7D5C205939B300B89521 /* cTOM.db */; };
 		F4CD745620209E8700C8A791 /* ViewControllerGaze.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD745520209E8700C8A791 /* ViewControllerGaze.swift */; };
 		F4CEFB94202B63B900AE1291 /* Apple_1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4CEFB8E202B63B900AE1291 /* Apple_1.mp4 */; };
 		F4CEFB95202B63B900AE1291 /* Present_2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4CEFB8F202B63B900AE1291 /* Present_2.mp4 */; };
@@ -67,88 +110,7 @@
 		F4D9FC60201FB3E3004D0F4E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC58201FB3E3004D0F4E /* Info.plist */; };
 		F4D9FC66201FB47C004D0F4E /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FC65201FB47C004D0F4E /* DBManager.swift */; };
 		F4D9FC68201FB4A9004D0F4E /* Trackers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FC67201FB4A9004D0F4E /* Trackers.swift */; };
-		F4D9FCC9201FB5B1004D0F4E /* Jenny_N_10d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC6D201FB5B1004D0F4E /* Jenny_N_10d_R.mp4 */; };
-		F4D9FCCA201FB5B1004D0F4E /* Jenny_N_30d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC6E201FB5B1004D0F4E /* Jenny_N_30d_R.mp4 */; };
-		F4D9FCCB201FB5B1004D0F4E /* Jenny_N_60d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC6F201FB5B1004D0F4E /* Jenny_N_60d_L.mp4 */; };
-		F4D9FCCC201FB5B1004D0F4E /* Jenny_N_20d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC70201FB5B1004D0F4E /* Jenny_N_20d_R.mp4 */; };
-		F4D9FCCD201FB5B1004D0F4E /* Jenny_N_30d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC71201FB5B1004D0F4E /* Jenny_N_30d_L.mp4 */; };
-		F4D9FCCE201FB5B1004D0F4E /* Jenny_N_60d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC72201FB5B1004D0F4E /* Jenny_N_60d_R.mp4 */; };
-		F4D9FCCF201FB5B1004D0F4E /* Jenny_N_20d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC73201FB5B1004D0F4E /* Jenny_N_20d_L.mp4 */; };
-		F4D9FCD0201FB5B1004D0F4E /* Jenny_N_sa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC74201FB5B1004D0F4E /* Jenny_N_sa.mp4 */; };
-		F4D9FCD1201FB5B1004D0F4E /* Jenny_N_up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC75201FB5B1004D0F4E /* Jenny_N_up.mp4 */; };
-		F4D9FCD2201FB5B1004D0F4E /* Jenny_N_10d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC76201FB5B1004D0F4E /* Jenny_N_10d_L.mp4 */; };
-		F4D9FCD3201FB5B1004D0F4E /* Jenny_A_sa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC78201FB5B1004D0F4E /* Jenny_A_sa.mp4 */; };
-		F4D9FCD4201FB5B1004D0F4E /* Jenny_A_30d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC79201FB5B1004D0F4E /* Jenny_A_30d_L.mp4 */; };
-		F4D9FCD5201FB5B1004D0F4E /* Jenny_A_20d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC7A201FB5B1004D0F4E /* Jenny_A_20d_L.mp4 */; };
-		F4D9FCD6201FB5B1004D0F4E /* Jenny_A_60d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC7B201FB5B1004D0F4E /* Jenny_A_60d_R.mp4 */; };
-		F4D9FCD7201FB5B1004D0F4E /* Jenny_A_up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC7C201FB5B1004D0F4E /* Jenny_A_up.mp4 */; };
-		F4D9FCD8201FB5B1004D0F4E /* Jenny_A_10d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC7D201FB5B1004D0F4E /* Jenny_A_10d_L.mp4 */; };
-		F4D9FCD9201FB5B1004D0F4E /* Jenny_A_10d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC7E201FB5B1004D0F4E /* Jenny_A_10d_R.mp4 */; };
-		F4D9FCDA201FB5B1004D0F4E /* Jenny_A_30d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC7F201FB5B1004D0F4E /* Jenny_A_30d_R.mp4 */; };
-		F4D9FCDB201FB5B1004D0F4E /* Jenny_A_20d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC80201FB5B1004D0F4E /* Jenny_A_20d_R.mp4 */; };
-		F4D9FCDC201FB5B1004D0F4E /* Jenny_A_60d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC81201FB5B1004D0F4E /* Jenny_A_60d_L.mp4 */; };
-		F4D9FCDD201FB5B1004D0F4E /* Chris_N_10d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC84201FB5B1004D0F4E /* Chris_N_10d_R.mp4 */; };
-		F4D9FCDE201FB5B1004D0F4E /* Chris_N_30d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC85201FB5B1004D0F4E /* Chris_N_30d_R.mp4 */; };
-		F4D9FCDF201FB5B1004D0F4E /* Chris_N_60d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC86201FB5B1004D0F4E /* Chris_N_60d_L.mp4 */; };
-		F4D9FCE0201FB5B1004D0F4E /* Chris_N_20d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC87201FB5B1004D0F4E /* Chris_N_20d_R.mp4 */; };
-		F4D9FCE1201FB5B1004D0F4E /* Chris_N_30d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC88201FB5B1004D0F4E /* Chris_N_30d_L.mp4 */; };
-		F4D9FCE2201FB5B1004D0F4E /* Chris_N_60d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC89201FB5B1004D0F4E /* Chris_N_60d_R.mp4 */; };
-		F4D9FCE3201FB5B1004D0F4E /* Chris_N_sa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC8A201FB5B1004D0F4E /* Chris_N_sa.mp4 */; };
-		F4D9FCE4201FB5B1004D0F4E /* Chris_N_20d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC8B201FB5B1004D0F4E /* Chris_N_20d_L.mp4 */; };
-		F4D9FCE5201FB5B1004D0F4E /* Chris_N_up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC8C201FB5B1004D0F4E /* Chris_N_up.mp4 */; };
-		F4D9FCE6201FB5B1004D0F4E /* Chris_N_10d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC8D201FB5B1004D0F4E /* Chris_N_10d_L.mp4 */; };
-		F4D9FCE7201FB5B1004D0F4E /* Chris_A_30d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC8F201FB5B1004D0F4E /* Chris_A_30d_L.mp4 */; };
-		F4D9FCE8201FB5B1004D0F4E /* Chris_A_sa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC90201FB5B1004D0F4E /* Chris_A_sa.mp4 */; };
-		F4D9FCE9201FB5B1004D0F4E /* Chris_A_20d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC91201FB5B1004D0F4E /* Chris_A_20d_L.mp4 */; };
-		F4D9FCEA201FB5B1004D0F4E /* Chris_A_60d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC92201FB5B1004D0F4E /* Chris_A_60d_R.mp4 */; };
-		F4D9FCEB201FB5B1004D0F4E /* Chris_A_10d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC93201FB5B1004D0F4E /* Chris_A_10d_L.mp4 */; };
-		F4D9FCEC201FB5B1004D0F4E /* Chris_A_up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC94201FB5B1004D0F4E /* Chris_A_up.mp4 */; };
-		F4D9FCED201FB5B1004D0F4E /* Chris_A_10d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC95201FB5B1004D0F4E /* Chris_A_10d_R.mp4 */; };
-		F4D9FCEE201FB5B1004D0F4E /* Chris_A_30d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC96201FB5B1004D0F4E /* Chris_A_30d_R.mp4 */; };
-		F4D9FCEF201FB5B1004D0F4E /* Chris_A_20d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC97201FB5B1004D0F4E /* Chris_A_20d_R.mp4 */; };
-		F4D9FCF0201FB5B1004D0F4E /* Chris_A_60d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC98201FB5B1004D0F4E /* Chris_A_60d_L.mp4 */; };
 		F4D9FCF1201FB5B1004D0F4E /* Montage.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC99201FB5B1004D0F4E /* Montage.mp4 */; };
-		F4D9FCF2201FB5B1004D0F4E /* Brian_N_30d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC9C201FB5B1004D0F4E /* Brian_N_30d_L.mp4 */; };
-		F4D9FCF3201FB5B1004D0F4E /* Brian_N_20d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC9D201FB5B1004D0F4E /* Brian_N_20d_L.mp4 */; };
-		F4D9FCF4201FB5B1004D0F4E /* Brian_N_60d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC9E201FB5B1004D0F4E /* Brian_N_60d_R.mp4 */; };
-		F4D9FCF5201FB5B1004D0F4E /* Brian_N_up_2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FC9F201FB5B1004D0F4E /* Brian_N_up_2.mp4 */; };
-		F4D9FCF6201FB5B1004D0F4E /* Brian_N_10d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCA0201FB5B1004D0F4E /* Brian_N_10d_L.mp4 */; };
-		F4D9FCF7201FB5B1004D0F4E /* Brian_N_up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCA1201FB5B1004D0F4E /* Brian_N_up.mp4 */; };
-		F4D9FCF8201FB5B1004D0F4E /* Brian_N_10d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCA2201FB5B1004D0F4E /* Brian_N_10d_R.mp4 */; };
-		F4D9FCF9201FB5B1004D0F4E /* Brian_N_30d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCA3201FB5B1004D0F4E /* Brian_N_30d_R.mp4 */; };
-		F4D9FCFA201FB5B1004D0F4E /* Brian_N_20d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCA4201FB5B1004D0F4E /* Brian_N_20d_R.mp4 */; };
-		F4D9FCFB201FB5B1004D0F4E /* Brian_N_60d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCA5201FB5B1004D0F4E /* Brian_N_60d_L.mp4 */; };
-		F4D9FCFC201FB5B1004D0F4E /* Brian_N_sa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCA6201FB5B1004D0F4E /* Brian_N_sa.mp4 */; };
-		F4D9FCFD201FB5B1004D0F4E /* Brian_A_up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCA8201FB5B1004D0F4E /* Brian_A_up.mp4 */; };
-		F4D9FCFE201FB5B1004D0F4E /* Brian_A_10d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCA9201FB5B1004D0F4E /* Brian_A_10d_R.mp4 */; };
-		F4D9FCFF201FB5B1004D0F4E /* Brian_A_30d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCAA201FB5B1004D0F4E /* Brian_A_30d_R.mp4 */; };
-		F4D9FD00201FB5B1004D0F4E /* Brian_A_sa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCAB201FB5B1004D0F4E /* Brian_A_sa.mp4 */; };
-		F4D9FD01201FB5B1004D0F4E /* Brian_A_60d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCAC201FB5B1004D0F4E /* Brian_A_60d_L.mp4 */; };
-		F4D9FD02201FB5B1004D0F4E /* Brian_A_20d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCAD201FB5B1004D0F4E /* Brian_A_20d_R.mp4 */; };
-		F4D9FD03201FB5B1004D0F4E /* Brian_A_30d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCAE201FB5B1004D0F4E /* Brian_A_30d_L.mp4 */; };
-		F4D9FD04201FB5B1004D0F4E /* Brian_A_60d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCAF201FB5B1004D0F4E /* Brian_A_60d_R.mp4 */; };
-		F4D9FD05201FB5B1004D0F4E /* Brian_A_20d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCB0201FB5B1004D0F4E /* Brian_A_20d_L.mp4 */; };
-		F4D9FD06201FB5B1004D0F4E /* Brian_A_10d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCB1201FB5B1004D0F4E /* Brian_A_10d_L.mp4 */; };
-		F4D9FD07201FB5B1004D0F4E /* Jess_N_30d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCB4201FB5B1004D0F4E /* Jess_N_30d_L.mp4 */; };
-		F4D9FD08201FB5B1004D0F4E /* Jess_N_up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCB5201FB5B1004D0F4E /* Jess_N_up.mp4 */; };
-		F4D9FD09201FB5B1004D0F4E /* Jess_N_20d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCB6201FB5B1004D0F4E /* Jess_N_20d_L.mp4 */; };
-		F4D9FD0A201FB5B1004D0F4E /* Jess_N_60d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCB7201FB5B1004D0F4E /* Jess_N_60d_R.mp4 */; };
-		F4D9FD0B201FB5B1004D0F4E /* Jess_N_sa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCB8201FB5B1004D0F4E /* Jess_N_sa.mp4 */; };
-		F4D9FD0C201FB5B1004D0F4E /* Jess_N_10d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCB9201FB5B1004D0F4E /* Jess_N_10d_L.mp4 */; };
-		F4D9FD0D201FB5B1004D0F4E /* Jess_N_10d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCBA201FB5B1004D0F4E /* Jess_N_10d_R.mp4 */; };
-		F4D9FD0E201FB5B1004D0F4E /* Jess_N_30d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCBB201FB5B1004D0F4E /* Jess_N_30d_R.mp4 */; };
-		F4D9FD0F201FB5B1004D0F4E /* Jess_N_20d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCBC201FB5B1004D0F4E /* Jess_N_20d_R.mp4 */; };
-		F4D9FD10201FB5B1004D0F4E /* Jess_N_60d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCBD201FB5B1004D0F4E /* Jess_N_60d_L.mp4 */; };
-		F4D9FD11201FB5B1004D0F4E /* Jess_A_10d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCBF201FB5B1004D0F4E /* Jess_A_10d_R.mp4 */; };
-		F4D9FD12201FB5B1004D0F4E /* Jess_A_30d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCC0201FB5B1004D0F4E /* Jess_A_30d_R.mp4 */; };
-		F4D9FD13201FB5B1004D0F4E /* Jess_A_60d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCC1201FB5B1004D0F4E /* Jess_A_60d_L.mp4 */; };
-		F4D9FD14201FB5B1004D0F4E /* Jess_A_20d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCC2201FB5B1004D0F4E /* Jess_A_20d_R.mp4 */; };
-		F4D9FD15201FB5B1004D0F4E /* Jess_A_30d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCC3201FB5B1004D0F4E /* Jess_A_30d_L.mp4 */; };
-		F4D9FD16201FB5B1004D0F4E /* Jess_A_up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCC4201FB5B1004D0F4E /* Jess_A_up.mp4 */; };
-		F4D9FD17201FB5B1004D0F4E /* Jess_A_60d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCC5201FB5B1004D0F4E /* Jess_A_60d_R.mp4 */; };
-		F4D9FD18201FB5B1004D0F4E /* Jess_A_20d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCC6201FB5B1004D0F4E /* Jess_A_20d_L.mp4 */; };
-		F4D9FD19201FB5B1004D0F4E /* Jess_A_sa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCC7201FB5B1004D0F4E /* Jess_A_sa.mp4 */; };
-		F4D9FD1A201FB5B1004D0F4E /* Jess_A_10d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4D9FCC8201FB5B1004D0F4E /* Jess_A_10d_L.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +131,50 @@
 		B6FCF397165E9619EA936879 /* Pods_cTOMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cTOMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F405413620497B1300202ABD /* ViewControllerResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerResults.swift; sourceTree = "<group>"; };
 		F405413820497F0100202ABD /* ResultSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSummary.swift; sourceTree = "<group>"; };
+		F405E1DA205BDFF900A50BFA /* Brian_20d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_20d_R.mp4; sourceTree = "<group>"; };
+		F405E1DB205BDFF900A50BFA /* Brian_10d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_10d_L.mp4; sourceTree = "<group>"; };
+		F405E1DC205BDFF900A50BFA /* Brian_20d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_20d_L.mp4; sourceTree = "<group>"; };
+		F405E1DD205BDFFA00A50BFA /* Brian_30d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_30d_R.mp4; sourceTree = "<group>"; };
+		F405E1DE205BDFFA00A50BFA /* Brian_30d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_30d_L.mp4; sourceTree = "<group>"; };
+		F405E1DF205BDFFA00A50BFA /* Brian_60d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_60d_R.mp4; sourceTree = "<group>"; };
+		F405E1E0205BDFFA00A50BFA /* Brian_up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_up.mp4; sourceTree = "<group>"; };
+		F405E1E1205BDFFA00A50BFA /* Brian_10d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_10d_R.mp4; sourceTree = "<group>"; };
+		F405E1E2205BDFFA00A50BFA /* Brian_sa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_sa.mp4; sourceTree = "<group>"; };
+		F405E1E3205BDFFA00A50BFA /* Brian_60d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_60d_L.mp4; sourceTree = "<group>"; };
+		F405E1EE205BE02600A50BFA /* Chris_30d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_30d_R.mp4; sourceTree = "<group>"; };
+		F405E1EF205BE02600A50BFA /* Chris_20d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_20d_R.mp4; sourceTree = "<group>"; };
+		F405E1F0205BE02600A50BFA /* Chris_sa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_sa.mp4; sourceTree = "<group>"; };
+		F405E1F1205BE02600A50BFA /* Chris_10d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_10d_R.mp4; sourceTree = "<group>"; };
+		F405E1F2205BE02600A50BFA /* Chris_60d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_60d_L.mp4; sourceTree = "<group>"; };
+		F405E1F3205BE02700A50BFA /* Chris_20d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_20d_L.mp4; sourceTree = "<group>"; };
+		F405E1F4205BE02700A50BFA /* Chris_60d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_60d_R.mp4; sourceTree = "<group>"; };
+		F405E1F5205BE02700A50BFA /* Chris_up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_up.mp4; sourceTree = "<group>"; };
+		F405E1F6205BE02700A50BFA /* Chris_30d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_30d_L.mp4; sourceTree = "<group>"; };
+		F405E1F7205BE02700A50BFA /* Chris_10d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_10d_L.mp4; sourceTree = "<group>"; };
+		F405E202205BE04E00A50BFA /* Jenny_up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_up.mp4; sourceTree = "<group>"; };
+		F405E203205BE04E00A50BFA /* Jenny_30d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_30d_R.mp4; sourceTree = "<group>"; };
+		F405E204205BE04E00A50BFA /* Jenny_10d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_10d_R.mp4; sourceTree = "<group>"; };
+		F405E205205BE04E00A50BFA /* Jenny_20d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_20d_L.mp4; sourceTree = "<group>"; };
+		F405E206205BE04F00A50BFA /* Jenny_60d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_60d_L.mp4; sourceTree = "<group>"; };
+		F405E207205BE04F00A50BFA /* Jenny_10d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_10d_L.mp4; sourceTree = "<group>"; };
+		F405E208205BE04F00A50BFA /* Jenny_20d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_20d_R.mp4; sourceTree = "<group>"; };
+		F405E209205BE04F00A50BFA /* Jenny_60d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_60d_R.mp4; sourceTree = "<group>"; };
+		F405E20A205BE04F00A50BFA /* Jenny_30d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_30d_L.mp4; sourceTree = "<group>"; };
+		F405E20B205BE04F00A50BFA /* Jenny_sa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_sa.mp4; sourceTree = "<group>"; };
+		F405E216205BE07200A50BFA /* Jess_60d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_60d_R.mp4; sourceTree = "<group>"; };
+		F405E217205BE07200A50BFA /* Jess_30d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_30d_R.mp4; sourceTree = "<group>"; };
+		F405E218205BE07200A50BFA /* Jess_30d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_30d_L.mp4; sourceTree = "<group>"; };
+		F405E219205BE07200A50BFA /* Jess_up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_up.mp4; sourceTree = "<group>"; };
+		F405E21A205BE07300A50BFA /* Jess_sa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_sa.mp4; sourceTree = "<group>"; };
+		F405E21B205BE07300A50BFA /* Jess_10d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_10d_R.mp4; sourceTree = "<group>"; };
+		F405E21C205BE07300A50BFA /* Jess_10d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_10d_L.mp4; sourceTree = "<group>"; };
+		F405E21D205BE07300A50BFA /* Jess_20d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_20d_L.mp4; sourceTree = "<group>"; };
+		F405E21E205BE07300A50BFA /* Jess_20d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_20d_R.mp4; sourceTree = "<group>"; };
+		F405E21F205BE07300A50BFA /* Jess_60d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_60d_L.mp4; sourceTree = "<group>"; };
+		F405E231205BE10C00A50BFA /* cTOM.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cTOM.db; sourceTree = "<group>"; };
+		F405E233205BE2EA00A50BFA /* Control_up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Control_up.mp4; sourceTree = "<group>"; };
+		F405E234205BE2EA00A50BFA /* Control_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Control_left.mp4; sourceTree = "<group>"; };
+		F405E235205BE2EA00A50BFA /* Control_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Control_right.mp4; sourceTree = "<group>"; };
 		F42693B82056CB7900EDA31A /* Robbery_1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Robbery_1.mp4; path = "../../../../Dropbox/Software Design and Development - NUIG/FYP/Media/c_TOM_Stories/Robbery_1.mp4"; sourceTree = "<group>"; };
 		F42693B92056CB7900EDA31A /* Robbery_2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Robbery_2.mp4; path = "../../../../Dropbox/Software Design and Development - NUIG/FYP/Media/c_TOM_Stories/Robbery_2.mp4"; sourceTree = "<group>"; };
 		F42693BC2056CBCD00EDA31A /* What Does Jane Think Tom Thinks Is In His Backpack.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "What Does Jane Think Tom Thinks Is In His Backpack.m4a"; path = "../../../../../Dropbox/Software Design and Development - NUIG/FYP/Media/ctomadditionalaudioandpicturefiles/Stories March 2018/What Does Jane Think Tom Thinks Is In His Backpack.m4a"; sourceTree = "<group>"; };
@@ -191,7 +197,6 @@
 		F4B99F0820289585003C25C0 /* GazePractice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GazePractice.png; sourceTree = "<group>"; };
 		F4BA870120388EAC00340BE0 /* ViewControllerNewParticipant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNewParticipant.swift; sourceTree = "<group>"; };
 		F4BC1F68202A275500A2E2B1 /* ViewControllerStoriesTrials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStoriesTrials.swift; sourceTree = "<group>"; };
-		F4BD7D5C205939B300B89521 /* cTOM.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cTOM.db; sourceTree = "<group>"; };
 		F4CD745520209E8700C8A791 /* ViewControllerGaze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGaze.swift; sourceTree = "<group>"; };
 		F4CEFB8E202B63B900AE1291 /* Apple_1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Apple_1.mp4; path = "../../../../Dropbox/Software Design and Development - NUIG/FYP/Media/c_TOM_Stories/Apple_1.mp4"; sourceTree = "<group>"; };
 		F4CEFB8F202B63B900AE1291 /* Present_2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Present_2.mp4; path = "../../../../Dropbox/Software Design and Development - NUIG/FYP/Media/c_TOM_Stories/Present_2.mp4"; sourceTree = "<group>"; };
@@ -236,88 +241,7 @@
 		F4D9FC5A201FB3E3004D0F4E /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = "../../../Downloads/fmdb-master/src/fmdb/FMDatabaseAdditions.h"; sourceTree = "<group>"; };
 		F4D9FC65201FB47C004D0F4E /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		F4D9FC67201FB4A9004D0F4E /* Trackers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trackers.swift; sourceTree = "<group>"; };
-		F4D9FC6D201FB5B1004D0F4E /* Jenny_N_10d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_N_10d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC6E201FB5B1004D0F4E /* Jenny_N_30d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_N_30d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC6F201FB5B1004D0F4E /* Jenny_N_60d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_N_60d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC70201FB5B1004D0F4E /* Jenny_N_20d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_N_20d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC71201FB5B1004D0F4E /* Jenny_N_30d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_N_30d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC72201FB5B1004D0F4E /* Jenny_N_60d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_N_60d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC73201FB5B1004D0F4E /* Jenny_N_20d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_N_20d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC74201FB5B1004D0F4E /* Jenny_N_sa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_N_sa.mp4; sourceTree = "<group>"; };
-		F4D9FC75201FB5B1004D0F4E /* Jenny_N_up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_N_up.mp4; sourceTree = "<group>"; };
-		F4D9FC76201FB5B1004D0F4E /* Jenny_N_10d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_N_10d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC78201FB5B1004D0F4E /* Jenny_A_sa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_A_sa.mp4; sourceTree = "<group>"; };
-		F4D9FC79201FB5B1004D0F4E /* Jenny_A_30d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_A_30d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC7A201FB5B1004D0F4E /* Jenny_A_20d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_A_20d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC7B201FB5B1004D0F4E /* Jenny_A_60d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_A_60d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC7C201FB5B1004D0F4E /* Jenny_A_up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_A_up.mp4; sourceTree = "<group>"; };
-		F4D9FC7D201FB5B1004D0F4E /* Jenny_A_10d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_A_10d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC7E201FB5B1004D0F4E /* Jenny_A_10d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_A_10d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC7F201FB5B1004D0F4E /* Jenny_A_30d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_A_30d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC80201FB5B1004D0F4E /* Jenny_A_20d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_A_20d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC81201FB5B1004D0F4E /* Jenny_A_60d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_A_60d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC84201FB5B1004D0F4E /* Chris_N_10d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_N_10d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC85201FB5B1004D0F4E /* Chris_N_30d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_N_30d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC86201FB5B1004D0F4E /* Chris_N_60d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_N_60d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC87201FB5B1004D0F4E /* Chris_N_20d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_N_20d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC88201FB5B1004D0F4E /* Chris_N_30d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_N_30d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC89201FB5B1004D0F4E /* Chris_N_60d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_N_60d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC8A201FB5B1004D0F4E /* Chris_N_sa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_N_sa.mp4; sourceTree = "<group>"; };
-		F4D9FC8B201FB5B1004D0F4E /* Chris_N_20d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_N_20d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC8C201FB5B1004D0F4E /* Chris_N_up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_N_up.mp4; sourceTree = "<group>"; };
-		F4D9FC8D201FB5B1004D0F4E /* Chris_N_10d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_N_10d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC8F201FB5B1004D0F4E /* Chris_A_30d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_A_30d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC90201FB5B1004D0F4E /* Chris_A_sa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_A_sa.mp4; sourceTree = "<group>"; };
-		F4D9FC91201FB5B1004D0F4E /* Chris_A_20d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_A_20d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC92201FB5B1004D0F4E /* Chris_A_60d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_A_60d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC93201FB5B1004D0F4E /* Chris_A_10d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_A_10d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC94201FB5B1004D0F4E /* Chris_A_up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_A_up.mp4; sourceTree = "<group>"; };
-		F4D9FC95201FB5B1004D0F4E /* Chris_A_10d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_A_10d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC96201FB5B1004D0F4E /* Chris_A_30d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_A_30d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC97201FB5B1004D0F4E /* Chris_A_20d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_A_20d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC98201FB5B1004D0F4E /* Chris_A_60d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chris_A_60d_L.mp4; sourceTree = "<group>"; };
 		F4D9FC99201FB5B1004D0F4E /* Montage.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montage.mp4; sourceTree = "<group>"; };
-		F4D9FC9C201FB5B1004D0F4E /* Brian_N_30d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_N_30d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC9D201FB5B1004D0F4E /* Brian_N_20d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_N_20d_L.mp4; sourceTree = "<group>"; };
-		F4D9FC9E201FB5B1004D0F4E /* Brian_N_60d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_N_60d_R.mp4; sourceTree = "<group>"; };
-		F4D9FC9F201FB5B1004D0F4E /* Brian_N_up_2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_N_up_2.mp4; sourceTree = "<group>"; };
-		F4D9FCA0201FB5B1004D0F4E /* Brian_N_10d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_N_10d_L.mp4; sourceTree = "<group>"; };
-		F4D9FCA1201FB5B1004D0F4E /* Brian_N_up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_N_up.mp4; sourceTree = "<group>"; };
-		F4D9FCA2201FB5B1004D0F4E /* Brian_N_10d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_N_10d_R.mp4; sourceTree = "<group>"; };
-		F4D9FCA3201FB5B1004D0F4E /* Brian_N_30d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_N_30d_R.mp4; sourceTree = "<group>"; };
-		F4D9FCA4201FB5B1004D0F4E /* Brian_N_20d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_N_20d_R.mp4; sourceTree = "<group>"; };
-		F4D9FCA5201FB5B1004D0F4E /* Brian_N_60d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_N_60d_L.mp4; sourceTree = "<group>"; };
-		F4D9FCA6201FB5B1004D0F4E /* Brian_N_sa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_N_sa.mp4; sourceTree = "<group>"; };
-		F4D9FCA8201FB5B1004D0F4E /* Brian_A_up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_A_up.mp4; sourceTree = "<group>"; };
-		F4D9FCA9201FB5B1004D0F4E /* Brian_A_10d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_A_10d_R.mp4; sourceTree = "<group>"; };
-		F4D9FCAA201FB5B1004D0F4E /* Brian_A_30d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_A_30d_R.mp4; sourceTree = "<group>"; };
-		F4D9FCAB201FB5B1004D0F4E /* Brian_A_sa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_A_sa.mp4; sourceTree = "<group>"; };
-		F4D9FCAC201FB5B1004D0F4E /* Brian_A_60d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_A_60d_L.mp4; sourceTree = "<group>"; };
-		F4D9FCAD201FB5B1004D0F4E /* Brian_A_20d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_A_20d_R.mp4; sourceTree = "<group>"; };
-		F4D9FCAE201FB5B1004D0F4E /* Brian_A_30d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_A_30d_L.mp4; sourceTree = "<group>"; };
-		F4D9FCAF201FB5B1004D0F4E /* Brian_A_60d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_A_60d_R.mp4; sourceTree = "<group>"; };
-		F4D9FCB0201FB5B1004D0F4E /* Brian_A_20d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_A_20d_L.mp4; sourceTree = "<group>"; };
-		F4D9FCB1201FB5B1004D0F4E /* Brian_A_10d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brian_A_10d_L.mp4; sourceTree = "<group>"; };
-		F4D9FCB4201FB5B1004D0F4E /* Jess_N_30d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_N_30d_L.mp4; sourceTree = "<group>"; };
-		F4D9FCB5201FB5B1004D0F4E /* Jess_N_up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_N_up.mp4; sourceTree = "<group>"; };
-		F4D9FCB6201FB5B1004D0F4E /* Jess_N_20d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_N_20d_L.mp4; sourceTree = "<group>"; };
-		F4D9FCB7201FB5B1004D0F4E /* Jess_N_60d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_N_60d_R.mp4; sourceTree = "<group>"; };
-		F4D9FCB8201FB5B1004D0F4E /* Jess_N_sa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_N_sa.mp4; sourceTree = "<group>"; };
-		F4D9FCB9201FB5B1004D0F4E /* Jess_N_10d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_N_10d_L.mp4; sourceTree = "<group>"; };
-		F4D9FCBA201FB5B1004D0F4E /* Jess_N_10d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_N_10d_R.mp4; sourceTree = "<group>"; };
-		F4D9FCBB201FB5B1004D0F4E /* Jess_N_30d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_N_30d_R.mp4; sourceTree = "<group>"; };
-		F4D9FCBC201FB5B1004D0F4E /* Jess_N_20d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_N_20d_R.mp4; sourceTree = "<group>"; };
-		F4D9FCBD201FB5B1004D0F4E /* Jess_N_60d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_N_60d_L.mp4; sourceTree = "<group>"; };
-		F4D9FCBF201FB5B1004D0F4E /* Jess_A_10d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_10d_R.mp4; sourceTree = "<group>"; };
-		F4D9FCC0201FB5B1004D0F4E /* Jess_A_30d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_30d_R.mp4; sourceTree = "<group>"; };
-		F4D9FCC1201FB5B1004D0F4E /* Jess_A_60d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_60d_L.mp4; sourceTree = "<group>"; };
-		F4D9FCC2201FB5B1004D0F4E /* Jess_A_20d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_20d_R.mp4; sourceTree = "<group>"; };
-		F4D9FCC3201FB5B1004D0F4E /* Jess_A_30d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_30d_L.mp4; sourceTree = "<group>"; };
-		F4D9FCC4201FB5B1004D0F4E /* Jess_A_up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_up.mp4; sourceTree = "<group>"; };
-		F4D9FCC5201FB5B1004D0F4E /* Jess_A_60d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_60d_R.mp4; sourceTree = "<group>"; };
-		F4D9FCC6201FB5B1004D0F4E /* Jess_A_20d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_20d_L.mp4; sourceTree = "<group>"; };
-		F4D9FCC7201FB5B1004D0F4E /* Jess_A_sa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_sa.mp4; sourceTree = "<group>"; };
-		F4D9FCC8201FB5B1004D0F4E /* Jess_A_10d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_A_10d_L.mp4; sourceTree = "<group>"; };
 		F842EE00EDF60EDB87DB497C /* Pods-cTOMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cTOMTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cTOMTests/Pods-cTOMTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -359,6 +283,16 @@
 				ADEAE1624F9FBD6227BD4F3A /* Pods-cTOMTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F405E22A205BE0C700A50BFA /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				F405E234205BE2EA00A50BFA /* Control_left.mp4 */,
+				F405E235205BE2EA00A50BFA /* Control_right.mp4 */,
+				F405E233205BE2EA00A50BFA /* Control_up.mp4 */,
+			);
+			path = Control;
 			sourceTree = "<group>";
 		};
 		F4CEFB8C202B637100AE1291 /* c_TOM_Stories */ = {
@@ -505,6 +439,7 @@
 		F4D9FC6A201FB5B1004D0F4E /* c_TOM_Gaze */ = {
 			isa = PBXGroup;
 			children = (
+				F405E22A205BE0C700A50BFA /* Control */,
 				F4B99F0820289585003C25C0 /* GazePractice.png */,
 				F4D9FC6B201FB5B1004D0F4E /* Jenny */,
 				F4D9FC82201FB5B1004D0F4E /* Chris */,
@@ -519,7 +454,6 @@
 			isa = PBXGroup;
 			children = (
 				F4D9FC6C201FB5B1004D0F4E /* Neutral */,
-				F4D9FC77201FB5B1004D0F4E /* Angry */,
 			);
 			path = Jenny;
 			sourceTree = "<group>";
@@ -527,42 +461,24 @@
 		F4D9FC6C201FB5B1004D0F4E /* Neutral */ = {
 			isa = PBXGroup;
 			children = (
-				F4D9FC6D201FB5B1004D0F4E /* Jenny_N_10d_R.mp4 */,
-				F4D9FC6E201FB5B1004D0F4E /* Jenny_N_30d_R.mp4 */,
-				F4D9FC6F201FB5B1004D0F4E /* Jenny_N_60d_L.mp4 */,
-				F4D9FC70201FB5B1004D0F4E /* Jenny_N_20d_R.mp4 */,
-				F4D9FC71201FB5B1004D0F4E /* Jenny_N_30d_L.mp4 */,
-				F4D9FC72201FB5B1004D0F4E /* Jenny_N_60d_R.mp4 */,
-				F4D9FC73201FB5B1004D0F4E /* Jenny_N_20d_L.mp4 */,
-				F4D9FC74201FB5B1004D0F4E /* Jenny_N_sa.mp4 */,
-				F4D9FC75201FB5B1004D0F4E /* Jenny_N_up.mp4 */,
-				F4D9FC76201FB5B1004D0F4E /* Jenny_N_10d_L.mp4 */,
+				F405E207205BE04F00A50BFA /* Jenny_10d_L.mp4 */,
+				F405E204205BE04E00A50BFA /* Jenny_10d_R.mp4 */,
+				F405E205205BE04E00A50BFA /* Jenny_20d_L.mp4 */,
+				F405E208205BE04F00A50BFA /* Jenny_20d_R.mp4 */,
+				F405E20A205BE04F00A50BFA /* Jenny_30d_L.mp4 */,
+				F405E203205BE04E00A50BFA /* Jenny_30d_R.mp4 */,
+				F405E206205BE04F00A50BFA /* Jenny_60d_L.mp4 */,
+				F405E209205BE04F00A50BFA /* Jenny_60d_R.mp4 */,
+				F405E20B205BE04F00A50BFA /* Jenny_sa.mp4 */,
+				F405E202205BE04E00A50BFA /* Jenny_up.mp4 */,
 			);
 			path = Neutral;
-			sourceTree = "<group>";
-		};
-		F4D9FC77201FB5B1004D0F4E /* Angry */ = {
-			isa = PBXGroup;
-			children = (
-				F4D9FC78201FB5B1004D0F4E /* Jenny_A_sa.mp4 */,
-				F4D9FC79201FB5B1004D0F4E /* Jenny_A_30d_L.mp4 */,
-				F4D9FC7A201FB5B1004D0F4E /* Jenny_A_20d_L.mp4 */,
-				F4D9FC7B201FB5B1004D0F4E /* Jenny_A_60d_R.mp4 */,
-				F4D9FC7C201FB5B1004D0F4E /* Jenny_A_up.mp4 */,
-				F4D9FC7D201FB5B1004D0F4E /* Jenny_A_10d_L.mp4 */,
-				F4D9FC7E201FB5B1004D0F4E /* Jenny_A_10d_R.mp4 */,
-				F4D9FC7F201FB5B1004D0F4E /* Jenny_A_30d_R.mp4 */,
-				F4D9FC80201FB5B1004D0F4E /* Jenny_A_20d_R.mp4 */,
-				F4D9FC81201FB5B1004D0F4E /* Jenny_A_60d_L.mp4 */,
-			);
-			path = Angry;
 			sourceTree = "<group>";
 		};
 		F4D9FC82201FB5B1004D0F4E /* Chris */ = {
 			isa = PBXGroup;
 			children = (
 				F4D9FC83201FB5B1004D0F4E /* Neutral */,
-				F4D9FC8E201FB5B1004D0F4E /* Angry */,
 			);
 			path = Chris;
 			sourceTree = "<group>";
@@ -570,42 +486,24 @@
 		F4D9FC83201FB5B1004D0F4E /* Neutral */ = {
 			isa = PBXGroup;
 			children = (
-				F4D9FC84201FB5B1004D0F4E /* Chris_N_10d_R.mp4 */,
-				F4D9FC85201FB5B1004D0F4E /* Chris_N_30d_R.mp4 */,
-				F4D9FC86201FB5B1004D0F4E /* Chris_N_60d_L.mp4 */,
-				F4D9FC87201FB5B1004D0F4E /* Chris_N_20d_R.mp4 */,
-				F4D9FC88201FB5B1004D0F4E /* Chris_N_30d_L.mp4 */,
-				F4D9FC89201FB5B1004D0F4E /* Chris_N_60d_R.mp4 */,
-				F4D9FC8A201FB5B1004D0F4E /* Chris_N_sa.mp4 */,
-				F4D9FC8B201FB5B1004D0F4E /* Chris_N_20d_L.mp4 */,
-				F4D9FC8C201FB5B1004D0F4E /* Chris_N_up.mp4 */,
-				F4D9FC8D201FB5B1004D0F4E /* Chris_N_10d_L.mp4 */,
+				F405E1F7205BE02700A50BFA /* Chris_10d_L.mp4 */,
+				F405E1F1205BE02600A50BFA /* Chris_10d_R.mp4 */,
+				F405E1F3205BE02700A50BFA /* Chris_20d_L.mp4 */,
+				F405E1EF205BE02600A50BFA /* Chris_20d_R.mp4 */,
+				F405E1F6205BE02700A50BFA /* Chris_30d_L.mp4 */,
+				F405E1EE205BE02600A50BFA /* Chris_30d_R.mp4 */,
+				F405E1F2205BE02600A50BFA /* Chris_60d_L.mp4 */,
+				F405E1F4205BE02700A50BFA /* Chris_60d_R.mp4 */,
+				F405E1F0205BE02600A50BFA /* Chris_sa.mp4 */,
+				F405E1F5205BE02700A50BFA /* Chris_up.mp4 */,
 			);
 			path = Neutral;
-			sourceTree = "<group>";
-		};
-		F4D9FC8E201FB5B1004D0F4E /* Angry */ = {
-			isa = PBXGroup;
-			children = (
-				F4D9FC8F201FB5B1004D0F4E /* Chris_A_30d_L.mp4 */,
-				F4D9FC90201FB5B1004D0F4E /* Chris_A_sa.mp4 */,
-				F4D9FC91201FB5B1004D0F4E /* Chris_A_20d_L.mp4 */,
-				F4D9FC92201FB5B1004D0F4E /* Chris_A_60d_R.mp4 */,
-				F4D9FC93201FB5B1004D0F4E /* Chris_A_10d_L.mp4 */,
-				F4D9FC94201FB5B1004D0F4E /* Chris_A_up.mp4 */,
-				F4D9FC95201FB5B1004D0F4E /* Chris_A_10d_R.mp4 */,
-				F4D9FC96201FB5B1004D0F4E /* Chris_A_30d_R.mp4 */,
-				F4D9FC97201FB5B1004D0F4E /* Chris_A_20d_R.mp4 */,
-				F4D9FC98201FB5B1004D0F4E /* Chris_A_60d_L.mp4 */,
-			);
-			path = Angry;
 			sourceTree = "<group>";
 		};
 		F4D9FC9A201FB5B1004D0F4E /* Brian */ = {
 			isa = PBXGroup;
 			children = (
 				F4D9FC9B201FB5B1004D0F4E /* Neutral */,
-				F4D9FCA7201FB5B1004D0F4E /* Angry */,
 			);
 			path = Brian;
 			sourceTree = "<group>";
@@ -613,43 +511,24 @@
 		F4D9FC9B201FB5B1004D0F4E /* Neutral */ = {
 			isa = PBXGroup;
 			children = (
-				F4D9FC9C201FB5B1004D0F4E /* Brian_N_30d_L.mp4 */,
-				F4D9FC9D201FB5B1004D0F4E /* Brian_N_20d_L.mp4 */,
-				F4D9FC9E201FB5B1004D0F4E /* Brian_N_60d_R.mp4 */,
-				F4D9FC9F201FB5B1004D0F4E /* Brian_N_up_2.mp4 */,
-				F4D9FCA0201FB5B1004D0F4E /* Brian_N_10d_L.mp4 */,
-				F4D9FCA1201FB5B1004D0F4E /* Brian_N_up.mp4 */,
-				F4D9FCA2201FB5B1004D0F4E /* Brian_N_10d_R.mp4 */,
-				F4D9FCA3201FB5B1004D0F4E /* Brian_N_30d_R.mp4 */,
-				F4D9FCA4201FB5B1004D0F4E /* Brian_N_20d_R.mp4 */,
-				F4D9FCA5201FB5B1004D0F4E /* Brian_N_60d_L.mp4 */,
-				F4D9FCA6201FB5B1004D0F4E /* Brian_N_sa.mp4 */,
+				F405E1DB205BDFF900A50BFA /* Brian_10d_L.mp4 */,
+				F405E1E1205BDFFA00A50BFA /* Brian_10d_R.mp4 */,
+				F405E1DC205BDFF900A50BFA /* Brian_20d_L.mp4 */,
+				F405E1DA205BDFF900A50BFA /* Brian_20d_R.mp4 */,
+				F405E1DE205BDFFA00A50BFA /* Brian_30d_L.mp4 */,
+				F405E1DD205BDFFA00A50BFA /* Brian_30d_R.mp4 */,
+				F405E1E3205BDFFA00A50BFA /* Brian_60d_L.mp4 */,
+				F405E1DF205BDFFA00A50BFA /* Brian_60d_R.mp4 */,
+				F405E1E2205BDFFA00A50BFA /* Brian_sa.mp4 */,
+				F405E1E0205BDFFA00A50BFA /* Brian_up.mp4 */,
 			);
 			path = Neutral;
-			sourceTree = "<group>";
-		};
-		F4D9FCA7201FB5B1004D0F4E /* Angry */ = {
-			isa = PBXGroup;
-			children = (
-				F4D9FCA8201FB5B1004D0F4E /* Brian_A_up.mp4 */,
-				F4D9FCA9201FB5B1004D0F4E /* Brian_A_10d_R.mp4 */,
-				F4D9FCAA201FB5B1004D0F4E /* Brian_A_30d_R.mp4 */,
-				F4D9FCAB201FB5B1004D0F4E /* Brian_A_sa.mp4 */,
-				F4D9FCAC201FB5B1004D0F4E /* Brian_A_60d_L.mp4 */,
-				F4D9FCAD201FB5B1004D0F4E /* Brian_A_20d_R.mp4 */,
-				F4D9FCAE201FB5B1004D0F4E /* Brian_A_30d_L.mp4 */,
-				F4D9FCAF201FB5B1004D0F4E /* Brian_A_60d_R.mp4 */,
-				F4D9FCB0201FB5B1004D0F4E /* Brian_A_20d_L.mp4 */,
-				F4D9FCB1201FB5B1004D0F4E /* Brian_A_10d_L.mp4 */,
-			);
-			path = Angry;
 			sourceTree = "<group>";
 		};
 		F4D9FCB2201FB5B1004D0F4E /* Jess */ = {
 			isa = PBXGroup;
 			children = (
 				F4D9FCB3201FB5B1004D0F4E /* Neutral */,
-				F4D9FCBE201FB5B1004D0F4E /* Angry */,
 			);
 			path = Jess;
 			sourceTree = "<group>";
@@ -657,41 +536,24 @@
 		F4D9FCB3201FB5B1004D0F4E /* Neutral */ = {
 			isa = PBXGroup;
 			children = (
-				F4D9FCB4201FB5B1004D0F4E /* Jess_N_30d_L.mp4 */,
-				F4D9FCB5201FB5B1004D0F4E /* Jess_N_up.mp4 */,
-				F4D9FCB6201FB5B1004D0F4E /* Jess_N_20d_L.mp4 */,
-				F4D9FCB7201FB5B1004D0F4E /* Jess_N_60d_R.mp4 */,
-				F4D9FCB8201FB5B1004D0F4E /* Jess_N_sa.mp4 */,
-				F4D9FCB9201FB5B1004D0F4E /* Jess_N_10d_L.mp4 */,
-				F4D9FCBA201FB5B1004D0F4E /* Jess_N_10d_R.mp4 */,
-				F4D9FCBB201FB5B1004D0F4E /* Jess_N_30d_R.mp4 */,
-				F4D9FCBC201FB5B1004D0F4E /* Jess_N_20d_R.mp4 */,
-				F4D9FCBD201FB5B1004D0F4E /* Jess_N_60d_L.mp4 */,
+				F405E21C205BE07300A50BFA /* Jess_10d_L.mp4 */,
+				F405E21B205BE07300A50BFA /* Jess_10d_R.mp4 */,
+				F405E21D205BE07300A50BFA /* Jess_20d_L.mp4 */,
+				F405E21E205BE07300A50BFA /* Jess_20d_R.mp4 */,
+				F405E218205BE07200A50BFA /* Jess_30d_L.mp4 */,
+				F405E217205BE07200A50BFA /* Jess_30d_R.mp4 */,
+				F405E21F205BE07300A50BFA /* Jess_60d_L.mp4 */,
+				F405E216205BE07200A50BFA /* Jess_60d_R.mp4 */,
+				F405E21A205BE07300A50BFA /* Jess_sa.mp4 */,
+				F405E219205BE07200A50BFA /* Jess_up.mp4 */,
 			);
 			path = Neutral;
-			sourceTree = "<group>";
-		};
-		F4D9FCBE201FB5B1004D0F4E /* Angry */ = {
-			isa = PBXGroup;
-			children = (
-				F4D9FCBF201FB5B1004D0F4E /* Jess_A_10d_R.mp4 */,
-				F4D9FCC0201FB5B1004D0F4E /* Jess_A_30d_R.mp4 */,
-				F4D9FCC1201FB5B1004D0F4E /* Jess_A_60d_L.mp4 */,
-				F4D9FCC2201FB5B1004D0F4E /* Jess_A_20d_R.mp4 */,
-				F4D9FCC3201FB5B1004D0F4E /* Jess_A_30d_L.mp4 */,
-				F4D9FCC4201FB5B1004D0F4E /* Jess_A_up.mp4 */,
-				F4D9FCC5201FB5B1004D0F4E /* Jess_A_60d_R.mp4 */,
-				F4D9FCC6201FB5B1004D0F4E /* Jess_A_20d_L.mp4 */,
-				F4D9FCC7201FB5B1004D0F4E /* Jess_A_sa.mp4 */,
-				F4D9FCC8201FB5B1004D0F4E /* Jess_A_10d_L.mp4 */,
-			);
-			path = Angry;
 			sourceTree = "<group>";
 		};
 		F4D9FD1B201FB6A8004D0F4E /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				F4BD7D5C205939B300B89521 /* cTOM.db */,
+				F405E231205BE10C00A50BFA /* cTOM.db */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -788,123 +650,85 @@
 			files = (
 				F42693CA2056CBCE00EDA31A /* What Does Jane Think Is In Her Backpack.m4a in Resources */,
 				F4CEFBAB202B678600AE1291 /* Where Does Tom Assume Jane Thinks Her Apple Is.m4a in Resources */,
-				F4D9FCD6201FB5B1004D0F4E /* Jenny_A_60d_R.mp4 in Resources */,
-				F4D9FCC9201FB5B1004D0F4E /* Jenny_N_10d_R.mp4 in Resources */,
-				F4D9FCCA201FB5B1004D0F4E /* Jenny_N_30d_R.mp4 in Resources */,
+				F405E20F205BE04F00A50BFA /* Jenny_20d_L.mp4 in Resources */,
 				F42693C92056CBCE00EDA31A /* What Does Tom Think Jane Thinks Is In Her Backpack.m4a in Resources */,
-				F4D9FD0F201FB5B1004D0F4E /* Jess_N_20d_R.mp4 in Resources */,
+				F405E222205BE07300A50BFA /* Jess_30d_L.mp4 in Resources */,
+				F405E201205BE02700A50BFA /* Chris_10d_L.mp4 in Resources */,
 				F4B99F0920289585003C25C0 /* GazePractice.png in Resources */,
-				F4D9FCE2201FB5B1004D0F4E /* Chris_N_60d_R.mp4 in Resources */,
 				F4CEFBB1202B678600AE1291 /* What Does Kate Think Is In Her Backpack.m4a in Resources */,
-				F4D9FCFC201FB5B1004D0F4E /* Brian_N_sa.mp4 in Resources */,
 				F4CEFB98202B63B900AE1291 /* Present_1.mp4 in Resources */,
-				F4D9FCD4201FB5B1004D0F4E /* Jenny_A_30d_L.mp4 in Resources */,
-				F4D9FD07201FB5B1004D0F4E /* Jess_N_30d_L.mp4 in Resources */,
+				F405E215205BE04F00A50BFA /* Jenny_sa.mp4 in Resources */,
+				F405E227205BE07300A50BFA /* Jess_20d_L.mp4 in Resources */,
+				F405E228205BE07300A50BFA /* Jess_20d_R.mp4 in Resources */,
 				F4CEFBB3202B678600AE1291 /* What Does John Assume Kate Thinks Is In Her Backpack.m4a in Resources */,
-				F4D9FCCD201FB5B1004D0F4E /* Jenny_N_30d_L.mp4 in Resources */,
-				F4D9FD06201FB5B1004D0F4E /* Brian_A_10d_L.mp4 in Resources */,
-				F4D9FCE3201FB5B1004D0F4E /* Chris_N_sa.mp4 in Resources */,
+				F405E1FB205BE02700A50BFA /* Chris_10d_R.mp4 in Resources */,
 				F4CEFBAA202B678600AE1291 /* Where Does Tom Think His Apple Is.m4a in Resources */,
 				F42693BA2056CB7900EDA31A /* Robbery_1.mp4 in Resources */,
-				F4D9FCDD201FB5B1004D0F4E /* Chris_N_10d_R.mp4 in Resources */,
-				F4D9FCFA201FB5B1004D0F4E /* Brian_N_20d_R.mp4 in Resources */,
-				F4D9FCEB201FB5B1004D0F4E /* Chris_A_10d_L.mp4 in Resources */,
-				F4D9FD0C201FB5B1004D0F4E /* Jess_N_10d_L.mp4 in Resources */,
 				F4D9FCF1201FB5B1004D0F4E /* Montage.mp4 in Resources */,
-				F4D9FCD5201FB5B1004D0F4E /* Jenny_A_20d_L.mp4 in Resources */,
 				F42693C62056CBCE00EDA31A /* What Does Tom Think Is In His Backpack.m4a in Resources */,
-				F4D9FD0D201FB5B1004D0F4E /* Jess_N_10d_R.mp4 in Resources */,
-				F4D9FD12201FB5B1004D0F4E /* Jess_A_30d_R.mp4 in Resources */,
+				F405E1FA205BE02700A50BFA /* Chris_sa.mp4 in Resources */,
 				F4CEFBB0202B678600AE1291 /* Where Is The Apple.m4a in Resources */,
-				F4BD7D5D205939B300B89521 /* cTOM.db in Resources */,
-				F4D9FCE0201FB5B1004D0F4E /* Chris_N_20d_R.mp4 in Resources */,
-				F4D9FCFB201FB5B1004D0F4E /* Brian_N_60d_L.mp4 in Resources */,
+				F405E1F8205BE02700A50BFA /* Chris_30d_R.mp4 in Resources */,
+				F405E1EB205BDFFA00A50BFA /* Brian_10d_R.mp4 in Resources */,
+				F405E224205BE07300A50BFA /* Jess_sa.mp4 in Resources */,
+				F405E1FF205BE02700A50BFA /* Chris_up.mp4 in Resources */,
+				F405E20D205BE04F00A50BFA /* Jenny_30d_R.mp4 in Resources */,
 				F4D9FC60201FB3E3004D0F4E /* Info.plist in Resources */,
-				F4D9FD00201FB5B1004D0F4E /* Brian_A_sa.mp4 in Resources */,
-				F4D9FCD3201FB5B1004D0F4E /* Jenny_A_sa.mp4 in Resources */,
-				F4D9FCDC201FB5B1004D0F4E /* Jenny_A_60d_L.mp4 in Resources */,
-				F4D9FCD1201FB5B1004D0F4E /* Jenny_N_up.mp4 in Resources */,
-				F4D9FD11201FB5B1004D0F4E /* Jess_A_10d_R.mp4 in Resources */,
-				F4D9FD18201FB5B1004D0F4E /* Jess_A_20d_L.mp4 in Resources */,
-				F4D9FD1A201FB5B1004D0F4E /* Jess_A_10d_L.mp4 in Resources */,
 				F4CEFBA9202B678600AE1291 /* What Does Kate Assume John Thinks Is In His Backpack.m4a in Resources */,
-				F4D9FCFD201FB5B1004D0F4E /* Brian_A_up.mp4 in Resources */,
-				F4D9FCEA201FB5B1004D0F4E /* Chris_A_60d_R.mp4 in Resources */,
-				F4D9FCD9201FB5B1004D0F4E /* Jenny_A_10d_R.mp4 in Resources */,
-				F4D9FCE6201FB5B1004D0F4E /* Chris_N_10d_L.mp4 in Resources */,
-				F4D9FCDB201FB5B1004D0F4E /* Jenny_A_20d_R.mp4 in Resources */,
+				F405E1EA205BDFFA00A50BFA /* Brian_up.mp4 in Resources */,
 				F4D9FC38201FB3BB004D0F4E /* LaunchScreen.storyboard in Resources */,
-				F4D9FD04201FB5B1004D0F4E /* Brian_A_60d_R.mp4 in Resources */,
-				F4D9FD17201FB5B1004D0F4E /* Jess_A_60d_R.mp4 in Resources */,
-				F4D9FCEC201FB5B1004D0F4E /* Chris_A_up.mp4 in Resources */,
+				F405E232205BE10C00A50BFA /* cTOM.db in Resources */,
 				F4CEFBAE202B678600AE1291 /* What Is In The Backpack.m4a in Resources */,
-				F4D9FD16201FB5B1004D0F4E /* Jess_A_up.mp4 in Resources */,
-				F4D9FD05201FB5B1004D0F4E /* Brian_A_20d_L.mp4 in Resources */,
-				F4D9FCD0201FB5B1004D0F4E /* Jenny_N_sa.mp4 in Resources */,
-				F4D9FCE9201FB5B1004D0F4E /* Chris_A_20d_L.mp4 in Resources */,
+				F405E20C205BE04F00A50BFA /* Jenny_up.mp4 in Resources */,
+				F405E220205BE07300A50BFA /* Jess_60d_R.mp4 in Resources */,
 				F4CEFB96202B63B900AE1291 /* Apple_2.mp4 in Resources */,
+				F405E1ED205BDFFA00A50BFA /* Brian_60d_L.mp4 in Resources */,
 				F42693C52056CBCE00EDA31A /* Where Does Jane Think Tom Thinks His Apple Is.m4a in Resources */,
-				F4D9FD08201FB5B1004D0F4E /* Jess_N_up.mp4 in Resources */,
-				F4D9FCE4201FB5B1004D0F4E /* Chris_N_20d_L.mp4 in Resources */,
 				F42693C72056CBCE00EDA31A /* What Does Jane Think Tom Thinks Is In The Box.m4a in Resources */,
 				F4499AE72034AA8100AD2CFD /* c-TOM Stories introduction.m4a in Resources */,
-				F4D9FCF3201FB5B1004D0F4E /* Brian_N_20d_L.mp4 in Resources */,
+				F405E1E5205BDFFA00A50BFA /* Brian_10d_L.mp4 in Resources */,
+				F405E226205BE07300A50BFA /* Jess_10d_L.mp4 in Resources */,
+				F405E229205BE07300A50BFA /* Jess_60d_L.mp4 in Resources */,
 				F4CEFBAC202B678600AE1291 /* What Does John Think Is In His Backpack.m4a in Resources */,
-				F4D9FCF8201FB5B1004D0F4E /* Brian_N_10d_R.mp4 in Resources */,
-				F4D9FD0E201FB5B1004D0F4E /* Jess_N_30d_R.mp4 in Resources */,
+				F405E1E4205BDFFA00A50BFA /* Brian_20d_R.mp4 in Resources */,
 				F4CEFB95202B63B900AE1291 /* Present_2.mp4 in Resources */,
-				F4D9FCF2201FB5B1004D0F4E /* Brian_N_30d_L.mp4 in Resources */,
-				F4D9FCCF201FB5B1004D0F4E /* Jenny_N_20d_L.mp4 in Resources */,
-				F4D9FD19201FB5B1004D0F4E /* Jess_A_sa.mp4 in Resources */,
-				F4D9FCE8201FB5B1004D0F4E /* Chris_A_sa.mp4 in Resources */,
+				F405E1FE205BE02700A50BFA /* Chris_60d_R.mp4 in Resources */,
 				F4CEFBB6202B678600AE1291 /* What Does Tom Assume Jane Thinks Is In The Box.m4a in Resources */,
-				F4D9FCF7201FB5B1004D0F4E /* Brian_N_up.mp4 in Resources */,
-				F4D9FCCE201FB5B1004D0F4E /* Jenny_N_60d_R.mp4 in Resources */,
-				F4D9FCCB201FB5B1004D0F4E /* Jenny_N_60d_L.mp4 in Resources */,
 				F49E4B552022585500161F15 /* Assets.xcassets in Resources */,
-				F4D9FCDA201FB5B1004D0F4E /* Jenny_A_30d_R.mp4 in Resources */,
-				F4D9FCFF201FB5B1004D0F4E /* Brian_A_30d_R.mp4 in Resources */,
 				F4CEFB94202B63B900AE1291 /* Apple_1.mp4 in Resources */,
-				F4D9FD10201FB5B1004D0F4E /* Jess_N_60d_L.mp4 in Resources */,
-				F4D9FCF6201FB5B1004D0F4E /* Brian_N_10d_L.mp4 in Resources */,
+				F405E212205BE04F00A50BFA /* Jenny_20d_R.mp4 in Resources */,
+				F405E1E7205BDFFA00A50BFA /* Brian_30d_R.mp4 in Resources */,
 				F4CEFBAD202B678600AE1291 /* What Does Tom Think Is In The Box.m4a in Resources */,
+				F405E20E205BE04F00A50BFA /* Jenny_10d_R.mp4 in Resources */,
+				F405E1FD205BE02700A50BFA /* Chris_20d_L.mp4 in Resources */,
+				F405E213205BE04F00A50BFA /* Jenny_60d_R.mp4 in Resources */,
+				F405E211205BE04F00A50BFA /* Jenny_10d_L.mp4 in Resources */,
 				F42693BB2056CB7900EDA31A /* Robbery_2.mp4 in Resources */,
-				F4D9FD01201FB5B1004D0F4E /* Brian_A_60d_L.mp4 in Resources */,
-				F4D9FD02201FB5B1004D0F4E /* Brian_A_20d_R.mp4 in Resources */,
-				F4D9FCD8201FB5B1004D0F4E /* Jenny_A_10d_L.mp4 in Resources */,
-				F4D9FD15201FB5B1004D0F4E /* Jess_A_30d_L.mp4 in Resources */,
-				F4D9FD03201FB5B1004D0F4E /* Brian_A_30d_L.mp4 in Resources */,
+				F405E236205BE2EA00A50BFA /* Control_up.mp4 in Resources */,
+				F405E223205BE07300A50BFA /* Jess_up.mp4 in Resources */,
+				F405E1EC205BDFFA00A50BFA /* Brian_sa.mp4 in Resources */,
 				F4D9FC33201FB3BB004D0F4E /* Main.storyboard in Resources */,
-				F4D9FCDE201FB5B1004D0F4E /* Chris_N_30d_R.mp4 in Resources */,
-				F4D9FCFE201FB5B1004D0F4E /* Brian_A_10d_R.mp4 in Resources */,
+				F405E1E8205BDFFA00A50BFA /* Brian_30d_L.mp4 in Resources */,
+				F405E200205BE02700A50BFA /* Chris_30d_L.mp4 in Resources */,
 				F4CEFBB4202B678600AE1291 /* What Does Jane Think Is In The Box.m4a in Resources */,
+				F405E1FC205BE02700A50BFA /* Chris_60d_L.mp4 in Resources */,
+				F405E1E6205BDFFA00A50BFA /* Brian_20d_L.mp4 in Resources */,
+				F405E210205BE04F00A50BFA /* Jenny_60d_L.mp4 in Resources */,
 				F42693C82056CBCE00EDA31A /* What Does Tom Think Jane Thinks Is In The Box.m4a in Resources */,
-				F4D9FD0A201FB5B1004D0F4E /* Jess_N_60d_R.mp4 in Resources */,
-				F4D9FCE5201FB5B1004D0F4E /* Chris_N_up.mp4 in Resources */,
 				F42693C42056CBCE00EDA31A /* What Does Jane Think Tom Thinks Is In His Backpack.m4a in Resources */,
-				F4D9FD09201FB5B1004D0F4E /* Jess_N_20d_L.mp4 in Resources */,
-				F4D9FD0B201FB5B1004D0F4E /* Jess_N_sa.mp4 in Resources */,
-				F4D9FCED201FB5B1004D0F4E /* Chris_A_10d_R.mp4 in Resources */,
-				F4D9FCF4201FB5B1004D0F4E /* Brian_N_60d_R.mp4 in Resources */,
-				F4D9FCF0201FB5B1004D0F4E /* Chris_A_60d_L.mp4 in Resources */,
+				F405E1E9205BDFFA00A50BFA /* Brian_60d_R.mp4 in Resources */,
 				F4CEFBB7202B678600AE1291 /* What Does Jane Assume Tom Thinks Is In The Box.m4a in Resources */,
-				F4D9FCEF201FB5B1004D0F4E /* Chris_A_20d_R.mp4 in Resources */,
-				F4D9FD14201FB5B1004D0F4E /* Jess_A_20d_R.mp4 in Resources */,
 				F4CEFBB2202B678600AE1291 /* What Is In The Box.m4a in Resources */,
 				F42693CB2056CBCE00EDA31A /* Where Does Tom Think Jane Thinks Her Apple Is.m4a in Resources */,
 				F4994B8220247688001CE79C /* Ding Sound Effect.m4a in Resources */,
-				F4D9FCD2201FB5B1004D0F4E /* Jenny_N_10d_L.mp4 in Resources */,
-				F4D9FCE1201FB5B1004D0F4E /* Chris_N_30d_L.mp4 in Resources */,
-				F4D9FCEE201FB5B1004D0F4E /* Chris_A_30d_R.mp4 in Resources */,
-				F4D9FD13201FB5B1004D0F4E /* Jess_A_60d_L.mp4 in Resources */,
-				F4D9FCD7201FB5B1004D0F4E /* Jenny_A_up.mp4 in Resources */,
-				F4D9FCF9201FB5B1004D0F4E /* Brian_N_30d_R.mp4 in Resources */,
+				F405E1F9205BE02700A50BFA /* Chris_20d_R.mp4 in Resources */,
+				F405E237205BE2EA00A50BFA /* Control_left.mp4 in Resources */,
+				F405E225205BE07300A50BFA /* Jess_10d_R.mp4 in Resources */,
+				F405E238205BE2EA00A50BFA /* Control_right.mp4 in Resources */,
 				F4CEFBAF202B678600AE1291 /* Where Does Jane Think Her Apple Is.m4a in Resources */,
-				F4D9FCF5201FB5B1004D0F4E /* Brian_N_up_2.mp4 in Resources */,
-				F4D9FCDF201FB5B1004D0F4E /* Chris_N_60d_L.mp4 in Resources */,
-				F4D9FCE7201FB5B1004D0F4E /* Chris_A_30d_L.mp4 in Resources */,
-				F4D9FCCC201FB5B1004D0F4E /* Jenny_N_20d_R.mp4 in Resources */,
 				F4CEFBB5202B678600AE1291 /* Where Does Jane Assume Tom Thinks His Apple Is.m4a in Resources */,
+				F405E214205BE04F00A50BFA /* Jenny_30d_L.mp4 in Resources */,
+				F405E221205BE07300A50BFA /* Jess_30d_R.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

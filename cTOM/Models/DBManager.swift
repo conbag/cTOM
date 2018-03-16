@@ -62,17 +62,20 @@ final class DBManager {
         // checks and stores latest session for passed in test_id
         
         var accuracyArray = [String]()
-        var ReactionDict = [String : Double]()
+        var reactionArray = [Double]()
         
         let resultQuery = "select accuracy_measure, time_measure, answer_tag from 'Trial-Session' where session_id = \(latestSession!)"
         
         if let results:FMResultSet = DBManager.ctomDB.executeQuery(resultQuery, withArgumentsIn: []) {
             while results.next() == true {
                 accuracyArray.append(results.string(forColumn: "accuracy_measure")!)
-                ReactionDict[(results.string(forColumn: "answer_tag")!)] = Double((results.double(forColumn: "time_measure")))
+                reactionArray.append(Double((results.double(forColumn: "time_measure"))))
             }
         }
         // extracting results data for latest session id from above
+        
+        print(reactionArray)
+        print("breakl")
         
         var accuracyTotal = 0
         let trialTotal = accuracyArray.count
@@ -86,15 +89,24 @@ final class DBManager {
         // iterating through results array and incrementing by 1 for every 'true'
         
         var totalReactionTime = 0.0
+        var unansweredTrials = 0
         
-        for (key, value) in ReactionDict {
-            if key != "0" {
-                totalReactionTime += value
+        for reaction in reactionArray {
+            if reaction != 0 {
+                totalReactionTime += reaction
+            } else {
+                unansweredTrials += 1
             }
         }
-        // iterating through ReactionDict Dictionary and getting total reaction time for rows where answer tag is not 0
+        // iterating through reactionArray and getting total reaction time for rows where reaction time is not 0
         
-        let averageReaction = totalReactionTime / (Double)(ReactionDict.count)
+        print(totalReactionTime)
+        print(reactionArray.count - unansweredTrials)
+        print(reactionArray)
+        print("hello")
+        print(accuracyArray)
+        
+        let averageReaction = totalReactionTime / (Double)(reactionArray.count - unansweredTrials)
         // get average reaction time
         
         return ResultSummary(accuracyMeasure: "\(accuracyTotal) / \(trialTotal)", sessionID: latestSession!, meanReaction: "\(String(format: "%.3f", averageReaction)) seconds", participantID: latestParticipant!, date: sessionDate!)

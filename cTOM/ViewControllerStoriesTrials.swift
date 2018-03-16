@@ -27,6 +27,8 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     
     var testPaused = false
     var pauseSeconds: Double?
+    var resumeSeconds: Double?
+    var pausedTime: Double?
     
     var videoState = false
     var audioState = false
@@ -63,7 +65,7 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
             
             let result: Result
             
-            let reactionTime = round(1000 * (currentTimeInMiliseconds(date: buttonDate!) - currentTimeInMiliseconds(date: questionDate!))) / 1000
+            let reactionTime = round(1000 * (currentTimeInMiliseconds(date: buttonDate!) - currentTimeInMiliseconds(date: questionDate!) - pausedTime!)) / 1000
             // get seconds(to 3 decimal places) by taking away question start time minus button time
             
             if sender.currentBackgroundImage?.accessibilityIdentifier == correctAnswer! {
@@ -113,7 +115,13 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
                 audioPlayer?.play()
                 // play audio player
             } else if answerState == true {
-                timer = Timer.scheduledTimer(timeInterval: 5.0 - (pauseSeconds! - currentTimeInMiliseconds(date: questionDate!)), target: self, selector: #selector(closeQuestion), userInfo: nil, repeats: false)
+                resumeSeconds = currentTimeInMiliseconds(date: Date())
+                // date in milliseconds when timer was resumed
+                
+                pausedTime = pausedTime! + (resumeSeconds! - pauseSeconds!)
+                // calculates accumulated pause time per trial. Resets when new video is called
+                
+                timer = Timer.scheduledTimer(timeInterval: 5.0 - (resumeSeconds! - currentTimeInMiliseconds(date: questionDate!) - pausedTime!), target: self, selector: #selector(closeQuestion), userInfo: nil, repeats: false)
                 // restart timer with original seconds less time played before paused
                 
                 activateAnswerButtons(bool: true)
@@ -151,6 +159,8 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     func playTestVideo(videoView: UIView) {
         videoState = true
         answerState = false
+        pausedTime = 0;
+        // reset accumulated pause time
         
         let path = Bundle.main.path(forResource: DBManager.trialWithVideo[Trackers
             .currentTrial!], ofType: "mp4")

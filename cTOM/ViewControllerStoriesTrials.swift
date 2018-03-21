@@ -72,9 +72,9 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
                 playDingSound()
                 // plays 'ding' audio for correct answer
                 
-                result = Result(answerTag: (sender.currentBackgroundImage?.accessibilityIdentifier)!, accuracyMeasure: "True", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
+                result = Result(answerTag: (sender.currentBackgroundImage?.accessibilityIdentifier)!, accuracyMeasure: "TRUE", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
             } else {
-                result = Result(answerTag: (sender.currentBackgroundImage?.accessibilityIdentifier)!, accuracyMeasure: "False", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
+                result = Result(answerTag: (sender.currentBackgroundImage?.accessibilityIdentifier)!, accuracyMeasure: "FALSE", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
             }
             // create new instance of result object to store trial data
             
@@ -200,7 +200,7 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     @objc func closeQuestion() {
         if activeTrial == true {
             
-            let result = Result(answerTag: "0", accuracyMeasure: "False", trialID: Trackers.currentTrial!, secondMeasure: 0.0, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
+            let result = Result(answerTag: "0", accuracyMeasure: "FALSE", trialID: Trackers.currentTrial!, secondMeasure: 0.0, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
             
             Trackers.resultsArray.append(result)
         }

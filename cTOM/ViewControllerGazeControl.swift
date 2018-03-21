@@ -16,6 +16,8 @@ class ViewControllerGazeControl: UIViewController, AVAudioPlayerDelegate {
     var buttonAudioPlayer: AVAudioPlayer?
     // seperate audioPlayers so I can call delegate to listen for when initial audio finishes
     
+    @IBOutlet weak var imageView: UIView!
+    
     @IBOutlet weak var readyButton: UIButton!
     @IBOutlet weak var centerButton: UIButton!
     @IBOutlet weak var leftButton: UIButton!
@@ -58,6 +60,8 @@ class ViewControllerGazeControl: UIViewController, AVAudioPlayerDelegate {
                 
                 buttonTag = 1
                 buttonAudioPlayer?.stop()
+                
+                imageView.layer.borderWidth = 0
                 
                 readyButton.isEnabled = true
                 readyButton.isHidden = false
@@ -141,6 +145,8 @@ class ViewControllerGazeControl: UIViewController, AVAudioPlayerDelegate {
         // hide and disable ready button
 
         buttonTag = 1
+        
+        imageView.layer.borderWidth = 3
 
         playSound(path: "Sometimes You Will See A Circle")
 

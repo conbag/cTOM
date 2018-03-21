@@ -79,7 +79,7 @@ final class DBManager {
         
         for measure in accuracyArray {
             
-            if measure == "True" {
+            if measure == "TRUE" {
                 accuracyTotal += 1
             }
         }

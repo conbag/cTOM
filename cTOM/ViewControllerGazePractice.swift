@@ -13,6 +13,8 @@ import AVKit
 class ViewControllerGazePractice: UIViewController {
     
     var audioPlayer: AVAudioPlayer?
+    
+    @IBOutlet weak var imageViewGazePractice: UIView!
 
     @IBOutlet weak var readyButton: UIButton!
     @IBOutlet weak var straightInstruction: UILabel!
@@ -57,11 +59,13 @@ class ViewControllerGazePractice: UIViewController {
                 let button = self.view.viewWithTag(4) as? UIButton
                 let img = UIImage(named: "c-TOM_Gaze_practice_looking_straight_ahead")
                 
-                playAudio(path: "Press Here If The Actor Is Looking Directly At You")
+                playAudio(path: "Press On The Image Below If The Actor Is Looking Directly At You")
                 
                 button?.setBackgroundImage(img, for: .normal)
             } else {
                 buttonTag = 1
+                
+                imageViewGazePractice.layer.borderWidth = 0
                 readyButton.isEnabled = true
                 readyButton.isHidden = false
                 
@@ -106,7 +110,10 @@ class ViewControllerGazePractice: UIViewController {
         
         centerButton.isHidden = false
         
+        imageViewGazePractice.layer.borderWidth = 3
+        
         straightInstruction.isHidden = true
+        straightInstruction.adjustsFontSizeToFitWidth = true
 
         buttonTag = 1
         playAudio(path: "Press Here If The Actor Is Looking To The Right")

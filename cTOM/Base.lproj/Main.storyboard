@@ -1359,7 +1359,7 @@
                                     <constraint firstAttribute="bottom" secondItem="sTD-51-2yl" secondAttribute="bottom" id="uWc-GA-tCP"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press on image below if the actor is looking directly at you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aal-35-eYF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press on the image below if the actor is looking directly at you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aal-35-eYF">
                                 <rect key="frame" x="245.5" y="103" width="620" height="24.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -1399,6 +1399,7 @@
                     </view>
                     <connections>
                         <outlet property="centerButton" destination="sTD-51-2yl" id="IhN-Ub-HYi"/>
+                        <outlet property="imageViewGazePractice" destination="mWc-g3-BQW" id="bLz-79-XHO"/>
                         <outlet property="leftButton" destination="gvJ-Tg-zGq" id="JVv-JQ-JUr"/>
                         <outlet property="readyButton" destination="gou-yg-ajd" id="nAR-x3-nqS"/>
                         <outlet property="rightButton" destination="g0l-lc-Hue" id="v3c-zM-84F"/>
@@ -1675,8 +1676,8 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sometimes you will see a circle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgO-uC-Meu">
-                                <rect key="frame" x="245.5" y="103" width="620" height="24.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <rect key="frame" x="246" y="98" width="620" height="34.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1699,7 +1700,7 @@
                             <constraint firstItem="2C3-Al-cER" firstAttribute="leading" secondItem="DoK-uZ-izq" secondAttribute="trailing" constant="7" id="XIK-F6-qpX"/>
                             <constraint firstItem="DoK-uZ-izq" firstAttribute="leading" secondItem="vJG-Ov-W5B" secondAttribute="trailing" constant="8" id="eQw-ef-Whs"/>
                             <constraint firstItem="PgO-uC-Meu" firstAttribute="width" secondItem="tv5-9Q-LHy" secondAttribute="width" multiplier="55.76%" id="eSe-v1-q5X"/>
-                            <constraint firstItem="PgO-uC-Meu" firstAttribute="height" secondItem="tv5-9Q-LHy" secondAttribute="height" multiplier="2.95%" id="h7g-Iq-7jV"/>
+                            <constraint firstItem="PgO-uC-Meu" firstAttribute="height" secondItem="tv5-9Q-LHy" secondAttribute="height" multiplier="4.24%" id="h7g-Iq-7jV"/>
                             <constraint firstItem="1pW-kl-MIG" firstAttribute="top" secondItem="tv5-9Q-LHy" secondAttribute="top" id="hkK-kr-z5d"/>
                             <constraint firstItem="tv5-9Q-LHy" firstAttribute="trailing" secondItem="2C3-Al-cER" secondAttribute="trailing" constant="20" id="nrD-uJ-2aR"/>
                             <constraint firstItem="vJG-Ov-W5B" firstAttribute="top" secondItem="tv5-9Q-LHy" secondAttribute="top" id="oJA-KE-qLO"/>
@@ -1714,6 +1715,7 @@
                     </view>
                     <connections>
                         <outlet property="centerButton" destination="ChE-DH-d4D" id="D5T-CG-Wgh"/>
+                        <outlet property="imageView" destination="DoK-uZ-izq" id="2Kq-lB-kzs"/>
                         <outlet property="leftButton" destination="vJG-Ov-W5B" id="Jng-7A-HHC"/>
                         <outlet property="readyButton" destination="s84-Od-fhh" id="Z04-0n-s5j"/>
                         <outlet property="rightButton" destination="2C3-Al-cER" id="WbV-sB-4ys"/>
@@ -1731,6 +1733,7 @@
         <image name="c-TOM_Gaze_practice_looking_right" width="943" height="529"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="7rG-2z-U6l"/>
         <segue reference="Eqa-8R-hPF"/>
         <segue reference="tVc-qY-VWp"/>
     </inferredMetricsTieBreakers>

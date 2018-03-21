@@ -68,9 +68,9 @@
 		F42797FC2031D52C007F5BE8 /* ViewControllerAdminLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42797FB2031D52C007F5BE8 /* ViewControllerAdminLogin.swift */; };
 		F42797FE2031D5B0007F5BE8 /* ViewControllerAdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42797FD2031D5B0007F5BE8 /* ViewControllerAdminHome.swift */; };
 		F427980220321051007F5BE8 /* ViewControllerAdminRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F427980120321051007F5BE8 /* ViewControllerAdminRegister.swift */; };
+		F43B67C720613B0600A32889 /* Press On The Image Below If The Actor Is Looking Directly At You.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F43B67C620613B0500A32889 /* Press On The Image Below If The Actor Is Looking Directly At You.m4a */; };
 		F4499AE72034AA8100AD2CFD /* c-TOM Stories introduction.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4499AE62034AA8100AD2CFD /* c-TOM Stories introduction.m4a */; };
 		F4630C69205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Left.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4630C65205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Left.m4a */; };
-		F4630C6A205C5BC80041CC61 /* Press Here If The Actor Is Looking Directly At You.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4630C66205C5BC80041CC61 /* Press Here If The Actor Is Looking Directly At You.m4a */; };
 		F4630C6B205C5BC80041CC61 /* Press Here If The Actor Is Looking Above.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4630C67205C5BC80041CC61 /* Press Here If The Actor Is Looking Above.m4a */; };
 		F4630C6C205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Right.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4630C68205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Right.m4a */; };
 		F4630C6E205C5DF90041CC61 /* ViewControllerGazeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4630C6D205C5DF90041CC61 /* ViewControllerGazeControl.swift */; };
@@ -199,9 +199,9 @@
 		F42797FB2031D52C007F5BE8 /* ViewControllerAdminLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminLogin.swift; sourceTree = "<group>"; };
 		F42797FD2031D5B0007F5BE8 /* ViewControllerAdminHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminHome.swift; sourceTree = "<group>"; };
 		F427980120321051007F5BE8 /* ViewControllerAdminRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminRegister.swift; sourceTree = "<group>"; };
+		F43B67C620613B0500A32889 /* Press On The Image Below If The Actor Is Looking Directly At You.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Press On The Image Below If The Actor Is Looking Directly At You.m4a"; sourceTree = "<group>"; };
 		F4499AE62034AA8100AD2CFD /* c-TOM Stories introduction.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "c-TOM Stories introduction.m4a"; sourceTree = "<group>"; };
 		F4630C65205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Left.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Press Here If The Actor Is Looking To The Left.m4a"; sourceTree = "<group>"; };
-		F4630C66205C5BC80041CC61 /* Press Here If The Actor Is Looking Directly At You.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Press Here If The Actor Is Looking Directly At You.m4a"; sourceTree = "<group>"; };
 		F4630C67205C5BC80041CC61 /* Press Here If The Actor Is Looking Above.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Press Here If The Actor Is Looking Above.m4a"; sourceTree = "<group>"; };
 		F4630C68205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Right.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Press Here If The Actor Is Looking To The Right.m4a"; sourceTree = "<group>"; };
 		F4630C6D205C5DF90041CC61 /* ViewControllerGazeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGazeControl.swift; sourceTree = "<group>"; };
@@ -320,8 +320,8 @@
 		F4C3ABC1205C52A000520B31 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				F43B67C620613B0500A32889 /* Press On The Image Below If The Actor Is Looking Directly At You.m4a */,
 				F4630C67205C5BC80041CC61 /* Press Here If The Actor Is Looking Above.m4a */,
-				F4630C66205C5BC80041CC61 /* Press Here If The Actor Is Looking Directly At You.m4a */,
 				F4630C65205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Left.m4a */,
 				F4630C68205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Right.m4a */,
 				F4C3ABC2205C52A000520B31 /* c-TOM Gaze Introduction.m4a */,
@@ -762,7 +762,6 @@
 				F42693C82056CBCE00EDA31A /* What Does Tom Think Jane Thinks Is In The Box.m4a in Resources */,
 				F4630C73205C609A0041CC61 /* Press Here If The Circle Moves Up.m4a in Resources */,
 				F4630C6B205C5BC80041CC61 /* Press Here If The Actor Is Looking Above.m4a in Resources */,
-				F4630C6A205C5BC80041CC61 /* Press Here If The Actor Is Looking Directly At You.m4a in Resources */,
 				F42693C42056CBCE00EDA31A /* What Does Jane Think Tom Thinks Is In His Backpack.m4a in Resources */,
 				F4630C75205C609A0041CC61 /* Press Here If The Circle Moves To The Right.m4a in Resources */,
 				F405E1E9205BDFFA00A50BFA /* Brian_60d_R.mp4 in Resources */,
@@ -779,6 +778,7 @@
 				F4CEFBB5202B678600AE1291 /* Where Does Jane Assume Tom Thinks His Apple Is.m4a in Resources */,
 				F405E214205BE04F00A50BFA /* Jenny_30d_L.mp4 in Resources */,
 				F405E221205BE07300A50BFA /* Jess_30d_R.mp4 in Resources */,
+				F43B67C720613B0600A32889 /* Press On The Image Below If The Actor Is Looking Directly At You.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1077,7 +1077,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39UPL9DKZ7;
 				INFOPLIST_FILE = cTOM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctom.cTOM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1097,7 +1097,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39UPL9DKZ7;
 				INFOPLIST_FILE = cTOM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctom.cTOM;
 				PRODUCT_NAME = "$(TARGET_NAME)";

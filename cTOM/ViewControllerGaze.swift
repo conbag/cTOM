@@ -68,9 +68,9 @@ class ViewControllerGaze: UIViewController {
                 playAudio()
                 // plays 'ding' audio for correct answer
                 
-                result = Result(answerTag: String(sender.tag), accuracyMeasure: "True", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
+                result = Result(answerTag: String(sender.tag), accuracyMeasure: "TRUE", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
             } else {
-                result = Result(answerTag: String(sender.tag), accuracyMeasure: "False", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
+                result = Result(answerTag: String(sender.tag), accuracyMeasure: "FALSE", trialID: currentTrial, secondMeasure: reactionTime, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
             }
             // create new instance of result object to store trial data
             
@@ -123,8 +123,6 @@ class ViewControllerGaze: UIViewController {
             mainMenu.isHidden = false
             mainMenu.isEnabled = true
             
-            crossView.layer.sublayers = nil
-            
             DBManager.storeResultsToDatabase()
             Trackers.resultsArray.removeAll()
             Trackers.randomizedTrialList.removeAll()
@@ -134,6 +132,8 @@ class ViewControllerGaze: UIViewController {
             // Reset various arrays on test finish
         }
         // logic for when trials are finished. Displays text label and stores Result array to DB
+        
+        crossView.layer.sublayers = nil
     }
     
     
@@ -147,10 +147,11 @@ class ViewControllerGaze: UIViewController {
         player = AVPlayer(url: URL(fileURLWithPath: path!))
         
         playerLayer = AVPlayerLayer(player: player)
+        
         playerLayer.videoGravity = .resize
-        
-        playerLayer.frame = videoView.bounds
-        
+        playerLayer.frame = CGRect(x: CGFloat(3), y: CGFloat(3), width: CGFloat(videoView.bounds.width - 6), height: CGFloat(videoView.bounds.height - 6))
+        // setting video player frame to within videoView's border of length 3
+
         videoView.layer.addSublayer(playerLayer)
         
         player.volume = 0.0
@@ -158,9 +159,12 @@ class ViewControllerGaze: UIViewController {
         player.play()
         
         timer = Timer.scheduledTimer(timeInterval: (longestTrialDuration! + 1), target: self, selector: #selector(videoDidFinishPlaying), userInfo: nil, repeats: false)
-        
+
         videoDate = Date()
         dbDate = dateToString(date: videoDate!)
+        
+        videoView.layer.borderWidth = 3
+        // adding border to videoView
     }
     
     @objc func videoDidFinishPlaying(){
@@ -168,7 +172,7 @@ class ViewControllerGaze: UIViewController {
         
         if activeTrial == true {
             
-            let result = Result(answerTag: "0", accuracyMeasure: "False", trialID: Trackers.currentTrial!, secondMeasure: 0.0, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
+            let result = Result(answerTag: "0", accuracyMeasure: "FALSE", trialID: Trackers.currentTrial!, secondMeasure: 0.0, order: (trialOrder + 1), date: dbDate!, session: Trackers.currentSession!)
             
             Trackers.resultsArray.append(result)
             activeTrial = false
@@ -191,8 +195,10 @@ class ViewControllerGaze: UIViewController {
     
         crossView.layer.addSublayer(imageLayer)
     
+        videoView.layer.borderWidth = 0
+        // remove border
+        
         startTimingTrials()
-
     }
     // function that is called when video is finished playing
     

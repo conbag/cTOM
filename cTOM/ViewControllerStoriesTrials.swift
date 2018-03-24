@@ -15,7 +15,7 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     var trialOrder = 0
     
     @IBOutlet weak var escapeTest: UIButton!
-    
+
     var counter = 0
     var timer = Timer()
     // timer object used to question and answer slots
@@ -29,6 +29,8 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     var pauseSeconds: Double?
     var resumeSeconds: Double?
     var pausedTime: Double?
+    
+    var myContext = 0
     
     var videoState = false
     var audioState = false
@@ -170,9 +172,8 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
         
         playerLayer = AVPlayerLayer(player: player)
         playerLayer.videoGravity = .resize
-        
-        playerLayer.frame = videoView.bounds
-        // set video to bounds of videoView
+        playerLayer.frame = CGRect(x: CGFloat(3), y: CGFloat(3), width: CGFloat(videoView.bounds.width - 6), height: CGFloat(videoView.bounds.height - 6))
+        // setting video player frame to within videoView's border of length 3
         
         videoView.layer.addSublayer(playerLayer)
         
@@ -181,12 +182,31 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
         player.play()
         pausedButton.isEnabled = true
         
+        self.playerLayer.addObserver(self, forKeyPath: #keyPath(AVPlayerLayer.isReadyForDisplay), options: NSKeyValueObservingOptions.new, context: &myContext)
+        // adding observer to indicate when video begins rather than called
+        
         NotificationCenter.default.addObserver(self, selector:#selector(self.playerDidFinishPlaying(note:)),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem)
         // notification for when video finishes
     }
     
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if context == &myContext {
+            if playerLayer.isReadyForDisplay == true {
+                
+                print("video starts" + String(trialOrder))
+                
+                videoView.layer.borderWidth = 3
+                // adding border to videoView
+            }
+        }
+    }
+    // Code that runs when video actually begins rather than when called
+    
     @objc func playerDidFinishPlaying(note: NSNotification){
         //Called when player finished playing
+        
+        self.playerLayer.removeObserver(self, forKeyPath: #keyPath(AVPlayerLayer.isReadyForDisplay))
+        // remove observer from player layer in order to not build on top of each other
         
         videoState = false
         audioState = true
@@ -230,6 +250,7 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
         } else {
             
             NotificationCenter.default.removeObserver(self)
+            
             playerLayer.player = nil
             playerLayer.removeFromSuperlayer()
             // removes player and observer objects to clear memory
@@ -244,6 +265,9 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
             playTestVideo(videoView: videoView)
         }
         // increment current trial and trial order by one and hide answer buttons
+        
+        videoView.layer.borderWidth = 0
+        // remove border from videoView
 
     }
     
@@ -269,8 +293,8 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
         for index in 1...4 {
             
             let button = self.view.viewWithTag(index) as? UIButton
-            
-            button!.isHidden = true
+
+            button?.isHidden = true
         }
     }
     // hides all 4 answer buttons
@@ -282,14 +306,23 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
         var randomisedImageArray = randomizeStringArray(array: imageList!)
         
         for index in 1...4 {
-            let image = UIImage(named: randomisedImageArray[index - 1]) as UIImage?
+            let path = Bundle.main.path(forResource: randomisedImageArray[index - 1], ofType: "png")
+            
+            let image = UIImage(contentsOfFile: path!) as UIImage?
             // randomize the correct answer images for each of the 4 buttons
-            image?.accessibilityIdentifier = randomisedImageArray[index - 1]
-            // tag each image with its filename so can be identified
             
             let button = self.view.viewWithTag(index) as? UIButton
-            button!.isHidden = false
-            button?.setBackgroundImage(image!, for: UIControlState.normal)
+            
+            let imageSize = CGRect(x: CGFloat(3), y: CGFloat(3), width: CGFloat((button?.bounds.width)! - 6), height: CGFloat((button?.bounds.height)! - 6)) as CGRect
+            let newImage = image?.imageWithSize(size: imageSize.size)
+            // resizing original image to significantly reduce memory footprint
+            
+            newImage?.accessibilityIdentifier = randomisedImageArray[index - 1]
+            // tag each image with its filename so can be identified
+            
+            button?.isHidden = false
+            button?.setBackgroundImage(newImage!, for: UIControlState.normal)
+            
             button?.layer.borderWidth = 3
             button?.layer.cornerRadius = 3
         }
@@ -432,4 +465,23 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
     }
     */
 
+}
+
+extension UIImage
+{
+    func imageWithSize(size:CGSize) -> UIImage? {
+        let newRect = CGRect(x: 0, y: 0, width: size.width, height: size.height).integral
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        if let context = UIGraphicsGetCurrentContext() {
+            context.interpolationQuality = .high
+            let flipVertical = CGAffineTransform(a: 1, b: 0, c: 0, d: -1, tx: 0, ty: size.height)
+            context.concatenate(flipVertical)
+            context.draw(self.cgImage!, in: newRect)
+            let newImage = UIImage(cgImage: context.makeImage()!)
+            UIGraphicsEndImageContext()
+            return newImage
+        }
+        return nil
+    }
+    // function to create new uiimage with passed in size
 }

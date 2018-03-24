@@ -68,6 +68,20 @@
 		F42797FC2031D52C007F5BE8 /* ViewControllerAdminLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42797FB2031D52C007F5BE8 /* ViewControllerAdminLogin.swift */; };
 		F42797FE2031D5B0007F5BE8 /* ViewControllerAdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42797FD2031D5B0007F5BE8 /* ViewControllerAdminHome.swift */; };
 		F427980220321051007F5BE8 /* ViewControllerAdminRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F427980120321051007F5BE8 /* ViewControllerAdminRegister.swift */; };
+		F427FC8B2066D62600DB8C50 /* Box_plant.png in Resources */ = {isa = PBXBuildFile; fileRef = F427FC7D2066D62500DB8C50 /* Box_plant.png */; };
+		F427FC8C2066D62600DB8C50 /* Bag_wallet.png in Resources */ = {isa = PBXBuildFile; fileRef = F427FC7E2066D62500DB8C50 /* Bag_wallet.png */; };
+		F427FC8D2066D62600DB8C50 /* Bag_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = F427FC7F2066D62500DB8C50 /* Bag_empty.png */; };
+		F427FC8E2066D62600DB8C50 /* Bin.png in Resources */ = {isa = PBXBuildFile; fileRef = F427FC802066D62500DB8C50 /* Bin.png */; };
+		F427FC8F2066D62600DB8C50 /* Box_spider.png in Resources */ = {isa = PBXBuildFile; fileRef = F427FC812066D62600DB8C50 /* Box_spider.png */; };
+		F427FC902066D62600DB8C50 /* Bag_hat.png in Resources */ = {isa = PBXBuildFile; fileRef = F427FC822066D62600DB8C50 /* Bag_hat.png */; };
+		F427FC912066D62600DB8C50 /* Box_mug.png in Resources */ = {isa = PBXBuildFile; fileRef = F427FC832066D62600DB8C50 /* Box_mug.png */; };
+		F427FC922066D62600DB8C50 /* Box_snake.png in Resources */ = {isa = PBXBuildFile; fileRef = F427FC842066D62600DB8C50 /* Box_snake.png */; };
+		F427FC932066D62600DB8C50 /* Box_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = F427FC852066D62600DB8C50 /* Box_empty.png */; };
+		F427FC942066D62600DB8C50 /* Bag_cup.png in Resources */ = {isa = PBXBuildFile; fileRef = F427FC862066D62600DB8C50 /* Bag_cup.png */; };
+		F427FC952066D62600DB8C50 /* Black_box.png in Resources */ = {isa = PBXBuildFile; fileRef = F427FC872066D62600DB8C50 /* Black_box.png */; };
+		F427FC962066D62600DB8C50 /* Basket.png in Resources */ = {isa = PBXBuildFile; fileRef = F427FC882066D62600DB8C50 /* Basket.png */; };
+		F427FC972066D62600DB8C50 /* Bag_banana_peel.png in Resources */ = {isa = PBXBuildFile; fileRef = F427FC892066D62600DB8C50 /* Bag_banana_peel.png */; };
+		F427FC982066D62600DB8C50 /* Questionmark.png in Resources */ = {isa = PBXBuildFile; fileRef = F427FC8A2066D62600DB8C50 /* Questionmark.png */; };
 		F43B67C720613B0600A32889 /* Press On The Image Below If The Actor Is Looking Directly At You.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F43B67C620613B0500A32889 /* Press On The Image Below If The Actor Is Looking Directly At You.m4a */; };
 		F4499AE72034AA8100AD2CFD /* c-TOM Stories introduction.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4499AE62034AA8100AD2CFD /* c-TOM Stories introduction.m4a */; };
 		F4630C69205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Left.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F4630C65205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Left.m4a */; };
@@ -199,6 +213,20 @@
 		F42797FB2031D52C007F5BE8 /* ViewControllerAdminLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminLogin.swift; sourceTree = "<group>"; };
 		F42797FD2031D5B0007F5BE8 /* ViewControllerAdminHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminHome.swift; sourceTree = "<group>"; };
 		F427980120321051007F5BE8 /* ViewControllerAdminRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminRegister.swift; sourceTree = "<group>"; };
+		F427FC7D2066D62500DB8C50 /* Box_plant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Box_plant.png; sourceTree = "<group>"; };
+		F427FC7E2066D62500DB8C50 /* Bag_wallet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bag_wallet.png; sourceTree = "<group>"; };
+		F427FC7F2066D62500DB8C50 /* Bag_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bag_empty.png; sourceTree = "<group>"; };
+		F427FC802066D62500DB8C50 /* Bin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bin.png; sourceTree = "<group>"; };
+		F427FC812066D62600DB8C50 /* Box_spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Box_spider.png; sourceTree = "<group>"; };
+		F427FC822066D62600DB8C50 /* Bag_hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bag_hat.png; sourceTree = "<group>"; };
+		F427FC832066D62600DB8C50 /* Box_mug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Box_mug.png; sourceTree = "<group>"; };
+		F427FC842066D62600DB8C50 /* Box_snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Box_snake.png; sourceTree = "<group>"; };
+		F427FC852066D62600DB8C50 /* Box_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Box_empty.png; sourceTree = "<group>"; };
+		F427FC862066D62600DB8C50 /* Bag_cup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bag_cup.png; sourceTree = "<group>"; };
+		F427FC872066D62600DB8C50 /* Black_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Black_box.png; sourceTree = "<group>"; };
+		F427FC882066D62600DB8C50 /* Basket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Basket.png; sourceTree = "<group>"; };
+		F427FC892066D62600DB8C50 /* Bag_banana_peel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bag_banana_peel.png; sourceTree = "<group>"; };
+		F427FC8A2066D62600DB8C50 /* Questionmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Questionmark.png; sourceTree = "<group>"; };
 		F43B67C620613B0500A32889 /* Press On The Image Below If The Actor Is Looking Directly At You.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Press On The Image Below If The Actor Is Looking Directly At You.m4a"; sourceTree = "<group>"; };
 		F4499AE62034AA8100AD2CFD /* c-TOM Stories introduction.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "c-TOM Stories introduction.m4a"; sourceTree = "<group>"; };
 		F4630C65205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Left.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Press Here If The Actor Is Looking To The Left.m4a"; sourceTree = "<group>"; };
@@ -336,6 +364,7 @@
 		F4CEFB8C202B637100AE1291 /* c_TOM_Stories */ = {
 			isa = PBXGroup;
 			children = (
+				F4E80A012066C66800CF37ED /* Images */,
 				F4CEFB99202B66A600AE1291 /* Audio */,
 				F4CEFB8E202B63B900AE1291 /* Apple_1.mp4 */,
 				F4CEFB90202B63B900AE1291 /* Apple_2.mp4 */,
@@ -599,6 +628,27 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
+		F4E80A012066C66800CF37ED /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F427FC892066D62600DB8C50 /* Bag_banana_peel.png */,
+				F427FC862066D62600DB8C50 /* Bag_cup.png */,
+				F427FC7F2066D62500DB8C50 /* Bag_empty.png */,
+				F427FC822066D62600DB8C50 /* Bag_hat.png */,
+				F427FC7E2066D62500DB8C50 /* Bag_wallet.png */,
+				F427FC882066D62600DB8C50 /* Basket.png */,
+				F427FC802066D62500DB8C50 /* Bin.png */,
+				F427FC872066D62600DB8C50 /* Black_box.png */,
+				F427FC852066D62600DB8C50 /* Box_empty.png */,
+				F427FC832066D62600DB8C50 /* Box_mug.png */,
+				F427FC7D2066D62500DB8C50 /* Box_plant.png */,
+				F427FC842066D62600DB8C50 /* Box_snake.png */,
+				F427FC812066D62600DB8C50 /* Box_spider.png */,
+				F427FC8A2066D62600DB8C50 /* Questionmark.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -690,8 +740,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F42693CA2056CBCE00EDA31A /* What Does Jane Think Is In Her Backpack.m4a in Resources */,
+				F427FC962066D62600DB8C50 /* Basket.png in Resources */,
 				F4CEFBAB202B678600AE1291 /* Where Does Tom Assume Jane Thinks Her Apple Is.m4a in Resources */,
 				F405E20F205BE04F00A50BFA /* Jenny_20d_L.mp4 in Resources */,
+				F427FC8F2066D62600DB8C50 /* Box_spider.png in Resources */,
+				F427FC932066D62600DB8C50 /* Box_empty.png in Resources */,
 				F42693C92056CBCE00EDA31A /* What Does Tom Think Jane Thinks Is In Her Backpack.m4a in Resources */,
 				F405E222205BE07300A50BFA /* Jess_30d_L.mp4 in Resources */,
 				F405E201205BE02700A50BFA /* Chris_10d_L.mp4 in Resources */,
@@ -699,10 +752,12 @@
 				F4CEFBB1202B678600AE1291 /* What Does Kate Think Is In Her Backpack.m4a in Resources */,
 				F4CEFB98202B63B900AE1291 /* Present_1.mp4 in Resources */,
 				F405E215205BE04F00A50BFA /* Jenny_sa.mp4 in Resources */,
+				F427FC8D2066D62600DB8C50 /* Bag_empty.png in Resources */,
 				F405E227205BE07300A50BFA /* Jess_20d_L.mp4 in Resources */,
 				F405E228205BE07300A50BFA /* Jess_20d_R.mp4 in Resources */,
 				F4CEFBB3202B678600AE1291 /* What Does John Assume Kate Thinks Is In Her Backpack.m4a in Resources */,
 				F405E1FB205BE02700A50BFA /* Chris_10d_R.mp4 in Resources */,
+				F427FC922066D62600DB8C50 /* Box_snake.png in Resources */,
 				F4C3ABC3205C52A000520B31 /* c-TOM Gaze Introduction.m4a in Resources */,
 				F4CEFBAA202B678600AE1291 /* Where Does Tom Think His Apple Is.m4a in Resources */,
 				F42693BA2056CB7900EDA31A /* Robbery_1.mp4 in Resources */,
@@ -710,11 +765,13 @@
 				F42693C62056CBCE00EDA31A /* What Does Tom Think Is In His Backpack.m4a in Resources */,
 				F405E1FA205BE02700A50BFA /* Chris_sa.mp4 in Resources */,
 				F4CEFBB0202B678600AE1291 /* Where Is The Apple.m4a in Resources */,
+				F427FC8B2066D62600DB8C50 /* Box_plant.png in Resources */,
 				F405E1F8205BE02700A50BFA /* Chris_30d_R.mp4 in Resources */,
 				F405E1EB205BDFFA00A50BFA /* Brian_10d_R.mp4 in Resources */,
 				F405E224205BE07300A50BFA /* Jess_sa.mp4 in Resources */,
 				F405E1FF205BE02700A50BFA /* Chris_up.mp4 in Resources */,
 				F405E20D205BE04F00A50BFA /* Jenny_30d_R.mp4 in Resources */,
+				F427FC942066D62600DB8C50 /* Bag_cup.png in Resources */,
 				F4D9FC60201FB3E3004D0F4E /* Info.plist in Resources */,
 				F4CEFBA9202B678600AE1291 /* What Does Kate Assume John Thinks Is In His Backpack.m4a in Resources */,
 				F405E1EA205BDFFA00A50BFA /* Brian_up.mp4 in Resources */,
@@ -722,6 +779,8 @@
 				F405E232205BE10C00A50BFA /* cTOM.db in Resources */,
 				F4CEFBAE202B678600AE1291 /* What Is In The Backpack.m4a in Resources */,
 				F405E20C205BE04F00A50BFA /* Jenny_up.mp4 in Resources */,
+				F427FC902066D62600DB8C50 /* Bag_hat.png in Resources */,
+				F427FC8E2066D62600DB8C50 /* Bin.png in Resources */,
 				F405E220205BE07300A50BFA /* Jess_60d_R.mp4 in Resources */,
 				F4CEFB96202B63B900AE1291 /* Apple_2.mp4 in Resources */,
 				F405E1ED205BDFFA00A50BFA /* Brian_60d_L.mp4 in Resources */,
@@ -730,6 +789,7 @@
 				F4499AE72034AA8100AD2CFD /* c-TOM Stories introduction.m4a in Resources */,
 				F405E1E5205BDFFA00A50BFA /* Brian_10d_L.mp4 in Resources */,
 				F405E226205BE07300A50BFA /* Jess_10d_L.mp4 in Resources */,
+				F427FC952066D62600DB8C50 /* Black_box.png in Resources */,
 				F405E229205BE07300A50BFA /* Jess_60d_L.mp4 in Resources */,
 				F4CEFBAC202B678600AE1291 /* What Does John Think Is In His Backpack.m4a in Resources */,
 				F405E1E4205BDFFA00A50BFA /* Brian_20d_R.mp4 in Resources */,
@@ -741,6 +801,7 @@
 				F4CEFB94202B63B900AE1291 /* Apple_1.mp4 in Resources */,
 				F405E212205BE04F00A50BFA /* Jenny_20d_R.mp4 in Resources */,
 				F405E1E7205BDFFA00A50BFA /* Brian_30d_R.mp4 in Resources */,
+				F427FC982066D62600DB8C50 /* Questionmark.png in Resources */,
 				F4CEFBAD202B678600AE1291 /* What Does Tom Think Is In The Box.m4a in Resources */,
 				F405E20E205BE04F00A50BFA /* Jenny_10d_R.mp4 in Resources */,
 				F405E1FD205BE02700A50BFA /* Chris_20d_L.mp4 in Resources */,
@@ -754,7 +815,9 @@
 				F4630C76205C609A0041CC61 /* Sometimes You Will See A Circle.m4a in Resources */,
 				F405E1E8205BDFFA00A50BFA /* Brian_30d_L.mp4 in Resources */,
 				F405E200205BE02700A50BFA /* Chris_30d_L.mp4 in Resources */,
+				F427FC972066D62600DB8C50 /* Bag_banana_peel.png in Resources */,
 				F4CEFBB4202B678600AE1291 /* What Does Jane Think Is In The Box.m4a in Resources */,
+				F427FC912066D62600DB8C50 /* Box_mug.png in Resources */,
 				F405E1FC205BE02700A50BFA /* Chris_60d_L.mp4 in Resources */,
 				F405E1E6205BDFFA00A50BFA /* Brian_20d_L.mp4 in Resources */,
 				F4630C69205C5BC80041CC61 /* Press Here If The Actor Is Looking To The Left.m4a in Resources */,
@@ -771,6 +834,7 @@
 				F4994B8220247688001CE79C /* Ding Sound Effect.m4a in Resources */,
 				F405E1F9205BE02700A50BFA /* Chris_20d_R.mp4 in Resources */,
 				F405E237205BE2EA00A50BFA /* Control_left.mp4 in Resources */,
+				F427FC8C2066D62600DB8C50 /* Bag_wallet.png in Resources */,
 				F405E225205BE07300A50BFA /* Jess_10d_R.mp4 in Resources */,
 				F4630C74205C609A0041CC61 /* Press Here If The Circle Moves To The Left.m4a in Resources */,
 				F405E238205BE2EA00A50BFA /* Control_right.mp4 in Resources */,
@@ -1077,7 +1141,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39UPL9DKZ7;
 				INFOPLIST_FILE = cTOM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctom.cTOM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1097,7 +1161,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39UPL9DKZ7;
 				INFOPLIST_FILE = cTOM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctom.cTOM;
 				PRODUCT_NAME = "$(TARGET_NAME)";

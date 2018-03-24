@@ -39,6 +39,10 @@ class ViewControllerGaze: UIViewController {
     var playerLayer: AVPlayerLayer!
     var audioPlayer: AVAudioPlayer?
     // video and audio players
+    
+    var myContext = 0
+    var observerAdded = false
+    // variable required for adding observer to playerlayer to detect when video has started. Needed due to slight lag in calling player and video starting
 
     @IBOutlet weak var finishMessage: UILabel!
     @IBOutlet weak var mainMenu: UIButton!
@@ -158,17 +162,42 @@ class ViewControllerGaze: UIViewController {
         // disable volume on gaze videos as direct is indicated
         player.play()
         
-        timer = Timer.scheduledTimer(timeInterval: (longestTrialDuration! + 1), target: self, selector: #selector(videoDidFinishPlaying), userInfo: nil, repeats: false)
-
-        videoDate = Date()
-        dbDate = dateToString(date: videoDate!)
-        
-        videoView.layer.borderWidth = 3
-        // adding border to videoView
+        self.playerLayer.addObserver(self, forKeyPath: #keyPath(AVPlayerLayer.isReadyForDisplay), options: NSKeyValueObservingOptions.new, context: &myContext)
+        // adding observer to indicate when video begins rather than called
+        observerAdded = true
     }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if context == &myContext {
+            if playerLayer.isReadyForDisplay == true {
+                
+                print("video starts" + String(trialOrder))
+                
+                videoView.layer.borderWidth = 3
+                // adding border to videoView
+                
+                timer = Timer.scheduledTimer(timeInterval: (longestTrialDuration! + 1), target: self, selector: #selector(videoDidFinishPlaying), userInfo: nil, repeats: false)
+                // intialise answer timer for length of longest video plus 1 second
+                
+                videoDate = Date()
+                dbDate = dateToString(date: videoDate!)
+                // set start date to when video begins
+            }
+        }
+    }
+    // Code that runs when video actually begins rather than when called
+    
     
     @objc func videoDidFinishPlaying(){
         //Called when player finished playing
+        
+        if observerAdded == true {
+            self.playerLayer.removeObserver(self, forKeyPath: #keyPath(AVPlayerLayer.isReadyForDisplay))
+            // remove observer from player layer in order to not build on top of each other
+            
+            observerAdded = false
+        }
+        // check if observer has been registered for playerlayer and remove if yes
         
         if activeTrial == true {
             

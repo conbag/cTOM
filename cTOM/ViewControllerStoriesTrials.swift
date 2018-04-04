@@ -249,6 +249,8 @@ class ViewControllerStoriesTrials: UIViewController, AVAudioPlayerDelegate {
             
         } else {
             
+            print(currentTimeInMiliseconds(date: Date()) - currentTimeInMiliseconds(date: questionDate!))
+            
             NotificationCenter.default.removeObserver(self)
             
             playerLayer.player = nil

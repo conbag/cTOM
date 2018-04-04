@@ -39,7 +39,6 @@
 		F405E211205BE04F00A50BFA /* Jenny_10d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E207205BE04F00A50BFA /* Jenny_10d_L.mp4 */; };
 		F405E212205BE04F00A50BFA /* Jenny_20d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E208205BE04F00A50BFA /* Jenny_20d_R.mp4 */; };
 		F405E213205BE04F00A50BFA /* Jenny_60d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E209205BE04F00A50BFA /* Jenny_60d_R.mp4 */; };
-		F405E214205BE04F00A50BFA /* Jenny_30d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E20A205BE04F00A50BFA /* Jenny_30d_L.mp4 */; };
 		F405E215205BE04F00A50BFA /* Jenny_sa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E20B205BE04F00A50BFA /* Jenny_sa.mp4 */; };
 		F405E220205BE07300A50BFA /* Jess_60d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E216205BE07200A50BFA /* Jess_60d_R.mp4 */; };
 		F405E221205BE07300A50BFA /* Jess_30d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E217205BE07200A50BFA /* Jess_30d_R.mp4 */; };
@@ -51,10 +50,11 @@
 		F405E227205BE07300A50BFA /* Jess_20d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E21D205BE07300A50BFA /* Jess_20d_L.mp4 */; };
 		F405E228205BE07300A50BFA /* Jess_20d_R.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E21E205BE07300A50BFA /* Jess_20d_R.mp4 */; };
 		F405E229205BE07300A50BFA /* Jess_60d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E21F205BE07300A50BFA /* Jess_60d_L.mp4 */; };
-		F405E232205BE10C00A50BFA /* cTOM.db in Resources */ = {isa = PBXBuildFile; fileRef = F405E231205BE10C00A50BFA /* cTOM.db */; };
 		F405E236205BE2EA00A50BFA /* Control_up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E233205BE2EA00A50BFA /* Control_up.mp4 */; };
 		F405E237205BE2EA00A50BFA /* Control_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E234205BE2EA00A50BFA /* Control_left.mp4 */; };
 		F405E238205BE2EA00A50BFA /* Control_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F405E235205BE2EA00A50BFA /* Control_right.mp4 */; };
+		F407A4972069194F00249E91 /* cTOM.db in Resources */ = {isa = PBXBuildFile; fileRef = F407A4962069194F00249E91 /* cTOM.db */; };
+		F4229EFC207398E900FF00E3 /* Jenny_30d_L.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4229EFB207398E800FF00E3 /* Jenny_30d_L.mp4 */; };
 		F42693BA2056CB7900EDA31A /* Robbery_1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F42693B82056CB7900EDA31A /* Robbery_1.mp4 */; };
 		F42693BB2056CB7900EDA31A /* Robbery_2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F42693B92056CB7900EDA31A /* Robbery_2.mp4 */; };
 		F42693C42056CBCE00EDA31A /* What Does Jane Think Tom Thinks Is In His Backpack.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F42693BC2056CBCD00EDA31A /* What Does Jane Think Tom Thinks Is In His Backpack.m4a */; };
@@ -184,7 +184,6 @@
 		F405E207205BE04F00A50BFA /* Jenny_10d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_10d_L.mp4; sourceTree = "<group>"; };
 		F405E208205BE04F00A50BFA /* Jenny_20d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_20d_R.mp4; sourceTree = "<group>"; };
 		F405E209205BE04F00A50BFA /* Jenny_60d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_60d_R.mp4; sourceTree = "<group>"; };
-		F405E20A205BE04F00A50BFA /* Jenny_30d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_30d_L.mp4; sourceTree = "<group>"; };
 		F405E20B205BE04F00A50BFA /* Jenny_sa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_sa.mp4; sourceTree = "<group>"; };
 		F405E216205BE07200A50BFA /* Jess_60d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_60d_R.mp4; sourceTree = "<group>"; };
 		F405E217205BE07200A50BFA /* Jess_30d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_30d_R.mp4; sourceTree = "<group>"; };
@@ -196,10 +195,11 @@
 		F405E21D205BE07300A50BFA /* Jess_20d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_20d_L.mp4; sourceTree = "<group>"; };
 		F405E21E205BE07300A50BFA /* Jess_20d_R.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_20d_R.mp4; sourceTree = "<group>"; };
 		F405E21F205BE07300A50BFA /* Jess_60d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jess_60d_L.mp4; sourceTree = "<group>"; };
-		F405E231205BE10C00A50BFA /* cTOM.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cTOM.db; sourceTree = "<group>"; };
 		F405E233205BE2EA00A50BFA /* Control_up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Control_up.mp4; sourceTree = "<group>"; };
 		F405E234205BE2EA00A50BFA /* Control_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Control_left.mp4; sourceTree = "<group>"; };
 		F405E235205BE2EA00A50BFA /* Control_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Control_right.mp4; sourceTree = "<group>"; };
+		F407A4962069194F00249E91 /* cTOM.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cTOM.db; sourceTree = "<group>"; };
+		F4229EFB207398E800FF00E3 /* Jenny_30d_L.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jenny_30d_L.mp4; sourceTree = "<group>"; };
 		F42693B82056CB7900EDA31A /* Robbery_1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Robbery_1.mp4; path = "../../../../Dropbox/Software Design and Development - NUIG/FYP/Media/c_TOM_Stories/Robbery_1.mp4"; sourceTree = "<group>"; };
 		F42693B92056CB7900EDA31A /* Robbery_2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Robbery_2.mp4; path = "../../../../Dropbox/Software Design and Development - NUIG/FYP/Media/c_TOM_Stories/Robbery_2.mp4"; sourceTree = "<group>"; };
 		F42693BC2056CBCD00EDA31A /* What Does Jane Think Tom Thinks Is In His Backpack.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "What Does Jane Think Tom Thinks Is In His Backpack.m4a"; path = "../../../../../Dropbox/Software Design and Development - NUIG/FYP/Media/ctomadditionalaudioandpicturefiles/Stories March 2018/What Does Jane Think Tom Thinks Is In His Backpack.m4a"; sourceTree = "<group>"; };
@@ -531,11 +531,11 @@
 		F4D9FC6C201FB5B1004D0F4E /* Neutral */ = {
 			isa = PBXGroup;
 			children = (
+				F4229EFB207398E800FF00E3 /* Jenny_30d_L.mp4 */,
 				F405E207205BE04F00A50BFA /* Jenny_10d_L.mp4 */,
 				F405E204205BE04E00A50BFA /* Jenny_10d_R.mp4 */,
 				F405E205205BE04E00A50BFA /* Jenny_20d_L.mp4 */,
 				F405E208205BE04F00A50BFA /* Jenny_20d_R.mp4 */,
-				F405E20A205BE04F00A50BFA /* Jenny_30d_L.mp4 */,
 				F405E203205BE04E00A50BFA /* Jenny_30d_R.mp4 */,
 				F405E206205BE04F00A50BFA /* Jenny_60d_L.mp4 */,
 				F405E209205BE04F00A50BFA /* Jenny_60d_R.mp4 */,
@@ -623,7 +623,7 @@
 		F4D9FD1B201FB6A8004D0F4E /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				F405E231205BE10C00A50BFA /* cTOM.db */,
+				F407A4962069194F00249E91 /* cTOM.db */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -700,7 +700,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Conor O'Grady";
 				TargetAttributes = {
 					F4D9FC29201FB3BB004D0F4E = {
@@ -761,6 +761,7 @@
 				F4C3ABC3205C52A000520B31 /* c-TOM Gaze Introduction.m4a in Resources */,
 				F4CEFBAA202B678600AE1291 /* Where Does Tom Think His Apple Is.m4a in Resources */,
 				F42693BA2056CB7900EDA31A /* Robbery_1.mp4 in Resources */,
+				F407A4972069194F00249E91 /* cTOM.db in Resources */,
 				F4D9FCF1201FB5B1004D0F4E /* Montage.mp4 in Resources */,
 				F42693C62056CBCE00EDA31A /* What Does Tom Think Is In His Backpack.m4a in Resources */,
 				F405E1FA205BE02700A50BFA /* Chris_sa.mp4 in Resources */,
@@ -776,12 +777,12 @@
 				F4CEFBA9202B678600AE1291 /* What Does Kate Assume John Thinks Is In His Backpack.m4a in Resources */,
 				F405E1EA205BDFFA00A50BFA /* Brian_up.mp4 in Resources */,
 				F4D9FC38201FB3BB004D0F4E /* LaunchScreen.storyboard in Resources */,
-				F405E232205BE10C00A50BFA /* cTOM.db in Resources */,
 				F4CEFBAE202B678600AE1291 /* What Is In The Backpack.m4a in Resources */,
 				F405E20C205BE04F00A50BFA /* Jenny_up.mp4 in Resources */,
 				F427FC902066D62600DB8C50 /* Bag_hat.png in Resources */,
 				F427FC8E2066D62600DB8C50 /* Bin.png in Resources */,
 				F405E220205BE07300A50BFA /* Jess_60d_R.mp4 in Resources */,
+				F4229EFC207398E900FF00E3 /* Jenny_30d_L.mp4 in Resources */,
 				F4CEFB96202B63B900AE1291 /* Apple_2.mp4 in Resources */,
 				F405E1ED205BDFFA00A50BFA /* Brian_60d_L.mp4 in Resources */,
 				F42693C52056CBCE00EDA31A /* Where Does Jane Think Tom Thinks His Apple Is.m4a in Resources */,
@@ -840,7 +841,6 @@
 				F405E238205BE2EA00A50BFA /* Control_right.mp4 in Resources */,
 				F4CEFBAF202B678600AE1291 /* Where Does Jane Think Her Apple Is.m4a in Resources */,
 				F4CEFBB5202B678600AE1291 /* Where Does Jane Assume Tom Thinks His Apple Is.m4a in Resources */,
-				F405E214205BE04F00A50BFA /* Jenny_30d_L.mp4 in Resources */,
 				F405E221205BE07300A50BFA /* Jess_30d_R.mp4 in Resources */,
 				F43B67C720613B0600A32889 /* Press On The Image Below If The Actor Is Looking Directly At You.m4a in Resources */,
 			);
@@ -1039,6 +1039,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1046,6 +1047,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1073,7 +1075,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1096,6 +1098,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1103,6 +1106,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1124,7 +1128,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1141,7 +1145,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39UPL9DKZ7;
 				INFOPLIST_FILE = cTOM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctom.cTOM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1161,7 +1165,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39UPL9DKZ7;
 				INFOPLIST_FILE = cTOM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctom.cTOM;
 				PRODUCT_NAME = "$(TARGET_NAME)";

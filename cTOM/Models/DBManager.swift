@@ -355,7 +355,7 @@ final class DBManager {
       
         return longestDuration!
     }
-    // returns dict with current trial list and corresponding audio file names
+    // returns double in seconds for trial with longest duration
     
     static func getVideoDataForTest() {
         for trial in trialList {
@@ -370,7 +370,7 @@ final class DBManager {
         }
         
     }
-    // returns dict with current trial list and corresponding audio file names
+    // returns dict with current trial list and corresponding video file names
     
     static func storeResultsToDatabase() {
         

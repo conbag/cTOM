@@ -170,9 +170,6 @@ class ViewControllerGaze: UIViewController {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if context == &myContext {
             if playerLayer.isReadyForDisplay == true {
-                
-                print("video starts" + String(trialOrder))
-                
                 videoView.layer.borderWidth = 3
                 // adding border to videoView
                 
@@ -217,7 +214,6 @@ class ViewControllerGaze: UIViewController {
         let cross = UIImage(named: "Cross")?.cgImage
     
         let imageLayer = CALayer()
-        //let blankLayer = CALayer()
     
         imageLayer.contents = cross
         imageLayer.frame = crossView.bounds

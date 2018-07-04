@@ -35,8 +35,8 @@ class ViewControllerResults: UIViewController {
 
         let smtpSession = MCOSMTPSession()
         smtpSession.hostname = "smtp.gmail.com"
-        smtpSession.username = "ctomresults@gmail.com"
-        smtpSession.password = "ctomNUIG"
+        smtpSession.username = "xxxxxxxx@gmail.com"
+        smtpSession.password = "xxxxxxxx"
         smtpSession.port = 465
         smtpSession.authType = MCOAuthType.saslPlain
         smtpSession.connectionType = MCOConnectionType.TLS
